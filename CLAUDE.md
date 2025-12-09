@@ -17,12 +17,15 @@ This repository contains course development materials for **DCDA 30833 – Creat
 
 ```
 dcda30833_workspace/
+├── labs/                 # Weekly low-stakes exercises
+├── projects/             # Major synthesis assignments
 ├── context/              # Course description, rationale, pedagogical theory
 ├── theory_sheets/        # Technical reference materials (cheat sheets)
-├── assignments/          # Assignment specifications and rubrics
-├── sketches/            # Example code demonstrations
-├── assets/              # Images, fonts, media files
-└── slide_decks/         # Presentation materials
+├── sketches/             # Example code demonstrations
+├── assets/               # Images, fonts, media files
+├── slide_decks/          # Presentation materials
+├── readings/             # Course readings and reference texts
+└── old_files/            # Archived materials
 ```
 
 ## Pedagogical Philosophy

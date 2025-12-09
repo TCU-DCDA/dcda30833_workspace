@@ -31,13 +31,13 @@ Mode: Image / Motion
 - random() vs rules  
 - Probability as design  
 - LAB 2 due  
-- LAB 3 due  
 
 ---
 
 ## Week 4 — Generative Visual Identity
 Mode: Image / Emergence  
 - Larger rule-based systems  
+- LAB 3 due  
 - PROJECT 2 due  
 
 ---
