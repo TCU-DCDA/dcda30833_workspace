@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discovery Over Expression — DCDA 30833</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/black.css">
+  <style>
+    :root {
+      --r-background-color: #111;
+      --r-main-font: system-ui, -apple-system, sans-serif;
+      --r-heading-font: system-ui, -apple-system, sans-serif;
+      --r-main-color: #eee;
+      --r-heading-color: #fff;
+      --r-link-color: #6af;
+    }
+
+    .reveal {
+      font-size: 32px;
+    }
+
+    .reveal h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: -0.02em;
+    }
+
+    .reveal h2 {
+      font-size: 1.8em;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5em;
+    }
+
+    .reveal h3 {
+      font-size: 1.2em;
+      font-weight: 400;
+      text-transform: none;
+      color: #999;
+    }
+
+    .reveal blockquote {
+      background: transparent;
+      border-left: 4px solid #6af;
+      padding: 0.5em 1em;
+      margin: 1em 0;
+      font-style: italic;
+      font-size: 1.3em;
+      width: 85%;
+      text-align: left;
+    }
+
+    .reveal blockquote footer,
+    .reveal .attribution {
+      font-style: normal;
+      font-size: 0.6em;
+      color: #888;
+      margin-top: 0.5em;
+    }
+
+    .reveal .subtitle {
+      font-size: 1.2em;
+      color: #888;
+      margin-top: 0.5em;
+    }
+
+    .reveal table {
+      margin: 1em auto;
+      border-collapse: collapse;
+      font-size: 0.8em;
+    }
+
+    .reveal table th,
+    .reveal table td {
+      padding: 0.5em 1em;
+      border: 1px solid #444;
+      text-align: left;
+    }
+
+    .reveal table th {
+      background: #222;
+      color: #6af;
+    }
+
+    .reveal .highlight {
+      color: #6af;
+    }
+
+    .reveal .dim {
+      color: #666;
+    }
+
+    .reveal .artist-slide {
+      text-align: left;
+      padding-left: 10%;
+    }
+
+    .reveal .artist-name {
+      font-size: 1.1em;
+      color: #6af;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.6em;
+      font-weight: 500;
+    }
+
+    .reveal .source {
+      font-size: 0.5em;
+      color: #555;
+      margin-top: 1em;
+    }
+
+    .reveal .discussion-prompt {
+      background: #1a1a2e;
+      padding: 1.5em;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    .reveal .discussion-prompt h3 {
+      color: #6af;
+      margin-bottom: 0.5em;
+    }
+
+    .reveal .discussion-prompt ol {
+      margin-left: 1.5em;
+      line-height: 1.8;
+    }
+
+    .reveal .principle-box {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 1em 1.5em;
+      border-radius: 8px;
+      margin: 0.5em 0;
+      text-align: left;
+    }
+
+    .reveal .principle-box h3 {
+      color: #6af;
+      font-size: 1em;
+      margin-bottom: 0.3em;
+    }
+
+    .reveal .principle-box p {
+      margin: 0;
+      font-size: 0.85em;
+      color: #aaa;
+    }
+
+    .reveal .sources-list {
+      font-size: 0.55em;
+      text-align: left;
+      columns: 2;
+      column-gap: 2em;
+      color: #777;
+    }
+
+    .reveal .sources-list li {
+      margin-bottom: 0.3em;
+    }
+
+    .reveal .big-question {
+      font-size: 1.5em;
+      font-style: italic;
+      color: #ccc;
+    }
+
+    .reveal .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3em;
+      align-items: center;
+      text-align: left;
+      padding: 0 5%;
+      height: 100%;
+    }
+
+    .reveal .two-col .col-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .reveal .two-col .col-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .reveal .two-col .col-image img {
+      max-width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .reveal .two-col .image-credit {
+      font-size: 0.45em;
+      color: #555;
+      margin-top: 0.8em;
+      text-align: center;
+    }
+
+    .reveal .two-col blockquote {
+      width: 100%;
+      font-size: 1.15em;
+      margin: 0.5em 0;
+    }
+
+    /* Two-column artist slides */
+    .reveal .artist-slide-with-image {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 4em;
+      padding: 0 2em;
+    }
+
+    .reveal .artist-slide-with-image .text-content {
+      flex: 0 1 45%;
+      min-width: 0;
+    }
+
+    .reveal .artist-slide-with-image .image-content {
+      flex: 1 1 50%;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .reveal .artist-slide-with-image .image-content img {
+      max-width: 100%;
+      max-height: 380px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .reveal .artist-slide-with-image .image-credit {
+      font-size: 0.45em;
+      color: #555;
+      margin-top: 0.8em;
+    }
+
+    .reveal .artist-slide-with-image blockquote {
+      width: 100%;
+      font-size: 1.35em;
+      line-height: 1.4;
+    }
+
+    .reveal .artwork-slide {
+      text-align: center;
+    }
+
+    .reveal .artwork-slide img {
+      max-width: 80%;
+      max-height: 500px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .reveal .artwork-slide .image-credit {
+      font-size: 0.5em;
+      color: #555;
+      margin-top: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title -->
+      <section>
+        <h1>Discovery Over Expression</h1>
+        <p class="subtitle">What if art isn't about saying what you mean?</p>
+        <p class="dim" style="margin-top: 2em; font-size: 0.6em;">DCDA 30833 — Creative Coding for the Humanities</p>
+      </section>
+
+      <!-- Slide 2: The Default Assumption -->
+      <section>
+        <h2>The Default Assumption</h2>
+        <p class="big-question">"What do I want to say?"</p>
+        <p class="dim" style="margin-top: 1.5em;">This is how we're taught to approach creative work.</p>
+      </section>
+
+      <!-- Slide 3: The Alternative -->
+      <section>
+        <h2>The Alternative</h2>
+        <p class="big-question">"What can this system reveal?"</p>
+        <p class="dim" style="margin-top: 1.5em;">This is how we'll work in this course.</p>
+      </section>
+
+      <!-- Slide 4: Picasso -->
+      <section class="artist-slide-with-image">
+        <div class="text-content">
+          <p class="artist-name">Pablo Picasso</p>
+          <blockquote>
+            "In my opinion to search means nothing in painting. To find is the thing."
+          </blockquote>
+          <p class="source">"Picasso Speaks," The Arts, 1923</p>
+        </div>
+        <div class="image-content">
+          <!-- Juan Gris, Portrait of Picasso, 1912 — Public Domain -->
+          <img src="images/gris-picasso.jpg" alt="Portrait of Picasso by Juan Gris, 1912">
+          <p class="image-credit">Juan Gris, Portrait of Picasso (1912)</p>
+        </div>
+      </section>
+
+      <!-- Slide 5: Frost -->
+      <section class="artist-slide-with-image">
+        <div class="text-content">
+          <p class="artist-name">Robert Frost</p>
+          <blockquote>
+            "No surprise for the writer, no surprise for the reader."
+          </blockquote>
+          <p class="source">"The Figure a Poem Makes," 1939</p>
+        </div>
+        <div class="image-content">
+          <!-- Library of Congress, Public Domain -->
+          <img src="https://tile.loc.gov/storage-services/service/pnp/cph/3c20000/3c20000/3c20700/3c20742r.jpg" alt="Robert Frost portrait, 1941">
+          <p class="image-credit">Photo: Library of Congress, 1941</p>
+        </div>
+      </section>
+
+      <!-- Slide 6: Cage -->
+      <section class="artist-slide-with-image">
+        <div class="text-content">
+          <p class="artist-name">John Cage</p>
+          <blockquote>
+            "I use chance operations instead of operating according to my likes and dislikes."
+          </blockquote>
+          <p class="source">Various interviews</p>
+        </div>
+        <div class="image-content">
+          <!-- Prepared piano materials for Sonatas and Interludes -->
+          <img src="images/Cage-sonatas-preparation-1.jpg" alt="John Cage prepared piano materials">
+          <p class="image-credit">Prepared piano materials</p>
+        </div>
+      </section>
+
+      <!-- Slide 7: Richter -->
+      <section class="artist-slide-with-image">
+        <div class="text-content">
+          <p class="artist-name">Gerhard Richter</p>
+          <blockquote>
+            "I want to end up with a picture that I haven't planned."
+          </blockquote>
+          <p class="source">gerhard-richter.com</p>
+        </div>
+        <div class="image-content">
+          <!-- Gerhard Richter squeegee technique -->
+          <img src="images/how-does-gerhard-richter-make-abstract-paintings.webp" alt="Gerhard Richter squeegee technique">
+          <p class="image-credit">Squeegee technique (Tate)</p>
+        </div>
+      </section>
+
+      <!-- Slide 8: LeWitt -->
+      <section class="artist-slide-with-image">
+        <div class="text-content">
+          <p class="artist-name">Sol LeWitt</p>
+          <blockquote>
+            "The idea becomes a machine that makes the art."
+          </blockquote>
+          <p class="source">"Paragraphs on Conceptual Art," Artforum, 1967</p>
+        </div>
+        <div class="image-content">
+          <!-- Wikimedia Commons, CC BY-SA 4.0 - simplified URL -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Bilbao_-_Museo_Guggenheim_-_Wall_Drawing_831_%28Geometric_Forms%29%2C_de_Sol_LeWitt_4.JPG/400px-Bilbao_-_Museo_Guggenheim_-_Wall_Drawing_831_%28Geometric_Forms%29%2C_de_Sol_LeWitt_4.JPG" alt="Sol LeWitt Wall Drawing 831">
+          <p class="image-credit">Wall Drawing 831, Guggenheim Bilbao<br>CC BY-SA 4.0</p>
+        </div>
+      </section>
+
+      <!-- Slide 9: Cunningham -->
+      <section class="artist-slide-with-image">
+        <div class="text-content">
+          <p class="artist-name">Merce Cunningham</p>
+          <blockquote>
+            "My main interest is, as always, in discovery."
+          </blockquote>
+          <p class="source">Merce Cunningham Trust</p>
+        </div>
+        <div class="image-content">
+          <!-- Abstract representation of I Ching hexagram -->
+          <div style="display: flex; flex-direction: column; gap: 12px; padding: 30px;">
+            <div style="display: flex; gap: 20px;"><div style="background: #fff; width: 80px; height: 12px;"></div><div style="background: #fff; width: 80px; height: 12px;"></div></div>
+            <div style="background: #fff; width: 180px; height: 12px;"></div>
+            <div style="display: flex; gap: 20px;"><div style="background: #fff; width: 80px; height: 12px;"></div><div style="background: #fff; width: 80px; height: 12px;"></div></div>
+            <div style="background: #fff; width: 180px; height: 12px;"></div>
+            <div style="background: #fff; width: 180px; height: 12px;"></div>
+            <div style="display: flex; gap: 20px;"><div style="background: #fff; width: 80px; height: 12px;"></div><div style="background: #fff; width: 80px; height: 12px;"></div></div>
+          </div>
+          <p class="image-credit">I Ching hexagram: chance operations</p>
+        </div>
+      </section>
+
+      <!-- Slide 10: Klee -->
+      <section class="artist-slide-with-image">
+        <div class="text-content">
+          <p class="artist-name">Paul Klee</p>
+          <blockquote>
+            "An active line on a walk, moving freely, without goal."
+          </blockquote>
+          <p class="source">Pedagogical Sketchbook, 1925</p>
+        </div>
+        <div class="image-content">
+          <!-- Public domain artwork by Klee - Museum Ludwig -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Paul_Klee%2C_Hauptweg_und_Nebenwege%2C_1929%2C_%C3%96l_auf_Leinwand%2C_83%2C7_x_67%2C5_cm%2C_Museum_Ludwig_1976.jpg/400px-Paul_Klee%2C_Hauptweg_und_Nebenwege%2C_1929%2C_%C3%96l_auf_Leinwand%2C_83%2C7_x_67%2C5_cm%2C_Museum_Ludwig_1976.jpg" alt="Paul Klee, Highways and Byways, 1929">
+          <p class="image-credit">Highway and Byways (1929)</p>
+        </div>
+      </section>
+
+      <!-- Slide 11: Eno -->
+      <section class="artist-slide-with-image">
+        <div class="text-content">
+          <p class="artist-name">Brian Eno</p>
+          <blockquote>
+            "One of the things art offers you is the chance to surrender."
+          </blockquote>
+          <p class="source">Interviews on Oblique Strategies</p>
+        </div>
+        <div class="image-content">
+          <!-- Representation of Oblique Strategies card -->
+          <div style="width: 280px; height: 180px; background: #f8f8f8; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 1.5em; box-shadow: 0 6px 20px rgba(0,0,0,0.4);">
+            <p style="color: #111; font-size: 0.85em; text-align: center; font-style: italic; margin: 0; line-height: 1.5;">Honor thy error<br>as a hidden intention</p>
+          </div>
+          <p class="image-credit">Oblique Strategies (1975)</p>
+        </div>
+      </section>
+
+      <!-- Slide 12: Doctorow -->
+      <section class="artist-slide-with-image">
+        <div class="text-content">
+          <p class="artist-name">E.L. Doctorow</p>
+          <blockquote>
+            "Writing is like driving at night in the fog. You can only see as far as your headlights, but you can make the whole trip that way."
+          </blockquote>
+          <p class="source">Paris Review, 1988</p>
+        </div>
+        <div class="image-content">
+          <!-- Abstract representation: headlights in fog -->
+          <div style="width: 320px; height: 220px; background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 30%, #252525 50%, #1a1a1a 70%, #0a0a0a 100%); border-radius: 8px; position: relative; overflow: hidden;">
+            <div style="position: absolute; bottom: 20%; left: 30%; width: 40%; height: 70%; background: radial-gradient(ellipse at bottom, rgba(255,255,200,0.25) 0%, transparent 70%);"></div>
+            <div style="position: absolute; bottom: 20%; left: 42%; width: 16%; height: 50%; background: radial-gradient(ellipse at bottom, rgba(255,255,220,0.5) 0%, transparent 60%);"></div>
+          </div>
+          <p class="image-credit">Headlights in fog</p>
+        </div>
+      </section>
+
+      <!-- Slide 13: The Shift (Table) -->
+      <section>
+        <h2>The Shift</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Expression</th>
+              <th>Discovery</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>"What do I want to say?"</td>
+              <td>"What can this reveal?"</td>
+            </tr>
+            <tr>
+              <td>Artist as author</td>
+              <td>Artist as collaborator</td>
+            </tr>
+            <tr>
+              <td>Medium as tool</td>
+              <td>Medium as partner</td>
+            </tr>
+            <tr>
+              <td>Outcome predetermined</td>
+              <td>Outcome emergent</td>
+            </tr>
+            <tr>
+              <td>Success = intention realized</td>
+              <td>Success = surprise</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Slide 14: Why This Matters -->
+      <section>
+        <h2>Why This Matters for Creative Coding</h2>
+        <p style="font-size: 1.3em; line-height: 1.8;">
+          Code is a <span class="highlight">system</span>.<br>
+          Systems have <span class="highlight">behaviors</span>.<br>
+          Behaviors can <span class="highlight">surprise you</span>.
+        </p>
+      </section>
+
+      <!-- Slide 15: Toward the Sublime -->
+      <section>
+        <h2 class="dim" style="font-size: 1.2em;">A deeper current...</h2>
+        <blockquote style="font-size: 1.1em; border-color: #94a;">
+          When we encounter something beyond our comprehension—<br>
+          something that exceeds our capacity to control or predict—<br>
+          we approach the territory of <span class="highlight" style="color: #94a;">the Sublime</span>.
+        </blockquote>
+        <p class="dim" style="font-size: 0.8em; margin-top: 1.5em;">
+          Discovery-based art puts us in relation to forces larger than ourselves.<br>
+          <em>We'll return to this idea later in the semester.</em>
+        </p>
+      </section>
+
+      <!-- Slide 16: Discussion -->
+      <section>
+        <h2>Discussion</h2>
+        <div class="discussion-prompt">
+          <h3>In pairs (3 minutes):</h3>
+          <ol>
+            <li>Think of a time you made something and were surprised by the result.</li>
+            <li>What created the surprise? Accident? Constraint? A tool's behavior?</li>
+            <li>Was the surprise good or bad? Did you keep it?</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Slide 17: Course Philosophy -->
+      <section>
+        <h2>The Course Philosophy</h2>
+        <div class="principle-box">
+          <h3>Form = Content</h3>
+          <p>Structure is meaning, not decoration.</p>
+        </div>
+        <div class="principle-box">
+          <h3>Systems Dramatize States</h3>
+          <p>Code performs — it doesn't represent.</p>
+        </div>
+        <div class="principle-box">
+          <h3>Discovery Over Expression</h3>
+          <p>We explore what systems reveal.</p>
+        </div>
+      </section>
+
+      <!-- Slide 18: Exit Prompt -->
+      <section>
+        <h2>Exit Prompt</h2>
+        <p style="font-size: 1.1em; color: #aaa; margin-bottom: 1.5em;">On a notecard or in your notes:</p>
+        <blockquote style="font-size: 1.1em;">
+          Name one assumption about "expressing yourself" through art that you're willing to question this semester.
+        </blockquote>
+      </section>
+
+      <!-- Slide 19: Sources -->
+      <section>
+        <h2>Sources</h2>
+        <ul class="sources-list">
+          <li><strong>Picasso:</strong> "Picasso Speaks," The Arts, 1923</li>
+          <li><strong>Frost:</strong> "The Figure a Poem Makes," 1939</li>
+          <li><strong>Cage:</strong> Various interviews, Wikiquote</li>
+          <li><strong>Richter:</strong> gerhard-richter.com</li>
+          <li><strong>LeWitt:</strong> "Paragraphs on Conceptual Art," Artforum, 1967</li>
+          <li><strong>Cunningham:</strong> Merce Cunningham Trust</li>
+          <li><strong>Klee:</strong> Pedagogical Sketchbook, 1925</li>
+          <li><strong>Eno:</strong> Interviews on Oblique Strategies</li>
+          <li><strong>Doctorow:</strong> Paris Review Interviews, 1988</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      transition: 'fade',
+      transitionSpeed: 'fast',
+      controls: true,
+      progress: true,
+      center: true,
+      width: 1280,
+      height: 720
+    });
+  </script>
+</body>
+</html>

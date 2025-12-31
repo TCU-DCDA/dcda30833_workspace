@@ -16,7 +16,7 @@ LAB 3 — Controlled Randomness
 LAB 4 — One-Hue World  
 LAB 5 — Palette as Prison  
 LAB 6 — Text as Object  
-LAB 7 — One Interaction, No Meaning  
+LAB 7 — Prompt as Material  
 LAB 8 — Envelope Only  
 LAB 9 — Rhythm Without Notes  
 LAB 10 — Mapping Without Message  

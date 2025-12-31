@@ -119,8 +119,8 @@ This course utilizes an **Ungrading** philosophy. This means I will not assign l
 Creative coding requires risk-taking and failure. A traditional grading system often punishes failure, leading to safe, boring work. Ungrading encourages you to experiment, break things, and learn from the process without fear of a low grade.
 
 ### Late Work *
-*   **Labs:** Accepted up to 1 week late for partial credit.
-*   **Projects:** Must be submitted on time for critique. Late projects may miss the critique window, significantly impacting the grade.
+*   **Labs:** Accepted up to 1 week late. The goal is completion and learning, not penalty.
+*   **Projects:** Should be submitted on time for critique. Late projects may miss the critique window, which limits feedback opportunities and peer learning.
 
 ### Participation, Engagement & Attendance *
 Coding is a practice, not just a theory. Attendance in studio sessions is critical for debugging and peer learning.

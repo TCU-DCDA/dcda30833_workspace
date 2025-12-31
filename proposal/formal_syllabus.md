@@ -29,12 +29,15 @@ The course is divided into weekly modules combining technical instruction with s
 
 ---
 
-## Grading & Assessment
-This course utilizes a **contract grading** or **specifications grading** model (instructor discretion). Focus is placed on process, iteration, and reflection rather than subjective aesthetic judgment.
+## Assessment & Feedback
+This course utilizes an **ungrading** model. Focus is placed on process, iteration, and reflection rather than subjective aesthetic judgment or numerical scores.
 
-*   **Labs (40%):** Completion of weekly technical challenges.
-*   **Projects (40%):** Execution of major creative works with accompanying artist statements.
-*   **Participation & Critique (20%):** Active engagement in code reviews and class discussions.
+*   **Labs:** Weekly technical challenges receive qualitative feedback, not grades. Completion and engagement matter more than perfection.
+*   **Projects:** Major creative works receive detailed feedback on concept and execution. Accompanied by short artist statements.
+*   **Participation & Critique:** Active engagement in code reviews and class discussions is expected and essential for learning.
+*   **Final Portfolio & Self-Evaluation:** At semester's end, you will submit a portfolio of your work and a self-evaluation proposing your final grade based on growth, effort, and quality. If the instructor's assessment differs significantly, you will meet to discuss.
+
+**Why Ungrading?** Creative coding requires risk-taking and productive failure. Traditional grading often punishes experimentation, leading to safe, uninteresting work. Ungrading encourages you to explore, break things, and learn from the process.
 
 ---
 
