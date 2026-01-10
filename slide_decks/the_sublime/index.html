@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sublime and Discovery — DCDA 30833</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/black.css">
+  <style>
+    :root {
+      --r-background-color: #0a0a0a;
+      --r-main-font: system-ui, -apple-system, sans-serif;
+      --r-heading-font: system-ui, -apple-system, sans-serif;
+      --r-main-color: #eee;
+      --r-heading-color: #fff;
+      --r-link-color: #94a;
+    }
+
+    .reveal {
+      font-size: 32px;
+    }
+
+    .reveal h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: -0.02em;
+    }
+
+    .reveal h2 {
+      font-size: 1.8em;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5em;
+    }
+
+    .reveal h3 {
+      font-size: 1.2em;
+      font-weight: 400;
+      text-transform: none;
+      color: #999;
+    }
+
+    .reveal blockquote {
+      background: transparent;
+      border-left: 4px solid #94a;
+      padding: 0.5em 1em;
+      margin: 1em 0;
+      font-style: italic;
+      font-size: 1.3em;
+      width: 85%;
+      text-align: left;
+    }
+
+    .reveal blockquote footer,
+    .reveal .attribution {
+      font-style: normal;
+      font-size: 0.6em;
+      color: #888;
+      margin-top: 0.5em;
+    }
+
+    .reveal .subtitle {
+      font-size: 1.2em;
+      color: #888;
+      margin-top: 0.5em;
+    }
+
+    .reveal table {
+      margin: 1em auto;
+      border-collapse: collapse;
+      font-size: 0.8em;
+    }
+
+    .reveal table th,
+    .reveal table td {
+      padding: 0.5em 1em;
+      border: 1px solid #444;
+      text-align: left;
+    }
+
+    .reveal table th {
+      background: #1a1a1a;
+      color: #94a;
+    }
+
+    .reveal .highlight {
+      color: #94a;
+    }
+
+    .reveal .dim {
+      color: #666;
+    }
+
+    .reveal .big-idea {
+      font-size: 1.5em;
+      line-height: 1.6;
+      color: #ccc;
+      margin: 1em 0;
+    }
+
+    .reveal .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3em;
+      align-items: start;
+      text-align: left;
+      padding: 0 3%;
+    }
+
+    .reveal .comparison-box {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 1.2em;
+      border-radius: 8px;
+      margin: 0.8em 0;
+    }
+
+    .reveal .comparison-box h3 {
+      color: #94a;
+      font-size: 1.1em;
+      margin-bottom: 0.5em;
+      font-weight: 500;
+    }
+
+    .reveal .comparison-box p {
+      margin: 0.3em 0;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+
+    .reveal .definition-box {
+      background: #1a1a2e;
+      padding: 1.5em;
+      border-radius: 8px;
+      border-left: 6px solid #94a;
+      text-align: left;
+      margin: 1em 0;
+    }
+
+    .reveal .definition-box h3 {
+      color: #94a;
+      margin-top: 0;
+      font-size: 1.1em;
+    }
+
+    .reveal .definition-box p {
+      margin: 0.5em 0;
+      line-height: 1.6;
+    }
+
+    .reveal .key-quote {
+      background: linear-gradient(135deg, #2a1a2e 0%, #1a1a3e 100%);
+      padding: 1.5em 2em;
+      border-radius: 8px;
+      border-left: 6px solid #94a;
+      font-size: 1.4em;
+      font-style: italic;
+      line-height: 1.5;
+      margin: 1.5em auto;
+      max-width: 90%;
+    }
+
+    .reveal .discussion-prompt {
+      background: #1a1a2e;
+      padding: 1.5em;
+      border-radius: 8px;
+      text-align: left;
+      border: 2px solid #333;
+    }
+
+    .reveal .discussion-prompt h3 {
+      color: #94a;
+      margin-bottom: 0.5em;
+    }
+
+    .reveal .discussion-prompt ol,
+    .reveal .discussion-prompt ul {
+      margin-left: 1.5em;
+      line-height: 1.8;
+    }
+
+    .reveal .artist-name {
+      font-size: 0.9em;
+      color: #94a;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.6em;
+      font-weight: 500;
+    }
+
+    .reveal .sources-list {
+      font-size: 0.55em;
+      text-align: left;
+      columns: 2;
+      column-gap: 2em;
+      color: #777;
+    }
+
+    .reveal .sources-list li {
+      margin-bottom: 0.3em;
+    }
+
+    .reveal .example-box {
+      background: #1a1a1a;
+      padding: 1em 1.5em;
+      border-radius: 6px;
+      margin: 0.8em 0;
+      border-left: 4px solid #555;
+    }
+
+    .reveal .example-box h4 {
+      color: #aaa;
+      font-size: 0.9em;
+      margin: 0 0 0.5em 0;
+      font-weight: 500;
+    }
+
+    .reveal .example-box p {
+      margin: 0;
+      font-size: 0.85em;
+      color: #ccc;
+      line-height: 1.5;
+    }
+
+    .reveal ul {
+      line-height: 1.8;
+    }
+
+    .reveal li {
+      margin-bottom: 0.5em;
+    }
+
+    .reveal .section-marker {
+      font-size: 0.7em;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title -->
+      <section>
+        <h1>The Sublime</h1>
+        <p class="subtitle">Encountering What Exceeds Comprehension</p>
+        <p class="dim" style="margin-top: 2em; font-size: 0.6em;">DCDA 30833 — Creative Coding for the Humanities</p>
+      </section>
+
+      <!-- Slide 2: Remember This? -->
+      <section>
+        <h2>Remember This?</h2>
+        <blockquote style="font-size: 1.2em;">
+          When we encounter something beyond our comprehension—<br>
+          something that exceeds our capacity to control or predict—<br>
+          we approach the territory of <span class="highlight">the Sublime</span>.
+        </blockquote>
+        <p class="dim" style="margin-top: 1.5em;">We said we'd return to this idea. Let's dig deeper.</p>
+      </section>
+
+      <!-- Slide 3: What Is the Sublime? -->
+      <section>
+        <h2>What Is the Sublime?</h2>
+        <div class="two-col">
+          <div class="comparison-box">
+            <h3>The Beautiful</h3>
+            <p>Pleases through form, proportion, harmony</p>
+            <p>We <em>comprehend</em> it</p>
+            <p>Fits within our understanding</p>
+            <p>Comforts us</p>
+          </div>
+          <div class="comparison-box">
+            <h3>The Sublime</h3>
+            <p>Overwhelms through magnitude or power</p>
+            <p>We <em>cannot</em> fully grasp it</p>
+            <p>Exceeds our comprehension</p>
+            <p>Confronts us with our limits</p>
+          </div>
+        </div>
+        <p class="dim" style="margin-top: 1em; font-size: 0.75em;">Immanuel Kant, <em>Critique of Judgment</em> (1790)</p>
+      </section>
+
+      <!-- Slide 4: Two Modes -->
+      <section>
+        <h2>Two Modes of the Sublime</h2>
+        <div class="definition-box">
+          <h3>Mathematical Sublime</h3>
+          <p>Vastness that defeats our ability to grasp it as a whole</p>
+          <p class="dim" style="font-size: 0.85em; margin-top: 0.5em;">
+            Examples: The starry sky · The ocean · Geological time · Infinite patterns
+          </p>
+        </div>
+        <div class="definition-box">
+          <h3>Dynamical Sublime</h3>
+          <p>Power that exceeds our capacity to resist or control</p>
+          <p class="dim" style="font-size: 0.85em; margin-top: 0.5em;">
+            Examples: Storms · Volcanoes · Waterfalls · Forces beyond human scale
+          </p>
+        </div>
+      </section>
+
+      <!-- Slide 5: The Key Insight -->
+      <section>
+        <h2>The Key Insight</h2>
+        <div class="key-quote">
+          The sublime is not <em>in the object</em><br>
+          but in the experience of our own limits.
+        </div>
+        <p style="margin-top: 1.5em; line-height: 1.7; font-size: 1.1em;">
+          It's not that the ocean <em>is</em> sublime.<br>
+          It's that confronting the ocean reveals something about <em>us</em>—<br>
+          our smallness, our inability to comprehend totality.
+        </p>
+      </section>
+
+      <!-- Slide 6: Burke Quote -->
+      <section>
+        <p class="artist-name">Edmund Burke</p>
+        <blockquote>
+          "The passion caused by the great and sublime in nature... is Astonishment; and astonishment is that state of the soul, in which all its motions are suspended, with some degree of horror."
+        </blockquote>
+        <p class="attribution"><em>A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful</em> (1757)</p>
+      </section>
+
+      <!-- Slide 7: Romantic Extension -->
+      <section>
+        <h2>The Romantic Extension</h2>
+        <p style="line-height: 1.8; font-size: 1.1em;">
+          For Romantic artists and writers, the sublime became central:<br>
+          <span class="dim">a way of valuing experiences that exceed rational control.</span>
+        </p>
+        <ul style="margin-top: 1.5em; font-size: 0.95em;">
+          <li>The value of being <span class="highlight">overwhelmed</span></li>
+          <li>Nature as a force <span class="highlight">beyond human intention</span></li>
+          <li>Art as a means of accessing experiences <span class="highlight">larger than the self</span></li>
+        </ul>
+        <p class="dim" style="margin-top: 1.5em; font-size: 0.75em;">
+          Artists: J.M.W. Turner · Caspar David Friedrich · William Wordsworth
+        </p>
+      </section>
+
+      <!-- Slide 8: The Artist's Role Shifts -->
+      <section>
+        <h2>The Artist's Role Shifts</h2>
+        <table style="font-size: 0.85em;">
+          <thead>
+            <tr>
+              <th>Classical View</th>
+              <th>Sublime/Romantic View</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Artist as master</td>
+              <td>Artist as witness</td>
+            </tr>
+            <tr>
+              <td>Control and perfection</td>
+              <td>Surrender and awe</td>
+            </tr>
+            <tr>
+              <td>Representation of ideas</td>
+              <td>Encounter with forces</td>
+            </tr>
+            <tr>
+              <td>Human scale</td>
+              <td>Inhuman magnitude</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Slide 9: Connection to Discovery -->
+      <section>
+        <h2>Connecting the Sublime to Discovery-Based Art</h2>
+        <table style="font-size: 0.75em;">
+          <thead>
+            <tr>
+              <th>The Sublime</th>
+              <th>Discovery-Based Art</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Exceeds comprehension</td>
+              <td>Exceeds intention</td>
+            </tr>
+            <tr>
+              <td>Overwhelms the viewer</td>
+              <td>Surprises the maker</td>
+            </tr>
+            <tr>
+              <td>Nature as force</td>
+              <td>System as collaborator</td>
+            </tr>
+            <tr>
+              <td>Witness, not master</td>
+              <td>Explorer, not author</td>
+            </tr>
+            <tr>
+              <td>Awe in the face of magnitude</td>
+              <td>Wonder in the face of emergence</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Slide 10: Artists Who Surrendered Control -->
+      <section>
+        <h2>Artists in Relation to Something Larger</h2>
+        <div class="example-box">
+          <h4>John Cage · I Ching</h4>
+          <p>Used chance operations to compose music beyond his preferences</p>
+        </div>
+        <div class="example-box">
+          <h4>Gerhard Richter · Squeegee</h4>
+          <p>Scraped paint across canvas to produce images he couldn't predict</p>
+        </div>
+        <div class="example-box">
+          <h4>Sol LeWitt · Instructions</h4>
+          <p>Wrote rules for others to execute—relinquishing final control</p>
+        </div>
+        <p class="dim" style="margin-top: 1.5em; font-size: 0.85em;">
+          These artists positioned themselves in relation to <span class="highlight">forces larger than their individual intentions</span>.
+        </p>
+      </section>
+
+      <!-- Slide 11: Richter Quote -->
+      <section>
+        <p class="artist-name">Gerhard Richter</p>
+        <blockquote>
+          "I'm often astonished to find how much better chance is than I am."
+        </blockquote>
+        <p class="attribution">gerhard-richter.com</p>
+      </section>
+
+      <!-- Slide 12: Kant on Superiority -->
+      <section>
+        <p class="artist-name">Immanuel Kant</p>
+        <blockquote style="font-size: 1.15em;">
+          "The sublime is the feeling of the superiority of our own power of reason, as a supersensible faculty, over nature."
+        </blockquote>
+        <p style="margin-top: 1.5em; line-height: 1.7; font-size: 1em;">
+          But here, the "nature" is <span class="highlight">the system itself</span>—<br>
+          the code, the constraint, the chance operation.<br><br>
+          And the "superiority" is not mastery but <span class="highlight">recognition</span>:<br>
+          <em>I designed this system, but it shows me things I could not have imagined.</em>
+        </p>
+      </section>
+
+      <!-- Slide 13: Emergence as Computational Sublime -->
+      <section>
+        <h2>Emergence as Computational Sublime</h2>
+        <p class="big-idea">
+          Simple rules → Complex behavior<br>
+          <span class="dim" style="font-size: 0.7em;">that cannot be easily predicted from the rules themselves</span>
+        </p>
+        <div class="example-box" style="margin-top: 1.5em;">
+          <h4>Conway's Game of Life</h4>
+          <p>Four rules produce infinite variety</p>
+        </div>
+        <div class="example-box">
+          <h4>Flocking algorithms</h4>
+          <p>Three behaviors produce coordinated motion</p>
+        </div>
+        <div class="example-box">
+          <h4>Generative art systems</h4>
+          <p>A few parameters produce inexhaustible variation</p>
+        </div>
+      </section>
+
+      <!-- Slide 14: Mathematical Sublime in Code -->
+      <section>
+        <h2>The Mathematical Sublime in Code</h2>
+        <div class="key-quote" style="font-size: 1.2em;">
+          I understand the parts,<br>
+          but the whole exceeds my grasp.
+        </div>
+        <p style="margin-top: 1.5em; line-height: 1.7; font-size: 1.05em;">
+          When you run your code and see something you didn't expect—<br>
+          something beautiful, strange, or disturbing—<br>
+          you have encountered the <span class="highlight">computational sublime</span>.
+        </p>
+      </section>
+
+      <!-- Slide 15: Discovery Over Expression (Reprise) -->
+      <section>
+        <h2>Why Discovery Over Expression</h2>
+        <p style="line-height: 1.8; font-size: 1.1em; margin-top: 1em;">
+          <strong>Expression</strong> assumes the artist knows in advance what they want to say.
+        </p>
+        <p style="line-height: 1.8; font-size: 1.1em; margin-top: 1em;">
+          <strong>Discovery</strong> acknowledges that the system has its own tendencies,<br>
+          its own emergent behaviors, its own capacity to surprise.
+        </p>
+        <p class="dim" style="margin-top: 1.5em; font-size: 0.85em;">
+          This is not randomness for its own sake.<br>
+          It is a <span class="highlight">stance</span>: the willingness to be surprised.
+        </p>
+      </section>
+
+      <!-- Slide 16: Where This Appears in the Course -->
+      <section>
+        <h2>Where the Sublime Appears</h2>
+        <p class="dim" style="font-size: 0.9em; margin-bottom: 1em;">The sublime is not explicitly named in most sessions, but it underlies:</p>
+        <div class="example-box">
+          <h4>Lab 01: Rule Without Random</h4>
+          <p>Deterministic systems that produce unexpected complexity</p>
+        </div>
+        <div class="example-box">
+          <h4>Lab 03: Controlled Randomness</h4>
+          <p>Taming chance while allowing it to exceed intention</p>
+        </div>
+        <div class="example-box">
+          <h4>Lab 13: Failure Harvest</h4>
+          <p>Glitches and errors as productive encounters with the unintended</p>
+        </div>
+        <div class="example-box">
+          <h4>Project 2: Generative Visual Study</h4>
+          <p>Designing a system whose output surprises you</p>
+        </div>
+      </section>
+
+      <!-- Slide 17: The Pedagogical Reframe -->
+      <section>
+        <h2>The Pedagogical Reframe</h2>
+        <p style="line-height: 1.7; font-size: 1.05em;">
+          Students often arrive expecting creative coding to be about <span class="highlight">control</span>—<br>
+          making the computer do exactly what they want.
+        </p>
+        <p style="line-height: 1.7; font-size: 1.05em; margin-top: 1.5em;">
+          The sublime offers a counter-narrative:<br>
+          The most interesting creative experiences may come from <span class="highlight">loss of control</span>,<br>
+          from designing systems that exceed our predictions.
+        </p>
+      </section>
+
+      <!-- Slide 18: Liberating for Students -->
+      <section>
+        <h2>A Liberating Framework</h2>
+        <div class="key-quote" style="font-size: 1.15em;">
+          Discovery-based art does not require a message.<br>
+          It requires a willingness to design systems<br>
+          and attend to what emerges.
+        </div>
+        <p class="dim" style="margin-top: 1.5em; font-size: 0.9em;">
+          This can be freeing for students who feel pressure to "have something to say."
+        </p>
+      </section>
+
+      <!-- Slide 19: The Technological Sublime -->
+      <section>
+        <p class="section-marker">The Ethical Dimension</p>
+        <h2>The Technological Sublime</h2>
+        <p style="line-height: 1.7; font-size: 1em; margin-top: 1em;">
+          <span class="artist-name" style="display: inline;">David Nye</span> describes how Americans have historically experienced technology<br>
+          (railroads, skyscrapers, atomic bombs) with a mix of <span class="highlight">awe and unease</span>.
+        </p>
+        <p style="line-height: 1.7; font-size: 1em; margin-top: 1.5em;">
+          In the context of <strong>AI and generative systems</strong>, this ambivalence returns:
+        </p>
+        <ul style="margin-top: 1em; font-size: 0.9em;">
+          <li>Wonder at what the system produces</li>
+          <li>Unease about authorship and control</li>
+          <li>Questions about what it means to "make" something</li>
+        </ul>
+      </section>
+
+      <!-- Slide 20: The Sublime as Framework -->
+      <section>
+        <h2>The Sublime as Framework</h2>
+        <p style="line-height: 1.7; font-size: 1.05em;">
+          The sublime offers a way to process these feelings.<br><br>
+          We can value the experience of encountering<br>
+          something beyond our full comprehension<br>
+          while remaining thoughtful about our relationship<br>
+          to the systems we use.
+        </p>
+      </section>
+
+      <!-- Slide 21: Against the Cult of Control -->
+      <section>
+        <h2>Against the Cult of Control</h2>
+        <p style="line-height: 1.7; font-size: 1.05em; margin-top: 1em;">
+          Much of technology culture valorizes<br>
+          mastery, optimization, and control.
+        </p>
+        <div class="key-quote" style="margin-top: 1.5em; font-size: 1.1em;">
+          The sublime offers a counter-value:<br>
+          There is worth in being overwhelmed,<br>
+          in failing to fully comprehend,<br>
+          in designing systems that exceed us.
+        </div>
+      </section>
+
+      <!-- Slide 22: Not Passivity -->
+      <section>
+        <h2>This Is Not Passivity</h2>
+        <ul style="font-size: 1.05em; line-height: 2; margin-top: 1em;">
+          <li>It takes <span class="highlight">skill</span> to design a system that can surprise you</li>
+          <li>It takes <span class="highlight">judgment</span> to recognize when emergence is interesting</li>
+          <li>It takes <span class="highlight">courage</span> to let go of predetermined outcomes</li>
+        </ul>
+      </section>
+
+      <!-- Slide 23: Paul Klee Quote -->
+      <section>
+        <p class="artist-name">Paul Klee</p>
+        <blockquote>
+          "An active line on a walk, moving freely, without goal."
+        </blockquote>
+        <p class="attribution"><em>Pedagogical Sketchbook</em> (1925)</p>
+      </section>
+
+      <!-- Slide 24: Discussion -->
+      <section>
+        <h2>Discussion</h2>
+        <div class="discussion-prompt">
+          <h3>In small groups (5 minutes):</h3>
+          <ol>
+            <li>Have you ever experienced something like the sublime while making or viewing generative art? What was that experience like?</li>
+            <li>How does the concept of the sublime challenge the idea that art is primarily about self-expression?</li>
+            <li>What is the relationship between control and creativity? Can surrendering control be a creative act?</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Slide 25: Reflection Prompt -->
+      <section>
+        <h2>Reflection Prompt</h2>
+        <p style="font-size: 1.1em; color: #aaa; margin-bottom: 1.5em;">In your notes or journal:</p>
+        <blockquote style="font-size: 1.1em;">
+          Describe a moment when a system you created showed you something you didn't expect. How did that feel? Did it change how you approached the work?
+        </blockquote>
+      </section>
+
+      <!-- Slide 26: Key Takeaways -->
+      <section>
+        <h2>Key Takeaways</h2>
+        <ul style="font-size: 0.95em; line-height: 1.9;">
+          <li>The sublime is the experience of encountering <span class="highlight">what exceeds our comprehension</span></li>
+          <li>In generative art, emergence can function as a <span class="highlight">computational sublime</span></li>
+          <li>Discovery-based art positions us in relation to <span class="highlight">forces larger than ourselves</span></li>
+          <li>Surrendering control is not weakness—it's a <span class="highlight">deliberate creative stance</span></li>
+          <li>The sublime offers a framework for engaging with <span class="highlight">AI and complex systems</span></li>
+        </ul>
+      </section>
+
+      <!-- Slide 27: Sources -->
+      <section>
+        <h2>Sources & Further Reading</h2>
+        <ul class="sources-list">
+          <li><strong>Kant, Immanuel.</strong> <em>Critique of Judgment</em> (1790), "Analytic of the Sublime"</li>
+          <li><strong>Burke, Edmund.</strong> <em>A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful</em> (1757)</li>
+          <li><strong>Nye, David.</strong> <em>American Technological Sublime</em> (1994)</li>
+          <li><strong>Galanter, Philip.</strong> "What is Generative Art? Complexity Theory as a Context for Art Theory" (2003)</li>
+          <li><strong>Whitelaw, Mitchell.</strong> <em>Metacreation: Art and Artificial Life</em> (2004)</li>
+          <li><strong>Richter, Gerhard.</strong> Artist statements, gerhard-richter.com</li>
+          <li><strong>Klee, Paul.</strong> <em>Pedagogical Sketchbook</em> (1925)</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      transition: 'fade',
+      transitionSpeed: 'default',
+      controls: true,
+      progress: true,
+      center: true,
+      width: 1280,
+      height: 720
+    });
+  </script>
+</body>
+</html>
