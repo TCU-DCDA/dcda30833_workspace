@@ -10,21 +10,22 @@ shows it visually (color tiles = authored, grey = not yet).
 ## Milestone: First Half (Weeks 1–8)
 
 The first half is the image-and-text arc (structure → motion → randomness →
-color → gesture → text). **Its assignments are complete except Project 4.**
+color → gesture → text). **All assignments are now authored; only polish remains.**
 
-### Remaining for the first half
+### Remaining for the first half (polish)
 
-- [ ] **Project 4 — Animated & Interactive Concrete Poem (Week 8)** — the keystone. Authoring it completes every Week 1–8 assignment. (Closes the text arc fed by Labs 6 & 7.)
+- [x] **Project 4 — Animated & Interactive Concrete Poem (Week 8)** — authored; closes the text arc fed by Labs 6 & 7.
 - [ ] **Deck coverage decision** — Weeks 3, 5, 6, 7, 8 have no dedicated slide deck. Decide whether to build them or teach those sessions from improvised slides.
 - [ ] **Fix `slide_decks/the_sublime/images/`** — empty folder; the Week 4 deck likely has broken image references.
-- [ ] **Live verify** — spot-check that first-half pages (Labs 0–7, Projects 1–3) render correctly on GitHub Pages.
+- [ ] **Live verify** — spot-check that first-half pages (Labs 0–7, Projects 1–4) render correctly on GitHub Pages.
+- [ ] **Optional:** author a live interactive concrete-poem recreation in `sketches/` for the "Precedents in Motion" strip (Project 4).
 
 ---
 
 ## Authored (done)
 
 - **Labs 0–8** (Lab 8 is Week 9, already drafted)
-- **Projects 1–3**
+- **Projects 1–4** (Project 4 completes the first-half assignments)
 - **Site & infrastructure:** Richter-style home page, HTML build pipeline
   (`build.sh` + pandoc), live p5.js precedent sketches, GitHub Pages enabled
   (serving `master` root), student-repo template

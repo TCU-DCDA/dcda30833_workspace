@@ -48,6 +48,7 @@ convert projects/project_01_system_based_shape_self_portrait.md "#2f4b9b" "PROJE
         "Discovery over Expression" "slide_decks/discovery_over_expression/index.html"
 convert projects/project_02_generative_visual_study.md          "#3f8a4f" "PROJECT 2 — Generative Visual Study"          "Projects"
 convert projects/project_03_algorithmic_color_composition.md    "#e0792e" "PROJECT 3 — Algorithmic Color Composition"    "Projects"
+convert projects/project_04_animated_interactive_concrete_poem.md "#d56a8f" "PROJECT 4 — Animated & Interactive Concrete Poem" "Projects"
 
 # ---- Theory sheets (accent = nearest related mode color) ----
 convert theory_sheets/generative_art_cheatsheet.md    "#3f8a4f" "Generative Art — Cheat Sheet"      "Theory Sheets"

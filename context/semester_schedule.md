@@ -6,7 +6,7 @@ Through-line:
 Form = Content · Systems Dramatize States · Discovery over Expression
 
 > Build status & remaining-work checklist: see context/build_status.md.
-> First half (Weeks 1–8) is complete except Project 4.
+> First half (Weeks 1–8) assignments are complete; polish items remain.
 
 ---
 

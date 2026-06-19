@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJECT 4 — Animated & Interactive Concrete Poem — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #d56a8f; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Projects</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="project-4-----animated--interactive-concrete-poem">PROJECT 4 ---
+Animated &amp; Interactive Concrete Poem</h1>
+<p><strong>Course:</strong> DCDA 30833 --- Creative Coding for the
+Humanities<br />
+<strong>Due:</strong> Week 8 (Thursday)<br />
+<strong>Tools:</strong> p5.js (optionally with AI-generated text from
+LAB 7)<br />
+<strong>Submission:</strong> GitHub link to your project folder + short
+written reflection</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This project brings together everything in the text arc: text as
+visual material (LAB 6) and language as a system that pushes back (LAB
+7) --- now set in <strong>motion</strong> and made
+<strong>interactive</strong>.</p>
+<p>You will build a <strong>concrete poem as a behaving system</strong>.
+In concrete poetry, the arrangement and behavior of the words
+<em>is</em> the meaning --- form is content, literally. Here the words
+also <strong>move</strong> and <strong>respond</strong>, so the poem
+performs a state through what it <em>does</em>, not through what it
+declares.</p>
+<p>You are not animating a message. You are designing a text system
+whose motion and response to the reader dramatize a condition ---
+hesitation, insistence, erosion, swarming, refusal.</p>
+<hr />
+<h2 id="precedents-----system-autopsy-in-class">Precedents --- System
+Autopsy (In-Class)</h2>
+<blockquote>
+<p><strong>How examples work in this course:</strong> you will always be
+shown examples --- but here, an example is a <strong>system to take
+apart, not an image to reproduce.</strong> You'll see how a work was
+made, and the range of outcomes its rules can produce, more often than a
+single finished "right answer." There is no result to match: a strong
+system can generate many different outcomes, including ones no one has
+made yet.</p>
+</blockquote>
+<p>Before you build, take apart how others have made text
+<em>behave</em>. The point is not to imitate a look but to
+<strong>reverse-engineer behavior</strong>: what rule moves the text,
+and what does the reader's action actually change?</p>
+<p><strong>Look at:</strong></p>
+<ul>
+<li><strong>Eugen Gomringer --- <em>Silencio</em> (1954):</strong> the
+word "silencio" repeated into a frame around a silent gap. The
+arrangement <em>is</em> the poem --- the ground of concrete poetry.</li>
+<li><strong>Augusto de Campos &amp; Brazilian concrete poetry:</strong>
+words built as spatial, visual objects ("ideograms"), not lines to read
+in order.</li>
+<li><strong>bpNichol --- <em>First Screening</em> (1984):</strong> a
+suite of <em>kinetic</em> computer poems written in Apple BASIC --- text
+that animates itself. The bridge from page to behavior.</li>
+<li><strong>Allison Parrish:</strong> poems as the output of a procedure
+--- language generated and arranged by rule.</li>
+</ul>
+<p><strong>Where to find them (free):</strong></p>
+<ul>
+<li>bpNichol --- <a
+href="https://vispo.com/bp/introduction.htm"><em>First Screening</em>
+preserved at vispo.com</a>: emulator, the original <strong>BASIC
+source</strong>, and a <strong>JavaScript port</strong> you can read;
+also at <a href="https://rhizome.org/community/38976/">Rhizome</a></li>
+<li>Concrete poetry (Gomringer, de Campos) --- <a
+href="https://ubu.punctumbooks.com/papers/solt/brazil.html">UbuWeb:
+<em>Concrete Poetry, A World View</em></a> and a <a
+href="https://www.theartstory.org/movement/concrete-poetry/">movement
+overview at The Art Story</a></li>
+<li>Allison Parrish --- free works at <a
+href="https://www.decontextualize.com/">decontextualize.com</a> and code
+at <a href="https://github.com/aparrish">github.com/aparrish</a></li>
+</ul>
+<p><strong>Autopsy questions (ask of each):</strong></p>
+<ol type="1">
+<li>What rule governs how the text is arranged or moves? Could you
+restate it as a few lines of pseudocode?</li>
+<li>Where is the text working as <em>shape</em> and where as
+<em>readable language</em>?</li>
+<li>What does the reader's action (if any) actually change --- the
+system, or only the surface?</li>
+<li>What state does the behavior dramatize, setting aside "what it
+says"?</li>
+<li>If you changed one rule, or removed the interaction, what would
+happen?</li>
+</ol>
+<p><em>In class: examine 2--3 of these together at the project's launch
+(~20--30 minutes), then carry the same questions into your own
+build.</em></p>
+<hr />
+<h2 id="core-requirements">Core Requirements</h2>
+<p>Your system must:</p>
+<ul>
+<li>Use <strong>p5.js</strong></li>
+<li>Make <strong>text the primary material</strong> (words or letters as
+shapes, per LAB 6 --- not text as a caption on top of other
+imagery)</li>
+<li>Include <strong>motion</strong> governed by a rule (time,
+<code>frameCount</code>, or response to input --- not a one-off
+tween)</li>
+<li>Include <strong>interaction</strong> that changes the system's
+behavior</li>
+<li>Maintain a clear, recognizable <strong>system identity</strong></li>
+<li>Produce variation over time or interaction</li>
+</ul>
+<hr />
+<h2 id="interaction-requirements">Interaction Requirements</h2>
+<ul>
+<li>At least <strong>one meaningful interaction</strong> (mouse
+position, click, key, or typing) that <strong>alters the text system
+itself</strong> --- its rule, its state, its arrangement.</li>
+<li>The interaction should let the reader <em>discover</em> the system,
+not just decorate it. Ask: if I removed this input, would the piece lose
+its behavior, or just a flourish?</li>
+</ul>
+<hr />
+<h2 id="technical-requirements">Technical Requirements</h2>
+<ul>
+<li>Use <strong>p5.js</strong> (<code>text()</code>,
+<code>textSize()</code>, transformations, and the mouse / keyboard event
+functions)</li>
+<li>You may use the <strong>DOM</strong> for text if it suits your
+system</li>
+<li>Default canvas: <code>400 × 400</code> (override if your system
+needs it)</li>
+<li>No images</li>
+<li><strong>AI-generated text is allowed</strong> as material (carry it
+forward from LAB 7). If you use it, say so in your artist statement:
+what did the AI contribute, and what did you decide?</li>
+</ul>
+<hr />
+<h2 id="process-documentation-requirements">Process Documentation
+Requirements</h2>
+<p>Your project folder must include:</p>
+<ul>
+<li><code>index.html</code> and <code>sketch.js</code></li>
+<li>A <code>README.md</code> artist statement (300--500 words)
+addressing:
+<ul>
+<li>What rule moves the text?</li>
+<li>What does the interaction change?</li>
+<li>What state does the system dramatize?</li>
+</ul></li>
+<li>If you used AI text: a note on what it contributed and what you
+curated</li>
+</ul>
+<hr />
+<h2 id="reflection-5--7-sentences">Reflection (5--7 Sentences)</h2>
+<p>What rule governs your text's behavior?<br />
+What does the reader's interaction actually change?<br />
+Where is the text shape, and where is it language?<br />
+What surprised you once the system was running?</p>
+<hr />
+<h2 id="how-this-project-fits-the-course-arc">How This Project Fits the
+Course Arc</h2>
+<p>This project closes the <strong>text arc</strong> and the
+<strong>first half</strong> of the course. You have moved from text as
+static shape (LAB 6), through language as a collaborator (LAB 7), to
+text as a <strong>behaving, responsive system</strong>.</p>
+<p>Next, the course shifts mode again --- from text to
+<strong>sound</strong> --- but the underlying question is unchanged:
+what state can this system dramatize through what it <em>does</em>?</p>
+<hr />
+<p><em>End of PROJECT 4</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -7,7 +7,7 @@ The course is **ungraded**; reflection and process matter more than polish.
 
 > **Status:** ✅ = authored · ◻️ = not yet authored. Build progress and the
 > remaining-work checklist live in [build_status.md](build_status.md).
-> The first half (Weeks 1–8) is complete except **Project 4**.
+> The first half (Weeks 1–8) assignments are **complete**; only polish remains.
 
 ---
 
@@ -36,7 +36,7 @@ The course is **ungraded**; reflection and process matter more than polish.
 ✅ PROJECT 1 — System-Based Shape Self-Portrait  
 ✅ PROJECT 2 — Generative Visual Study  
 ✅ PROJECT 3 — Algorithmic Color Composition  
-◻️ PROJECT 4 — Animated & Interactive Concrete Poem *(completes the first half)*  
+✅ PROJECT 4 — Animated & Interactive Concrete Poem *(completes the first half)*  
 ◻️ PROJECT 5 — Generative Sound / Sonified System  
 ◻️ PROJECT 6 — Data-Driven Expressive System  
 
