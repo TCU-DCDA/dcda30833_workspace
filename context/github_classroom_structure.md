@@ -1,6 +1,13 @@
-# GitHub Classroom Structure for DCDA 30833
+# Student Repositories & Workflow for DCDA 30833
 
-This document outlines the recommended repository structure and workflow for using GitHub Classroom with Creative Coding for the Humanities.
+This document outlines the recommended repository structure and workflow for student work in Creative Coding for the Humanities.
+
+> **Do you need GitHub Classroom? No.** The course runs on plain GitHub. The
+> default path below uses a **template repository** ("Use this template") —
+> nothing about the structure, the workflow, GitHub Pages, or feedback requires
+> Classroom. Classroom only automates *distribution and roster*, which pays off
+> at larger scale; for a small ungraded elective the template path is simpler.
+> An optional "If you use GitHub Classroom" note appears in the setup section.
 
 ---
 
@@ -10,7 +17,7 @@ Given the course's ungrading philosophy and emphasis on process over product, we
 
 - **1 Course Repository** per student (all labs, projects, and portfolio in one place)
 
-This minimizes overhead, shows the full semester arc in commit history, and naturally builds toward the final portfolio.
+This minimizes overhead, shows the full semester arc in commit history, and naturally builds toward the final portfolio. Each student creates their copy from a shared **template repository** (details below).
 
 ---
 
@@ -18,7 +25,7 @@ This minimizes overhead, shows the full semester arc in commit history, and natu
 
 ### Course Repository (1 per student)
 
-**Template name:** `dcda30833`
+**Created from template:** `dcda30833` (a GitHub *template repository* — see [Distributing the Template](#distributing-the-template) below)
 
 ```
 dcda30833-[username]/
@@ -71,7 +78,7 @@ dcda30833-[username]/
 - Reduces cognitive overhead (no juggling multiple repos)
 
 **Trade-offs:**
-- Can't use separate GitHub Classroom assignment links per project
+- All work lives together, so there are no per-assignment submissions to track separately
 - Critique sessions require navigating to subfolders
 - Larger repo size by end of semester
 
@@ -275,18 +282,41 @@ function draw() {
 
 ---
 
-## GitHub Classroom Setup
+## Distributing the Template
 
-### Assignment Settings
+The course uses one **template repository** that students copy. This is the
+default path and needs no GitHub Classroom.
 
-**For Course repo:**
+### One-time setup (instructor)
+
+1. Create a repository to hold the starter structure (the folder layout and
+   starter files above; [templates/student-repo/](../templates/student-repo/)
+   in this workspace is the seed for it).
+2. In that repo's **Settings**, check **"Template repository."**
+3. Make it **Public** (so students can copy it and peers can view work).
+
+### Each student (Week 1)
+
+1. Open the template repo and click **"Use this template" → "Create a new repository."**
+2. Name it (e.g., `dcda30833-yourname`) and make it **Public.**
+3. Clone it, and enable GitHub Pages once (see [Workflow for Students](#workflow-for-students)).
+4. **Share the repository URL with the instructor** (a shared sheet or form is enough — this is your "roster").
+
+That's the whole distribution mechanism: copy the template, share the URL.
+
+### Optional: if you use GitHub Classroom
+
+Classroom automates the copy-and-roster step and is worth it for larger
+classes. If you choose it, create **one** assignment for the whole semester:
+
 - Type: Individual
-- Visibility: Public (recommended for peer viewing and critique)
-- Starter code: `dcda30833` template
+- Visibility: Public (peer viewing and critique)
+- Starter code: the `dcda30833` template repo above
 - Deadline: None (ongoing all semester)
 - Autograding: Disabled
 
-**Note:** With a single-repo model, you create one GitHub Classroom assignment at the start of the semester. Students accept once and use that repo for all work.
+Students accept the link once and use that repo for all work; everything else
+in this document is identical either way.
 
 ---
 
@@ -294,7 +324,7 @@ function draw() {
 
 ### Initial Setup (Week 1)
 
-1. Accept the GitHub Classroom assignment link
+1. Create your repo from the course template ("Use this template" → "Create a new repository"), or accept the GitHub Classroom link if your section uses it
 2. Clone your repo locally
 3. Open in VS Code
 4. Familiarize yourself with the folder structure
@@ -415,4 +445,5 @@ A URL resolves to a folder only if that folder contains an `index.html`. (Option
 - **Public repos:** Enable peer learning and critique. Students can browse each other's code.
 - **GitHub Pages:** Free hosting for final portfolio. Each lab/project can be viewed live.
 - **No autograding:** Aligns with ungrading philosophy. Feedback is qualitative, not automated.
-- **One assignment link:** Students accept once at semester start; no need to distribute new links per assignment.
+- **One repo, set up once:** Students create their repo at the start of the semester (from the template, or via a single Classroom link) and use it for all work — no new repos or links per assignment.
+- **Classroom is optional:** It only automates distribution and roster. The template path needs nothing beyond plain GitHub.
