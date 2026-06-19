@@ -27,11 +27,15 @@ color → gesture → text). **All assignments are now authored; only polish rem
 - **Labs 0–8** (Lab 8 is Week 9, already drafted)
 - **Projects 1–4** (Project 4 completes the first-half assignments)
 - **Site & infrastructure:** Richter-style home page, HTML build pipeline
-  (`build.sh` + pandoc), live p5.js precedent sketches, GitHub Pages enabled
-  (serving `master` root), student-repo template
-- **Pedagogy scaffolding:** Lab → Autopsy → Project workflow, per-project
-  System Autopsy beat with vetted free exemplar links, examples policy
-  (instructor + student-facing)
+  (`build.sh` + pandoc), GitHub Pages enabled (serving `master` root),
+  student-repo template
+- **Precedents on the schedule:** four live, responsive p5.js recreations —
+  Interruptions (Molnár), Schotter (Nees), Homage (Albers), and kinetic
+  Silencio (Gomringer) — embedded as inline cards that close each first-half
+  unit and link to that project's autopsy
+- **Pedagogy scaffolding:** Lab → Autopsy → Project workflow (surfaced on the
+  home page), per-project System Autopsy beat with vetted free exemplar links,
+  examples policy (instructor + student-facing)
 
 ---
 
