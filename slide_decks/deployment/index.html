@@ -218,6 +218,12 @@
       max-width: 90%;
       text-align: left;
     }
+    /* --- Fit content within the slide frame (prevent below-the-fold overflow) --- */
+    .reveal { font-size: 28px; }
+    .reveal li { margin-bottom: 0.3em; }
+    .reveal ul, .reveal ol { line-height: 1.5; }
+    .reveal blockquote { font-size: 1.1em; margin: 0.6em 0; }
+    .reveal pre { font-size: 0.52em; }
   </style>
 </head>
 <body>
@@ -481,7 +487,7 @@
       progress: true,
       center: true,
       width: 1280,
-      height: 720,
+      height: 820,
       plugins: [ RevealNotes ]
     });
   </script>
