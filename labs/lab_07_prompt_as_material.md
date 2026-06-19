@@ -15,6 +15,10 @@ You will build a generative sketch by working *through* an AI assistant, treatin
 
 This lab asks: What happens when natural language becomes your creative code?
 
+> **This lab puts the course AI policy into practice** — AI as *material*, not a
+> vending machine; prompt for constraints, not outcomes; keep nothing you can't
+> explain; document your conversation. Read it: [AI in This Course](../context/ai_policy.html).
+
 ---
 
 ## Core Tension
