@@ -55,7 +55,7 @@ rule moves the text, and what does the reader's action actually change?
 **Where to find them (free):**
 
 -   bpNichol --- [*First Screening* preserved at vispo.com](https://vispo.com/bp/introduction.htm): emulator, the original **BASIC source**, and a **JavaScript port** you can read; also at [Rhizome](https://rhizome.org/community/38976/)
--   Concrete poetry (Gomringer, de Campos) --- [UbuWeb: *Concrete Poetry, A World View*](https://ubu.punctumbooks.com/papers/solt/brazil.html) and a [movement overview at The Art Story](https://www.theartstory.org/movement/concrete-poetry/)
+-   Concrete poetry (Gomringer, de Campos) --- [UbuWeb: *Concrete Poetry, A World View*](https://ubu.punctumbooks.com/papers/solt/brazil.html) and a [movement overview at The Art Story](https://www.theartstory.org/movement/concrete-poetry/); see also our own [kinetic *Silencio* recreation](../sketches/concrete_poem.html)
 -   Allison Parrish --- free works at [decontextualize.com](https://www.decontextualize.com/) and code at [github.com/aparrish](https://github.com/aparrish)
 
 **Autopsy questions (ask of each):**

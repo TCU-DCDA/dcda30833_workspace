@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silencio (kinetic, after Eugen Gomringer) — DCDA 30833</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <style>
+    html, body { margin: 0; height: 100%; background: #f4f3ee; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+<script>
+// SILENCIO (kinetic) — after Eugen Gomringer's concrete poem "silencio" (1954).
+//
+// Gomringer's original: the word "silencio" repeated into a block with one
+// blank cell in the middle — the silence is the gap the word cannot fill.
+//
+// This version makes that idea BEHAVE (animated + interactive), which is the
+// move Project 4 asks of you. The SYSTEM (what an autopsy should recover):
+//   - Fill the field with the word "silencio" on a regular grid.
+//   - Open a circular GAP — the silence — and draw nothing inside it.
+//   - The gap FOLLOWS THE READER (the mouse); where you attend, silence opens.
+//   - With no reader, the gap rests at center and BREATHES (a slow pulse).
+//   - Words at the gap's edge FADE, so silence has a soft border, not a hard cut.
+//
+// One rule — "draw the word everywhere except within radius r of the gap" —
+// produces the whole behavior. The reader's attention is what makes silence.
+
+const WORD = "silencio";
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);   // fill the container (card or full window)
+  textFont("monospace");
+  textAlign(LEFT, BASELINE);
+}
+
+function draw() {
+  background(244, 243, 238);
+
+  const tSize = constrain(min(width, height) * 0.045, 9, 22);
+  textSize(tSize);
+  const stepX = textWidth(WORD + "  ");   // word plus spacing
+  const lineH = tSize * 1.7;
+
+  // the silence follows the mouse when present, else rests at center
+  const overCanvas = mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height;
+  const sx = overCanvas ? mouseX : width / 2;
+  const sy = overCanvas ? mouseY : height / 2;
+
+  // the gap breathes slowly over time
+  const r = min(width, height) * 0.20 * (0.85 + 0.15 * sin(frameCount * 0.03));
+
+  for (let y = lineH; y < height + lineH; y += lineH) {
+    for (let x = 8; x < width - stepX * 0.4; x += stepX) {
+      const d = dist(x + stepX * 0.4, y - tSize * 0.4, sx, sy);
+      if (d < r) continue;                       // inside the silence: draw nothing
+      const a = map(d, r, r + lineH * 1.6, 0, 230, true);  // fade at the edge
+      fill(26, a);
+      text(WORD, x, y);
+    }
+  }
+}
+
+function windowResized() { resizeCanvas(windowWidth, windowHeight); }
+</script>
+</body>
+</html>

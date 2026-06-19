@@ -18,7 +18,7 @@ color → gesture → text). **All assignments are now authored; only polish rem
 - [ ] **Deck coverage decision** — Weeks 3, 5, 6, 7, 8 have no dedicated slide deck. Decide whether to build them or teach those sessions from improvised slides.
 - [ ] **Fix `slide_decks/the_sublime/images/`** — empty folder; the Week 4 deck likely has broken image references.
 - [ ] **Live verify** — spot-check that first-half pages (Labs 0–7, Projects 1–4) render correctly on GitHub Pages.
-- [ ] **Optional:** author a live interactive concrete-poem recreation in `sketches/` to replace the Project 4 precedent-card placeholder ("SOON") on the home page.
+- [x] **Optional:** live interactive concrete-poem recreation — `sketches/concrete_poem.html` (kinetic *Silencio*, after Gomringer); replaces the Project 4 placeholder on the home page.
 
 ---
 
