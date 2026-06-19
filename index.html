@@ -10,7 +10,7 @@
       --wall-2: #ecebe5;
       --ink: #1a1a18;
       --ink-soft: #56564f;
-      --faint: #8e8e85;
+      --faint: #6a6a61;
       --line: #d8d7cf;
       --grey-tile: #9b988f;   /* Richter grey — not yet authored */
       --grey-studio: #c7c4ba; /* lighter grey — studio week */
@@ -72,20 +72,20 @@
     .card { background: #fff; border: 1px solid var(--line); display: flex; flex-direction: column; }
     .swatch { height: 58px; width: 100%; }
     .body { padding: 0.8rem 0.95rem 0.95rem; display: flex; flex-direction: column; flex: 1; }
-    .wk { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--faint); }
+    .wk { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--faint); }
     .card h3 { font-size: 0.97rem; font-weight: 600; margin: 0.2rem 0 0.1rem; letter-spacing: -0.01em; line-height: 1.25; }
-    .mode { font-size: 0.72rem; color: var(--ink-soft); margin-bottom: 0.45rem; }
+    .mode { font-size: 0.76rem; color: var(--ink-soft); margin-bottom: 0.45rem; }
     .topics { font-size: 0.79rem; color: var(--faint); margin: 0 0 0.75rem; }
     .due { margin-top: auto; border-top: 1px solid var(--line); padding-top: 0.6rem; display: flex; flex-direction: column; gap: 0.32rem; }
     .item { font-size: 0.82rem; display: flex; gap: 0.45rem; align-items: baseline; }
-    .item .label { color: var(--faint); font-size: 0.68rem; min-width: 3.4em; text-transform: uppercase; letter-spacing: 0.04em; }
+    .item .label { color: var(--faint); font-size: 0.76rem; min-width: 3.4em; text-transform: uppercase; letter-spacing: 0.04em; }
     .item.todo .name { color: var(--faint); }
-    .item.todo .name::after { content: " · not yet authored"; font-size: 0.7rem; font-style: italic; color: var(--faint); }
+    .item.todo .name::after { content: " · not yet authored"; font-size: 0.76rem; font-style: italic; color: var(--faint); }
     .studio { font-size: 0.78rem; color: var(--faint); font-style: italic; }
 
     /* Deck reference within a week card */
     .deck-ref { font-size: 0.76rem; margin: 0 0 0.75rem; line-height: 1.5; }
-    .deck-ref .dlabel { text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint); font-size: 0.64rem; margin-right: 0.45em; }
+    .deck-ref .dlabel { text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint); font-size: 0.76rem; margin-right: 0.45em; }
     .deck-ref a { color: var(--ink); border-bottom: 1px solid var(--line); }
     .deck-ref a:hover { color: var(--link-hover); border-color: var(--link-hover); }
 
@@ -99,10 +99,10 @@
     .precedent-card .pc-soon {
       width: 100%; aspect-ratio: 1 / 1; background: var(--wall);
       display: flex; align-items: center; justify-content: center;
-      color: var(--faint); font-size: 0.7rem; letter-spacing: 0.12em;
+      color: var(--faint); font-size: 0.76rem; letter-spacing: 0.12em;
     }
     .precedent-card .pc-kind {
-      font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600;
+      font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600;
     }
     .precedent-card .pc-artist { font-size: 0.74rem; color: var(--ink-soft); margin-bottom: 0.4rem; }
     .precedent-card .pc-link { margin-top: auto; font-size: 0.82rem; }
@@ -156,7 +156,7 @@
     <h2 class="section" id="schedule">Semester Schedule</h2>
     <p class="section-note">
       TR · 80-minute sessions. Each week is a tile in the chart — color where the assignment is written,
-      <span style="color:var(--grey-tile)">Richter grey</span> where it is still to come.
+      <em>Richter grey</em> where it is still to come.
       <br><br>
       <strong>How a unit runs:</strong> <b>Lab</b> (build the grammar) → <b>Autopsy</b> (take a precedent apart) → <b>Project</b> (synthesize). Every project opens with a precedent study — taking a system apart, not copying a look.
     </p>

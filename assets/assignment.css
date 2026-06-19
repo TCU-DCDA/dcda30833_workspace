@@ -7,7 +7,7 @@
   --paper: #ffffff;
   --ink: #1a1a18;
   --ink-soft: #56564f;
-  --faint: #8e8e85;
+  --faint: #6a6a61;
   --line: #d8d7cf;
   --code-bg: #f0efe9;
   --accent: #1a1a18; /* overridden per page */
@@ -74,7 +74,7 @@ body {
 .related-deck .rlabel {
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 0.66rem;
+  font-size: 0.76rem;
   color: var(--faint);
 }
 .related-deck a { color: var(--ink); border-bottom: 1px solid var(--accent); text-decoration: none; }
