@@ -51,7 +51,7 @@ special attention to *where chance is let in and how it is bounded.*
 
 -   Casey Reas — [*Software Structures* at Whitney artport](https://artport.whitney.org/commissions/software-structures-2016/text.html) (text structures + code)
 -   Tyler Hobbs — the essays [*Flow Fields*](https://www.tylerxhobbs.com/words/flow-fields) and [*Fidenza*](https://www.tylerxhobbs.com/words/fidenza) (read these, not the NFT marketplace)
--   Georg Nees — a [*Schotter* tutorial](https://www.artsnova.com/Nees_Schotter_Tutorial.html) and an [OpenProcessing recreation](https://openprocessing.org/sketch/144930)
+-   Georg Nees — a [*Schotter* tutorial](https://www.artsnova.com/Nees_Schotter_Tutorial.html), an [OpenProcessing recreation](https://openprocessing.org/sketch/144930), and our own [live recreation](../sketches/schotter.html)
 
 **Autopsy questions (ask of each):**
 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schotter (after Georg Nees) — DCDA 30833</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <style>
+    html, body { margin: 0; height: 100%; background: #f4f3ee; }
+    body { display: grid; place-items: center; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+<script>
+// SCHOTTER — a recreation of Georg Nees' 1965 plotter drawing.
+//
+// The SYSTEM (this is what an autopsy should recover):
+//   - A regular grid of squares: order at the top.
+//   - As you move DOWN the grid, two kinds of disorder grow with the row:
+//       1. a random POSITION offset
+//       2. a random ROTATION
+//   - Nothing else changes. The whole piece is one rule:
+//       "disorder proportional to how far down you are."
+//
+// That is controlled randomness: chance is present, but bounded and
+// shaped by a rule. Order and chaos are the same system, dialed by row.
+
+const COLS = 12;
+const ROWS = 22;
+const MARGIN = 28;
+
+function setup() {
+  createCanvas(300, 480);
+  rectMode(CENTER);
+  noFill();
+  stroke(26);
+  strokeWeight(1.2);
+  noLoop();           // a still image; we regenerate on a timer / click
+  window.renderArt = renderArt;
+  renderArt();
+}
+
+function renderArt() {
+  randomSeed(floor(millis()));   // a fresh arrangement each time
+  background(244, 243, 238);
+
+  const cellW = (width - MARGIN * 2) / COLS;
+  const cellH = (height - MARGIN * 2) / ROWS;
+  const size = min(cellW, cellH) * 0.78;
+
+  for (let row = 0; row < ROWS; row++) {
+    // disorder grows from 0 at the top toward 1 at the bottom
+    const disorder = row / ROWS;
+
+    for (let col = 0; col < COLS; col++) {
+      const x = MARGIN + cellW * (col + 0.5);
+      const y = MARGIN + cellH * (row + 0.5);
+
+      push();
+      translate(
+        x + random(-1, 1) * disorder * cellW * 0.6,   // position drift
+        y + random(-1, 1) * disorder * cellH * 0.6
+      );
+      rotate(random(-1, 1) * disorder * PI * 0.5);     // rotation drift
+      rect(0, 0, size, size);
+      pop();
+    }
+  }
+}
+
+function mousePressed() { renderArt(); }            // click to re-roll
+window.setInterval(function () {                    // and a slow auto-refresh
+  if (window.renderArt) window.renderArt();
+}, 6000);
+</script>
+</body>
+</html>

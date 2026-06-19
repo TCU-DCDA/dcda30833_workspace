@@ -57,7 +57,7 @@ colors appear, *where*, and *how often.*
 
 **Where to find them (free):**
 
--   Josef Albers — [the Albers Foundation](https://www.albersfoundation.org/) and a [p5.js recreation](https://medium.com/@romapandya49/making-a-generative-recreation-of-paintings-by-vera-molnar-and-josef-albers-in-p5-js-436ce07462e7)
+-   Josef Albers — [the Albers Foundation](https://www.albersfoundation.org/), a [p5.js recreation](https://medium.com/@romapandya49/making-a-generative-recreation-of-paintings-by-vera-molnar-and-josef-albers-in-p5-js-436ce07462e7), and our own [live recreation](../sketches/homage.html)
 -   Gerhard Richter — [Colour Charts at gerhard-richter.com](https://www.gerhard-richter.com/)
 -   Bridget Riley — [*True Stripes* at Tate Etc](https://www.tate.org.uk/tate-etc/issue-66-summer-2025/true-stripes-bridget-riley) (view-only; observe the system)
 

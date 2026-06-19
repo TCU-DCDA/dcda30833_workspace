@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interruptions (after Vera Molnár) — DCDA 30833</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <style>
+    html, body { margin: 0; height: 100%; background: #f4f3ee; }
+    body { display: grid; place-items: center; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+<script>
+// INTERRUPTIONS — a recreation of Vera Molnár's 1968-69 plotter work.
+//
+// The SYSTEM (what an autopsy should recover):
+//   - A dense, regular grid of short line segments.
+//   - Each segment is rotated by a SMALL random angle — order with a
+//     little noise ("1% disorder," as Molnár put it).
+//   - Then the rule INTERRUPTS itself: random patches are left blank,
+//     tearing holes in the field.
+//   - The tension between the regular grid and the omissions is the work.
+//
+// Chance enters in two bounded ways — a little angle jitter, and where
+// the field goes silent. The grid is the constraint; the gaps are events.
+
+const GRID = 36;        // segments per side
+const MARGIN = 24;
+const JITTER = 0.5;     // max angle wobble (radians) — keep it small
+
+function setup() {
+  createCanvas(360, 360);
+  stroke(26);
+  strokeWeight(1.1);
+  noLoop();
+  window.renderArt = renderArt;
+  renderArt();
+}
+
+function renderArt() {
+  randomSeed(floor(millis()));
+  background(244, 243, 238);
+
+  const step = (width - MARGIN * 2) / GRID;
+  const len = step * 0.9;
+
+  // a few random rectangular "interruptions" where nothing is drawn
+  const holes = [];
+  const holeCount = floor(random(3, 7));
+  for (let h = 0; h < holeCount; h++) {
+    holes.push({
+      c0: floor(random(GRID)), r0: floor(random(GRID)),
+      w: floor(random(3, 8)), h: floor(random(3, 8))
+    });
+  }
+  const inHole = (c, r) => holes.some(o =>
+    c >= o.c0 && c < o.c0 + o.w && r >= o.r0 && r < o.r0 + o.h);
+
+  for (let r = 0; r < GRID; r++) {
+    for (let c = 0; c < GRID; c++) {
+      if (inHole(c, r)) continue;            // the interruption
+      const x = MARGIN + step * (c + 0.5);
+      const y = MARGIN + step * (r + 0.5);
+      const a = random(-1, 1) * JITTER;       // small angle disorder
+      push();
+      translate(x, y);
+      rotate(a);
+      line(-len / 2, 0, len / 2, 0);
+      pop();
+    }
+  }
+}
+
+function mousePressed() { renderArt(); }
+window.setInterval(function () {
+  if (window.renderArt) window.renderArt();
+}, 6000);
+</script>
+</body>
+</html>

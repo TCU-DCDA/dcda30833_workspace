@@ -89,6 +89,13 @@
     .deck-ref a { color: var(--ink); border-bottom: 1px solid var(--line); }
     .deck-ref a:hover { color: var(--link-hover); border-color: var(--link-hover); }
 
+    /* ---- Precedents in motion (live sketch embeds) ---- */
+    .motion-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+    .motion-card { margin: 0; background: #fff; border: 1px solid var(--line); }
+    .motion-card iframe { display: block; width: 100%; height: 300px; border: 0; background: var(--wall); }
+    .motion-card figcaption { padding: 0.6rem 0.8rem; font-size: 0.8rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
+    .motion-card figcaption .sub { color: var(--faint); }
+
     /* ---- Resource panels ---- */
     .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 10px; }
     .panel { background: #fff; border: 1px solid var(--line); padding: 1.1rem 1.3rem; }
@@ -127,6 +134,7 @@
 
       <nav class="toc">
         <a href="#schedule">Schedule</a>
+        <a href="#motion">In Motion</a>
         <a href="#theory">Theory Sheets</a>
         <a href="#decks">Slide Decks</a>
         <a href="#resources">Tools &amp; Resources</a>
@@ -392,6 +400,26 @@
         </div>
       </div>
 
+    </div>
+
+    <h2 class="section" id="motion">Precedents in Motion</h2>
+    <p class="section-note">
+      Live recreations of works we take apart in the project autopsies — running the rules, not showing a finished image.
+      Each re-rolls every few seconds (or on click): one system, many outcomes. Source is in <code>sketches/</code>.
+    </p>
+    <div class="motion-grid">
+      <figure class="motion-card">
+        <iframe src="sketches/schotter.html" title="Schotter recreation" loading="lazy"></iframe>
+        <figcaption><strong>Schotter</strong> — after Georg Nees · disorder grows down the grid <span class="sub">(see <a href="projects/project_02_generative_visual_study.html#precedents-----system-autopsy-in-class">Project 2</a>)</span></figcaption>
+      </figure>
+      <figure class="motion-card">
+        <iframe src="sketches/interruptions.html" title="Interruptions recreation" loading="lazy"></iframe>
+        <figcaption><strong>Interruptions</strong> — after Vera Molnár · a grid that tears holes in itself <span class="sub">(see <a href="projects/project_01_system_based_shape_self_portrait.html#precedents-----system-autopsy-in-class">Project 1</a>)</span></figcaption>
+      </figure>
+      <figure class="motion-card">
+        <iframe src="sketches/homage.html" title="Homage to the Square recreation" loading="lazy"></iframe>
+        <figcaption><strong>Homage</strong> — after Josef Albers · fixed format, the palette is the variable <span class="sub">(see <a href="projects/project_03_algorithmic_color_composition.html#precedents-----system-autopsy-in-class">Project 3</a>)</span></figcaption>
+      </figure>
     </div>
 
     <h2 class="section" id="theory">Theory Sheets</h2>

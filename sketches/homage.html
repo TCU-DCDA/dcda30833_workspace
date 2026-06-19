@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homage (after Josef Albers) — DCDA 30833</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <style>
+    html, body { margin: 0; height: 100%; background: #f4f3ee; }
+    body { display: grid; place-items: center; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+<script>
+// HOMAGE — after Josef Albers' "Homage to the Square."
+//
+// The SYSTEM (what an autopsy should recover):
+//   - A fixed FORMAT: nested squares, each sitting lower in the frame
+//     than the one behind it (Albers' precise, repeated layout).
+//   - The format never changes. Only the COLORS do.
+//   - The lesson Albers chased: a color is not fixed — it reads
+//     differently depending on the colors next to it. The system is a
+//     machine for staging color relationships.
+//
+// Here the layout is the constraint; the palette is the variable —
+// chosen from a fixed set (the same one used across this course site).
+
+// the course's Richter-derived palette, used as a constraint
+const PALETTE = [
+  '#c1352b', '#e0792e', '#f2c12e', '#a7b53b', '#3f8a4f', '#2f8f86',
+  '#4aa8c4', '#3f7cc4', '#2f4b9b', '#6b4a9e', '#a8408b', '#d56a8f',
+  '#8a5a3c', '#6e7038', '#c98a3c', '#7a3b5c'
+];
+
+function setup() {
+  createCanvas(360, 360);
+  noStroke();
+  rectMode(CENTER);
+  noLoop();
+  window.renderArt = renderArt;
+  renderArt();
+}
+
+function renderArt() {
+  randomSeed(floor(millis()));
+
+  // pick four distinct palette colors for the four nested squares
+  const chosen = shuffle(PALETTE.slice()).slice(0, 4);
+
+  const S = width * 0.84;              // outermost square size
+  const cx = width / 2;
+  const baseY = height / 2;
+  const sizes = [1.0, 0.74, 0.5, 0.28];    // size fraction per nested layer
+
+  background(chosen[0]);
+
+  for (let i = 0; i < 4; i++) {
+    const s = S * sizes[i];
+    // shift each smaller square UP, leaving more room at the bottom —
+    // Albers' signature off-center nesting
+    const cy = baseY - (S - s) * 0.17;
+    fill(chosen[i]);
+    rect(cx, cy, s, s);
+  }
+}
+
+function mousePressed() { renderArt(); }
+window.setInterval(function () {
+  if (window.renderArt) window.renderArt();
+}, 6000);
+</script>
+</body>
+</html>
