@@ -5,6 +5,9 @@ TR · 80 minutes · Junior Level
 Through-line:
 Form = Content · Systems Dramatize States · Discovery over Expression
 
+> Build status & remaining-work checklist: see context/build_status.md.
+> First half (Weeks 1–8) is complete except Project 4.
+
 ---
 
 ## Week 1 — Structure → Surface → Behavior
@@ -74,7 +77,7 @@ Mode: Text / Visual Language
 ## Week 8 — Interactive Poetry Systems
 Mode: Text / Interaction  
 - Motion + text + interaction  
-- PROJECT 4 due  
+- PROJECT 4 due — **completes the first half (Weeks 1–8)**  
 
 ---
 
