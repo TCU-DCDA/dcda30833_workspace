@@ -83,5 +83,5 @@ The repeatable steps (same for every lab/project):
    live link; for a project, add the **Autopsy** marker (and any deck link).
 4. For projects, add a free, reverse-engineerable exemplar to the "Where to
    find them" list; optionally author a live recreation in `sketches/` and
-   embed it in "Precedents in Motion."
+   embed it as the unit's inline precedent card on the schedule.
 5. Commit and push — GitHub Pages publishes automatically.
