@@ -4,6 +4,14 @@ A practical, coding-oriented introduction to color theory for students working w
 
 ---
 
+<aside class="swatchboard">
+<div class="sw-title">The dimensions of color</div>
+<div class="sw"><span class="sw-label">Hue</span><div class="sw-bar sw-hue"></div><span class="sw-cap">position on the wheel · 0–360°</span></div>
+<div class="sw"><span class="sw-label">Saturation</span><div class="sw-bar sw-sat"></div><span class="sw-cap">gray → full intensity</span></div>
+<div class="sw"><span class="sw-label">Brightness</span><div class="sw-bar sw-val"></div><span class="sw-cap">black → full color (HSB value)</span></div>
+<div class="sw"><span class="sw-label">Opacity</span><div class="sw-bar sw-alpha"></div><span class="sw-cap">transparent → opaque (alpha)</span></div>
+</aside>
+
 ## 1. The Three Core Components of Color
 
 ### Hue

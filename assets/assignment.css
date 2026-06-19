@@ -158,3 +158,36 @@ body {
   font-size: 0.78rem;
 }
 .sheet-footer a { color: var(--ink-soft); }
+
+/* ---- Color Theory sheet: illustration column (pure-CSS gradients) ---- */
+.content .swatchboard {
+  float: right;
+  width: 234px;
+  margin: 2.4rem 0 1.4rem 2rem;
+  border-left: 1px solid var(--line);
+  padding-left: 1.3rem;
+}
+.content .swatchboard .sw-title {
+  font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.1em;
+  font-weight: 600; color: var(--accent); margin-bottom: 0.9rem;
+}
+.content .swatchboard .sw { margin-bottom: 1.15rem; }
+.content .swatchboard .sw-label {
+  display: block; font-size: 0.74rem; text-transform: uppercase;
+  letter-spacing: 0.1em; font-weight: 600; color: var(--ink-soft); margin-bottom: 0.35rem;
+}
+.content .swatchboard .sw-bar { height: 30px; border-radius: 3px; border: 1px solid var(--line); }
+.content .swatchboard .sw-cap { display: block; font-size: 0.74rem; color: var(--faint); margin-top: 0.3rem; }
+
+.sw-hue   { background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00); }
+.sw-sat   { background: linear-gradient(to right, hsl(265,0%,55%), hsl(265,70%,52%)); }
+.sw-val   { background: linear-gradient(to right, #000, hsl(265,70%,52%)); }
+.sw-alpha {
+  background:
+    linear-gradient(to right, hsla(265,70%,52%,0), hsla(265,70%,52%,1)),
+    repeating-conic-gradient(#cfcfcf 0% 25%, #fff 0% 50%) 0 / 14px 14px;
+}
+
+@media (max-width: 760px) {
+  .content .swatchboard { float: none; width: 100%; margin: 1.2rem 0; border-left: none; padding-left: 0; }
+}

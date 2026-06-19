@@ -63,29 +63,32 @@
 
     h2.section {
       font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.18em;
-      color: var(--ink-soft); margin: 3rem 0 0.4rem; padding-top: 1rem;
+      color: var(--ink-soft); margin: 3.4rem 0 0.4rem;
+      border-left: 7px solid var(--sec, var(--ink-soft)); padding-left: 0.55rem;
     }
     .section-note { color: var(--faint); font-size: 0.84rem; margin: 0 0 1.3rem; }
 
     /* ---- Semester grid = color chart ---- */
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+    /* Grounded tile, but the color field is large enough to read as a color
+       plate — not a thin Monopoly-style stripe atop a white card. */
     .card { background: #fff; border: 1px solid var(--line); display: flex; flex-direction: column; }
-    .swatch { height: 58px; width: 100%; }
-    .body { padding: 0.8rem 0.95rem 0.95rem; display: flex; flex-direction: column; flex: 1; }
-    .wk { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--faint); }
+    .swatch { height: 90px; width: 100%; }
+    .body { padding: 0.75rem 0.9rem 0.85rem; display: flex; flex-direction: column; flex: 1; }
+    .wk { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--faint); font-weight: 600; }
     .card h3 { font-size: 0.97rem; font-weight: 600; margin: 0.2rem 0 0.1rem; letter-spacing: -0.01em; line-height: 1.25; }
     .mode { font-size: 0.76rem; color: var(--ink-soft); margin-bottom: 0.45rem; }
     .topics { font-size: 0.79rem; color: var(--faint); margin: 0 0 0.75rem; }
     .due { margin-top: auto; border-top: 1px solid var(--line); padding-top: 0.6rem; display: flex; flex-direction: column; gap: 0.32rem; }
     .item { font-size: 0.82rem; display: flex; gap: 0.45rem; align-items: baseline; }
-    .item .label { color: var(--faint); font-size: 0.76rem; min-width: 3.4em; text-transform: uppercase; letter-spacing: 0.04em; }
+    .item .label { color: var(--faint); font-size: 0.76rem; min-width: 3.4em; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; }
     .item.todo .name { color: var(--faint); }
     .item.todo .name::after { content: " · not yet authored"; font-size: 0.76rem; font-style: italic; color: var(--faint); }
     .studio { font-size: 0.78rem; color: var(--faint); font-style: italic; }
 
     /* Deck reference within a week card */
     .deck-ref { font-size: 0.76rem; margin: 0 0 0.75rem; line-height: 1.5; }
-    .deck-ref .dlabel { text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint); font-size: 0.76rem; margin-right: 0.45em; }
+    .deck-ref .dlabel { text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint); font-size: 0.76rem; margin-right: 0.45em; font-weight: 600; }
     .deck-ref a { color: var(--ink); border-bottom: 1px solid var(--line); }
     .deck-ref a:hover { color: var(--link-hover); border-color: var(--link-hover); }
 
@@ -112,7 +115,7 @@
 
     /* ---- Resource panels ---- */
     .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 10px; }
-    .panel { background: #fff; border: 1px solid var(--line); padding: 1.1rem 1.3rem; }
+    .panel { background: color-mix(in srgb, var(--sec, #fff) 10%, #fff); border: 1px solid var(--line); border-top: 4px solid var(--sec, var(--line)); padding: 1.1rem 1.3rem; }
     .panel h3 { margin: 0 0 0.8rem; font-size: 0.95rem; }
     .panel ul { margin: 0; padding: 0; list-style: none; }
     .panel li { padding: 0.3rem 0; font-size: 0.86rem; border-bottom: 1px solid var(--line); }
@@ -154,7 +157,7 @@
       </nav>
     </header>
 
-    <h2 class="section" id="schedule">Semester Schedule</h2>
+    <h2 class="section" id="schedule" style="--sec:#c1352b">Semester Schedule</h2>
     <p class="section-note">
       TR · 80-minute sessions. Each week is a tile in the chart — color where the assignment is written,
       <em>Richter grey</em> where it is still to come.
@@ -468,9 +471,9 @@
 
     </div>
 
-    <h2 class="section" id="theory">Theory Sheets</h2>
+    <h2 class="section" id="theory" style="--sec:#6b4a9e">Theory Sheets</h2>
     <p class="section-note">Reference cheat sheets — technical concepts framed for humanities inquiry.</p>
-    <div class="cols">
+    <div class="cols" style="--sec:#6b4a9e">
       <div class="panel">
         <h3>Cheat sheets</h3>
         <ul>
@@ -492,9 +495,9 @@
       </div>
     </div>
 
-    <h2 class="section" id="decks">Slide Decks</h2>
+    <h2 class="section" id="decks" style="--sec:#2f8f86">Slide Decks</h2>
     <p class="section-note">In-class conceptual and technical presentations.</p>
-    <div class="cols">
+    <div class="cols" style="--sec:#2f8f86">
       <div class="panel">
         <h3>Decks</h3>
         <ul>
@@ -505,9 +508,9 @@
       </div>
     </div>
 
-    <h2 class="section" id="resources">Tools &amp; Resources</h2>
+    <h2 class="section" id="resources" style="--sec:#e0792e">Tools &amp; Resources</h2>
     <p class="section-note">External platforms and documentation.</p>
-    <div class="cols">
+    <div class="cols" style="--sec:#e0792e">
       <div class="panel">
         <h3>Make</h3>
         <ul>
