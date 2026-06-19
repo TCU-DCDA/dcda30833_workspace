@@ -38,6 +38,7 @@ convert labs/lab_02_random_without_design.md "#f2c12e" "LAB 2 — Random Without
 convert labs/lab_03_controlled_randomness.md "#3f8a4f" "LAB 3 — Controlled Randomness"          "Labs"
 convert labs/lab_04_one_hue_world.md         "#6b4a9e" "LAB 4 — One-Hue World"                  "Labs"
 convert labs/lab_05_palette_as_prison.md     "#6b4a9e" "LAB 5 — Palette as Prison"              "Labs"
+convert labs/lab_06_text_as_object.md        "#2f8f86" "LAB 6 — Text as Object"                 "Labs"
 convert labs/lab_07_prompt_as_material.md    "#2f8f86" "LAB 7 — Prompt as Material"             "Labs" \
         "The Sublime & Discovery" "slide_decks/the_sublime/index.html"
 convert labs/lab_08_envelope_only.md         "#a8408b" "LAB 8 — Envelope Only"                  "Labs"
