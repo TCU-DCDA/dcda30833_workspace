@@ -10,14 +10,16 @@ shows it visually (color tiles = authored, grey = not yet).
 ## Milestone: First Half (Weeks 1–8)
 
 The first half is the image-and-text arc (structure → motion → randomness →
-color → gesture → text). **All assignments are now authored; only polish remains.**
+color → gesture → text). **Assignments authored, site/decks polished and
+accessibility-checked; the only open item is a curricular deck-coverage decision.**
 
 ### Remaining for the first half (polish)
 
 - [x] **Project 4 — Animated & Interactive Concrete Poem (Week 8)** — authored; closes the text arc fed by Labs 6 & 7.
-- [ ] **Deck coverage decision** — Weeks 3, 5, 6, 7, 8 have no dedicated slide deck. Decide whether to build them or teach those sessions from improvised slides.
-- [ ] **Fix `slide_decks/the_sublime/images/`** — empty folder; the Week 4 deck likely has broken image references.
-- [ ] **Live verify** — spot-check that first-half pages (Labs 0–7, Projects 1–4) render correctly on GitHub Pages.
+- [ ] **Deck coverage decision** — Weeks 3, 5, 6, 7, 8 have no dedicated slide deck. Decide whether to build them or teach those sessions from improvised slides. *(Only remaining first-half item.)*
+- [x] **`slide_decks/the_sublime/`** — was text-only (nothing broken); enriched with Richter and Klee images on their quote slides.
+- [x] **Accessibility (WAVE)** — fixed across the course site and all three decks: contrast (faint grey, dark-theme dim greys, accent text, precedent-card labels) and very-small text raised to a readable floor; deck content no longer runs below the fold; deck images have descriptive alt text.
+- [x] **Live verify** — first-half pages and decks confirmed rendering correctly on GitHub Pages.
 - [x] **Optional:** live interactive concrete-poem recreation — `sketches/concrete_poem.html` (kinetic *Silencio*, after Gomringer); replaces the Project 4 placeholder on the home page.
 
 ---
