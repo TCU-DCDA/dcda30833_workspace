@@ -51,6 +51,26 @@ accessibility-checked; the only open item is a curricular deck-coverage decision
 
 ---
 
+## Cross-cutting thread — AI in the course
+
+The course already frames AI as creative **material** (LAB 7 — Prompt as
+Material; PROJECT 4 allows AI-generated text). Make it a coherent thread:
+
+- [x] **Seed early** — the Week 3 live-coding plan connects "the machine
+  decides" (chance) to AI as another deciding system.
+- [ ] **Write a DCDA AI policy** — model the *discipline* on WRIT 40363's AI
+  guidelines (sibling course): the **Explanation Test** (keep nothing you can't
+  explain), appropriate vs. inappropriate use, document/cite AI, and **no AI on
+  the learning labs** — but reframe the *stance* for creative coding (AI as
+  collaborator/material, discovery over expression), not productivity.
+  Reference files: WRIT40363_2026 `student_resources/AI_Collaboration_Guide.md`
+  and `AI_Assisted_Coding_Guidelines.md`.
+- [ ] **Roll AI into later projects** — deliberate, scaffolded AI use in the
+  back half (e.g., Projects 5/6/Final), analogous to WRIT's AI-assisted capstone
+  "Project Zed," with an AI-collaboration log + citation.
+
+---
+
 ## How to author and wire in a new assignment
 
 The repeatable steps (same for every lab/project):

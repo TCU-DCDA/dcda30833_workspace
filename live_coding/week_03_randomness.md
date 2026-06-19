@@ -39,6 +39,23 @@ territory (Random Without Design).
 *How does pure chance feel compared to last week's rules? What's gained — and
 what's lost when nothing is in control?*
 
+## Aside · When the machine decides — seeding AI (~3 min, opportunistic)
+
+Today the machine made choices for us (chance). Name the bigger version out
+loud: **AI is another system that decides** — it generates moves you didn't,
+and like `random()`, `noise()`, or data, it *pushes back*. Plant the stance now;
+the full treatment is LAB 7 (Prompt as Material) and the course AI policy.
+
+- **Our creative framing:** you don't outsource the thinking — you *curate* what
+  the system offers and stay critical of it. *Discovery over expression*: the
+  question is "what can this system reveal?", not "make me a thing."
+- **The discipline (borrowed from WRIT 40363's AI guidelines):** keep nothing
+  you can't explain; AI assists discovery, it doesn't replace the struggle —
+  which is exactly why the *labs* are done by hand.
+
+*Ask:* if chance and AI both make choices for you, what's the difference between
+a result you **find** and a result you **accept without looking**?
+
 ## 3 · Live build B — "Tame it, one rule at a time" (20 min)
 
 Reintroduce constraint incrementally — the heart of "probability as design":
