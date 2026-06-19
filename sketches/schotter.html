@@ -31,7 +31,7 @@ const ROWS = 22;
 const MARGIN = 28;
 
 function setup() {
-  createCanvas(300, 480);
+  createCanvas(windowWidth, windowHeight);   // fill the container (card or full window)
   rectMode(CENTER);
   noFill();
   stroke(26);
@@ -70,6 +70,7 @@ function renderArt() {
 }
 
 function mousePressed() { renderArt(); }            // click to re-roll
+function windowResized() { resizeCanvas(windowWidth, windowHeight); renderArt(); }
 window.setInterval(function () {                    // and a slow auto-refresh
   if (window.renderArt) window.renderArt();
 }, 6000);

@@ -34,7 +34,7 @@ const PALETTE = [
 ];
 
 function setup() {
-  createCanvas(360, 360);
+  createCanvas(windowWidth, windowHeight);   // fill the container (card or full window)
   noStroke();
   rectMode(CENTER);
   noLoop();
@@ -66,6 +66,7 @@ function renderArt() {
 }
 
 function mousePressed() { renderArt(); }
+function windowResized() { resizeCanvas(windowWidth, windowHeight); renderArt(); }
 window.setInterval(function () {
   if (window.renderArt) window.renderArt();
 }, 6000);
