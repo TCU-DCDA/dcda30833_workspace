@@ -62,8 +62,8 @@ Material; PROJECT 4 allows AI-generated text). Make it a coherent thread:
   discipline (Explanation Test, document/cite, no AI on learning labs, stay
   critical) reframed for creative coding (AI as collaborator/material,
   discovery over expression). Rendered to `context/ai_policy.html` and linked
-  from LAB 7. *Still to do: add to the home-page Resources panel + reference in
-  the syllabus.*
+  from LAB 7, and listed under "Course foundations" on the home page. *Still to
+  do: reference it in the syllabus.*
 - [ ] **Roll AI into later projects** — deliberate, scaffolded AI use in the
   back half (e.g., Projects 5/6/Final), analogous to WRIT's AI-assisted capstone
   "Project Zed," with an AI-collaboration log + citation.
