@@ -33,6 +33,13 @@ This project synthesizes:
 
 ## Precedents --- System Autopsy (In-Class)
 
+> **How examples work in this course:** you will always be shown examples ---
+> but here, an example is a **system to take apart, not an image to
+> reproduce.** You'll see how a work was made, and the range of outcomes its
+> rules can produce, more often than a single finished "right answer." There is
+> no result to match: a strong system can generate many different outcomes,
+> including ones no one has made yet.
+
 Before you build, take apart how others have treated color as a system
 rather than decoration. The point is not to imitate a palette but to
 **reverse-engineer behavior**: recover the rules that govern *which*

@@ -80,6 +80,21 @@ exhibition
 
 ------------------------------------------------------------------------
 
+## Standard Precedents Opener (paste into each project)
+
+Every project's "Precedents --- System Autopsy" section should open with this
+student-facing framing before listing exemplars (see context/examples_policy.md
+for the instructor rationale):
+
+> **How examples work in this course:** you will always be shown examples ---
+> but here, an example is a **system to take apart, not an image to
+> reproduce.** You'll see how a work was made, and the range of outcomes its
+> rules can produce, more often than a single finished "right answer." There is
+> no result to match: a strong system can generate many different outcomes,
+> including ones no one has made yet.
+
+------------------------------------------------------------------------
+
 ## Technical Stack Defaults
 
 Unless otherwise specified: - Visual work uses: p5.js - Sound work uses:
