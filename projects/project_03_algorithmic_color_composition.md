@@ -55,6 +55,12 @@ colors appear, *where*, and *how often.*
 -   **Bridget Riley:** systematic color and the perceptual effects of
     constrained repetition.
 
+**Where to find them (free):**
+
+-   Josef Albers — [the Albers Foundation](https://www.albersfoundation.org/) and a [p5.js recreation](https://medium.com/@romapandya49/making-a-generative-recreation-of-paintings-by-vera-molnar-and-josef-albers-in-p5-js-436ce07462e7)
+-   Gerhard Richter — [Colour Charts at gerhard-richter.com](https://www.gerhard-richter.com/)
+-   Bridget Riley — [*True Stripes* at Tate Etc](https://www.tate.org.uk/tate-etc/issue-66-summer-2025/true-stripes-bridget-riley) (view-only; observe the system)
+
 **Autopsy questions (ask of each):**
 
 1.  What is the color rule? Could you restate it as a few lines of

@@ -55,6 +55,12 @@ treat each work as a rule set to recover, not a style to copy.
 -   **Manfred Mohr:** forms generated algorithmically from a single
     underlying structure (the cube).
 
+**Where to find them (free):**
+
+-   Sol LeWitt — [wall-drawing instructions at SFMOMA](https://www.sfmoma.org/read/drawing-with-instructions/) (the rule *is* the work)
+-   Vera Molnár — [*Interruptions* recreation on OpenProcessing](https://openprocessing.org/sketch/584871/) and a [p5.js walkthrough](https://cagrimmett.com/2022/03/08/how-to-create-vera-molnars-structure-de-quadrilateres-in-p5-js/)
+-   Manfred Mohr — [emohr.com](https://www.emohr.com/) (his own algorithm notes)
+
 **Autopsy questions (ask of each):**
 
 1.  What is the generating rule? Could you restate it as a few lines of

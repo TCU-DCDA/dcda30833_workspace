@@ -47,6 +47,12 @@ special attention to *where chance is let in and how it is bounded.*
 -   **Georg Nees / Frieder Nake:** 1960s computer art --- randomness
     deliberately bounded by rules.
 
+**Where to find them (free):**
+
+-   Casey Reas — [*Software Structures* at Whitney artport](https://artport.whitney.org/commissions/software-structures-2016/text.html) (text structures + code)
+-   Tyler Hobbs — the essays [*Flow Fields*](https://www.tylerxhobbs.com/words/flow-fields) and [*Fidenza*](https://www.tylerxhobbs.com/words/fidenza) (read these, not the NFT marketplace)
+-   Georg Nees — a [*Schotter* tutorial](https://www.artsnova.com/Nees_Schotter_Tutorial.html) and an [OpenProcessing recreation](https://openprocessing.org/sketch/144930)
+
 **Autopsy questions (ask of each):**
 
 1.  What is the generating rule? Could you restate it as a few lines of
