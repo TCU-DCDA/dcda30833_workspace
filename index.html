@@ -90,11 +90,26 @@
     .deck-ref a:hover { color: var(--link-hover); border-color: var(--link-hover); }
 
     /* ---- Precedents in motion (live sketch embeds) ---- */
-    .motion-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
-    .motion-card { margin: 0; background: #fff; border: 1px solid var(--line); }
-    .motion-card iframe { display: block; width: 100%; height: 300px; border: 0; background: var(--wall); }
-    .motion-card figcaption { padding: 0.6rem 0.8rem; font-size: 0.8rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
-    .motion-card figcaption .sub { color: var(--faint); }
+    /* ---- Precedent unit-break strips (span the schedule grid) ---- */
+    .unit-break {
+      grid-column: 1 / -1;
+      display: flex; align-items: center; gap: 0.9rem;
+      background: #fff; border: 1px solid var(--line);
+      border-left: 4px solid var(--faint);
+      padding: 0.5rem 0.7rem; margin: 2px 0;
+    }
+    .unit-break .ub-thumbwrap {
+      width: 84px; height: 84px; flex: none; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--line); background: var(--wall); text-decoration: none;
+    }
+    .unit-break .ub-thumb { border: 0; pointer-events: none; flex: none; transform-origin: center center; }
+    .unit-break .ub-soon { color: var(--faint); font-size: 0.66rem; letter-spacing: 0.06em; }
+    .unit-break .ub-label { font-size: 0.84rem; color: var(--ink-soft); line-height: 1.45; }
+    .unit-break .ub-tag { display: block; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.62rem; color: var(--faint); margin-bottom: 0.15rem; }
+    .unit-break .ub-label strong { color: var(--ink); }
+    .unit-break .ub-label a { color: var(--ink); border-bottom: 1px solid var(--line); }
+    .unit-break .ub-label a:hover { color: var(--link-hover); border-color: var(--link-hover); }
 
     /* ---- Resource panels ---- */
     .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 10px; }
@@ -134,7 +149,6 @@
 
       <nav class="toc">
         <a href="#schedule">Schedule</a>
-        <a href="#motion">In Motion</a>
         <a href="#theory">Theory Sheets</a>
         <a href="#decks">Slide Decks</a>
         <a href="#resources">Tools &amp; Resources</a>
@@ -182,6 +196,17 @@
         </div>
       </div>
 
+      <!-- Unit 1 → Project 1 -->
+      <div class="unit-break" style="border-left-color:#2f4b9b">
+        <a class="ub-thumbwrap" href="sketches/interruptions.html" title="Open Interruptions full-size">
+          <iframe class="ub-thumb" src="sketches/interruptions.html" width="360" height="360" style="transform:scale(0.233)" loading="lazy" tabindex="-1" title="Interruptions (live)"></iframe>
+        </a>
+        <div class="ub-label">
+          <span class="ub-tag">Autopsy · close of unit 1</span>
+          <strong>Interruptions</strong> — after Vera Molnár · <a href="projects/project_01_system_based_shape_self_portrait.html#precedents-----system-autopsy-in-class">Project 1 →</a>
+        </div>
+      </div>
+
       <!-- Week 3 -->
       <div class="card">
         <div class="swatch" style="background:#f2c12e"></div>
@@ -210,6 +235,17 @@
             <div class="item"><span class="label">Lab 3</span><span class="name"><a href="labs/lab_03_controlled_randomness.html">Controlled Randomness</a></span></div>
             <div class="item"><span class="label">Proj 2</span><span class="name"><a href="projects/project_02_generative_visual_study.html">Generative Visual Study</a></span></div>
           </div>
+        </div>
+      </div>
+
+      <!-- Unit 2 → Project 2 -->
+      <div class="unit-break" style="border-left-color:#3f8a4f">
+        <a class="ub-thumbwrap" href="sketches/schotter.html" title="Open Schotter full-size">
+          <iframe class="ub-thumb" src="sketches/schotter.html" width="300" height="480" style="transform:scale(0.175)" loading="lazy" tabindex="-1" title="Schotter (live)"></iframe>
+        </a>
+        <div class="ub-label">
+          <span class="ub-tag">Autopsy · close of unit 2</span>
+          <strong>Schotter</strong> — after Georg Nees · <a href="projects/project_02_generative_visual_study.html#precedents-----system-autopsy-in-class">Project 2 →</a>
         </div>
       </div>
 
@@ -243,6 +279,17 @@
         </div>
       </div>
 
+      <!-- Unit 3 → Project 3 -->
+      <div class="unit-break" style="border-left-color:#e0792e">
+        <a class="ub-thumbwrap" href="sketches/homage.html" title="Open Homage full-size">
+          <iframe class="ub-thumb" src="sketches/homage.html" width="360" height="360" style="transform:scale(0.233)" loading="lazy" tabindex="-1" title="Homage (live)"></iframe>
+        </a>
+        <div class="ub-label">
+          <span class="ub-tag">Autopsy · close of unit 3</span>
+          <strong>Homage</strong> — after Josef Albers · <a href="projects/project_03_algorithmic_color_composition.html#precedents-----system-autopsy-in-class">Project 3 →</a>
+        </div>
+      </div>
+
       <!-- Week 7 -->
       <div class="card">
         <div class="swatch" style="background:#2f8f86"></div>
@@ -270,6 +317,15 @@
           <div class="due">
             <div class="item"><span class="label">Proj 4</span><span class="name"><a href="projects/project_04_animated_interactive_concrete_poem.html">Animated &amp; Interactive Concrete Poem</a></span></div>
           </div>
+        </div>
+      </div>
+
+      <!-- Unit 4 → Project 4 -->
+      <div class="unit-break" style="border-left-color:#d56a8f">
+        <span class="ub-thumbwrap"><span class="ub-soon">SOON</span></span>
+        <div class="ub-label">
+          <span class="ub-tag">Autopsy · close of unit 4</span>
+          <strong>Concrete poem</strong> — live recreation forthcoming · <a href="projects/project_04_animated_interactive_concrete_poem.html#precedents-----system-autopsy-in-class">Project 4 →</a>
         </div>
       </div>
 
@@ -401,26 +457,6 @@
         </div>
       </div>
 
-    </div>
-
-    <h2 class="section" id="motion">Precedents in Motion</h2>
-    <p class="section-note">
-      Live recreations of works we take apart in the project autopsies — running the rules, not showing a finished image.
-      Each re-rolls every few seconds (or on click): one system, many outcomes. Source is in <code>sketches/</code>.
-    </p>
-    <div class="motion-grid">
-      <figure class="motion-card">
-        <iframe src="sketches/schotter.html" title="Schotter recreation" loading="lazy"></iframe>
-        <figcaption><strong>Schotter</strong> — after Georg Nees · disorder grows down the grid <span class="sub">(see <a href="projects/project_02_generative_visual_study.html#precedents-----system-autopsy-in-class">Project 2</a>)</span></figcaption>
-      </figure>
-      <figure class="motion-card">
-        <iframe src="sketches/interruptions.html" title="Interruptions recreation" loading="lazy"></iframe>
-        <figcaption><strong>Interruptions</strong> — after Vera Molnár · a grid that tears holes in itself <span class="sub">(see <a href="projects/project_01_system_based_shape_self_portrait.html#precedents-----system-autopsy-in-class">Project 1</a>)</span></figcaption>
-      </figure>
-      <figure class="motion-card">
-        <iframe src="sketches/homage.html" title="Homage to the Square recreation" loading="lazy"></iframe>
-        <figcaption><strong>Homage</strong> — after Josef Albers · fixed format, the palette is the variable <span class="sub">(see <a href="projects/project_03_algorithmic_color_composition.html#precedents-----system-autopsy-in-class">Project 3</a>)</span></figcaption>
-      </figure>
     </div>
 
     <h2 class="section" id="theory">Theory Sheets</h2>
