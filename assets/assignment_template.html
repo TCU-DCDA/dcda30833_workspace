@@ -17,6 +17,9 @@
       <a href="../index.html#decks">Slide Decks</a>
       <a href="../index.html#resources">Tools &amp; Resources</a>
     </nav>
+$if(deckurl)$
+    <div class="related-deck"><span class="rlabel">Related slides</span><a href="../$deckurl$">$deck$</a></div>
+$endif$
     <div class="content">
 $body$
     </div>

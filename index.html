@@ -83,6 +83,12 @@
     .item.todo .name::after { content: " · not yet authored"; font-size: 0.7rem; font-style: italic; color: var(--faint); }
     .studio { font-size: 0.78rem; color: var(--faint); font-style: italic; }
 
+    /* Deck reference within a week card */
+    .deck-ref { font-size: 0.76rem; margin: 0 0 0.75rem; line-height: 1.5; }
+    .deck-ref .dlabel { text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint); font-size: 0.64rem; margin-right: 0.45em; }
+    .deck-ref a { color: var(--ink); border-bottom: 1px solid var(--line); }
+    .deck-ref a:hover { color: var(--link-hover); border-color: var(--link-hover); }
+
     /* ---- Resource panels ---- */
     .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 10px; }
     .panel { background: #fff; border: 1px solid var(--line); padding: 1.1rem 1.3rem; }
@@ -143,6 +149,7 @@
           <h3>Structure → Surface → Behavior</h3>
           <div class="mode">Structure &amp; Interface</div>
           <p class="topics">HTML as structure · CSS as rule system · Canvas · enable GitHub Pages</p>
+          <div class="deck-ref"><span class="dlabel">Slides</span><a href="slide_decks/discovery_over_expression/index.html">Discovery over Expression</a> · <a href="slide_decks/deployment/index.html">Publishing as Part of the System</a></div>
           <div class="due">
             <div class="item"><span class="label">Lab 0</span><span class="name"><a href="labs/lab_00_structure_surface.html">Structure &amp; Surface as Systems</a></span></div>
           </div>
@@ -186,6 +193,7 @@
           <h3>Generative Visual Identity</h3>
           <div class="mode">Image / Emergence</div>
           <p class="topics">Larger rule-based systems</p>
+          <div class="deck-ref"><span class="dlabel">Slides</span><a href="slide_decks/the_sublime/index.html">The Sublime &amp; Discovery</a></div>
           <div class="due">
             <div class="item"><span class="label">Lab 3</span><span class="name"><a href="labs/lab_03_controlled_randomness.html">Controlled Randomness</a></span></div>
             <div class="item"><span class="label">Proj 2</span><span class="name"><a href="projects/project_02_generative_visual_study.html">Generative Visual Study</a></span></div>

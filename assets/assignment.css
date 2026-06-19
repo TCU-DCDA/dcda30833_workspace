@@ -63,6 +63,23 @@ body {
 }
 .subnav a:hover { color: var(--accent); }
 
+/* Optional "related slides" cross-link to a deck */
+.related-deck {
+  margin: 0 0 1.8rem;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.related-deck .rlabel {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.66rem;
+  color: var(--faint);
+}
+.related-deck a { color: var(--ink); border-bottom: 1px solid var(--accent); text-decoration: none; }
+.related-deck a:hover { color: var(--accent); }
+
 /* The markdown body */
 .content h1 {
   font-size: 1.95rem;
