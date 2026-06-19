@@ -18,7 +18,7 @@ accessibility-checked; the only open item is a curricular deck-coverage decision
 - [x] **Project 4 — Animated & Interactive Concrete Poem (Week 8)** — authored; closes the text arc fed by Labs 6 & 7.
 - [ ] **Deck coverage decision** — Weeks 3, 5, 6, 7, 8 have no dedicated slide deck. *(Only remaining first-half item.)*
   - **Direction:** these are hands-on technique weeks (randomness, color, mark-making, text), likely taught better through **live coding** than slides — build a sketch with the class in the p5.js editor, and teach from the assignment page + live precedent sketches projected on the site. Reserve committed decks for big conceptual framing (already built: Discovery, the Sublime, Deployment).
-  - **To do:** prepare live-coding plans/starter sketches for these weeks (a short "what we build live" outline per session), rather than authoring full decks. Confirm which—if any—still warrant a saved deck.
+  - **Plans live in `live_coding/`** — Week 3 (Randomness) is drafted as the model; Weeks 5, 6, 7, 8 are skeletons ready to fill. To do: complete the four skeletons; confirm which—if any—still warrant a saved deck.
 - [x] **`slide_decks/the_sublime/`** — was text-only (nothing broken); enriched with Richter and Klee images on their quote slides.
 - [x] **Accessibility (WAVE)** — fixed across the course site and all three decks: contrast (faint grey, dark-theme dim greys, accent text, precedent-card labels) and very-small text raised to a readable floor; deck content no longer runs below the fold; deck images have descriptive alt text.
 - [x] **Live verify** — first-half pages and decks confirmed rendering correctly on GitHub Pages.
