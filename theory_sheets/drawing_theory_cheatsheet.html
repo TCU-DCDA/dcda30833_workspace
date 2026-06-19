@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawing Theory — Cheat Sheet — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #e0792e; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Theory Sheets</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="pencil2-drawing-theory-cheat-sheet-for-creative-coding">✏️
+Drawing Theory Cheat Sheet for Creative Coding</h1>
+<p>A practical guide to essential drawing concepts useful for generative
+art, p5.js sketches, interaction design, and visual composition.</p>
+<hr />
+<h2 id="1-seeing-vs-knowing">1. Seeing vs. Knowing</h2>
+<p>Beginners draw what they <em>think</em> an object looks like instead
+of what they actually <em>see</em>.<br />
+Key skills:</p>
+<ul>
+<li>Observe angles, proportions, and negative space.</li>
+<li>Break objects into simple shapes.</li>
+<li>Avoid symbolic drawing (“eye = almond shape”).</li>
+</ul>
+<hr />
+<h2 id="2-shape--form--value">2. Shape → Form → Value</h2>
+<h3 id="shape">Shape</h3>
+<p>2D outlines: circles, squares, triangles, irregular polygons.</p>
+<h3 id="form">Form</h3>
+<p>Turning shapes into 3D illusions using:</p>
+<ul>
+<li>light &amp; shadow</li>
+<li>perspective</li>
+<li>overlap</li>
+<li>foreshortening</li>
+</ul>
+<h3 id="value">Value</h3>
+<p>Light → dark scale that creates depth.</p>
+<p>Value is often <strong>more important</strong> than color.</p>
+<hr />
+<h2 id="3-light--shadow-basics">3. Light &amp; Shadow Basics</h2>
+<p>Every form has:</p>
+<ul>
+<li><strong>Highlight</strong></li>
+<li><strong>Midtones</strong></li>
+<li><strong>Core Shadow</strong></li>
+<li><strong>Reflected Light</strong></li>
+<li><strong>Cast Shadow</strong></li>
+</ul>
+<p>Understanding light direction helps with:</p>
+<ul>
+<li>shading algorithms</li>
+<li>generative lighting</li>
+<li>depth-driven color mapping</li>
+</ul>
+<hr />
+<h2 id="4-gesture-the-essence-of-movement">4. Gesture: The Essence of
+Movement</h2>
+<p>Gesture drawing captures:</p>
+<ul>
+<li>flow</li>
+<li>rhythm</li>
+<li>action</li>
+<li>overall proportions</li>
+</ul>
+<p>Core rule: <strong>Start loose, then refine.</strong></p>
+<p>In creative coding:</p>
+<ul>
+<li>particle systems</li>
+<li>animated strokes</li>
+<li>motion trails</li>
+</ul>
+<p>all draw directly from gesture logic.</p>
+<hr />
+<h2 id="5-negative-space">5. Negative Space</h2>
+<p>Negative space = the space <em>around</em> the subject.</p>
+<p>Why it matters:</p>
+<ul>
+<li>helps with proportion</li>
+<li>simplifies busy compositions</li>
+<li>improves layout clarity</li>
+</ul>
+<p>In p5.js:</p>
+<ul>
+<li>treat the background as an intentional shape</li>
+</ul>
+<hr />
+<h2 id="6-proportion--measurement-systems">6. Proportion &amp;
+Measurement Systems</h2>
+<p>Useful tools:</p>
+<ul>
+<li>sighting verticals/horizontals</li>
+<li>comparing lengths (“head is 1/7 of body”)</li>
+<li>using reference grids</li>
+</ul>
+<p>In creative coding:</p>
+<ul>
+<li>grid-based layouts</li>
+<li>proportional spacing</li>
+<li>consistent scaling</li>
+</ul>
+<hr />
+<h2 id="7-perspective-simplified">7. Perspective (Simplified)</h2>
+<p>You don’t need full technical perspective.<br />
+Just brush up on:</p>
+<h3 id="1-point-perspective">1-Point Perspective</h3>
+<ul>
+<li>lines converge to one vanishing point</li>
+<li>used for roads, hallways, simple spaces</li>
+</ul>
+<h3 id="2-point-perspective">2-Point Perspective</h3>
+<ul>
+<li>two vanishing points</li>
+<li>used for cubes, buildings, boxes</li>
+</ul>
+<h3 id="atmospheric-perspective">Atmospheric Perspective</h3>
+<ul>
+<li>distance = lighter + bluer</li>
+<li>useful for generative landscapes</li>
+</ul>
+<hr />
+<h2 id="8-composition-principles">8. Composition Principles</h2>
+<h3 id="rule-of-thirds">Rule of Thirds</h3>
+<p>Divide the frame into a 3 × 3 grid; place focal points on
+intersections.</p>
+<h3 id="balance">Balance</h3>
+<ul>
+<li>symmetrical (stable)</li>
+<li>asymmetrical (dynamic)</li>
+</ul>
+<h3 id="visual-hierarchy">Visual Hierarchy</h3>
+<p>Guide the viewer’s eye using:</p>
+<ul>
+<li>size</li>
+<li>contrast</li>
+<li>placement</li>
+<li>value</li>
+</ul>
+<h3 id="rhythm--repetition">Rhythm &amp; Repetition</h3>
+<p>Repeating elements create harmony and movement.</p>
+<hr />
+<h2 id="9-line-quality--mark-making">9. Line Quality &amp;
+Mark-Making</h2>
+<p>Lines can be:</p>
+<ul>
+<li>thick or thin</li>
+<li>smooth or jagged</li>
+<li>fast or slow</li>
+<li>mechanical or expressive</li>
+</ul>
+<p>Mark-making generates style:</p>
+<ul>
+<li>crosshatching → texture</li>
+<li>stippling → softness</li>
+<li>broken lines → subtlety</li>
+</ul>
+<p>In code:</p>
+<ul>
+<li>strokeWeight</li>
+<li>noise-based jitter</li>
+<li>alpha blending</li>
+<li>repeated patterns</li>
+</ul>
+<hr />
+<h2 id="10-abstraction--reduction">10. Abstraction &amp; Reduction</h2>
+<p>Abstraction = distilling to essentials.</p>
+<p>Strategies:</p>
+<ul>
+<li>simplify shapes</li>
+<li>exaggerate features</li>
+<li>remove detail</li>
+<li>use symbols</li>
+</ul>
+<p>Perfect for:</p>
+<ul>
+<li>generative portraits</li>
+<li>data-driven visuals</li>
+<li>shape-based self-portraits</li>
+</ul>
+<hr />
+<h2 id="11-drawing-as-iteration">11. Drawing as Iteration</h2>
+<p>Professional artists:</p>
+<ul>
+<li>sketch → refine → finalize</li>
+<li>“block in big forms first”</li>
+<li>work from general to specific</li>
+</ul>
+<p>This mirrors:</p>
+<ul>
+<li>iterative coding</li>
+<li>prototyping</li>
+<li>refinement cycles</li>
+</ul>
+<p>Encourage students to revise both art and code.</p>
+<hr />
+<h2 id="12-common-mistakes-students-make">12. Common Mistakes Students
+Make</h2>
+<ul>
+<li>Starting with detail instead of broad shapes</li>
+<li>Overusing outlines</li>
+<li>Ignoring value contrast</li>
+<li>Centering everything</li>
+<li>Using too many unrelated shapes</li>
+<li>Forgetting the background is part of the composition</li>
+</ul>
+<hr />
+<h2 id="13-teaching-metaphors">13. Teaching Metaphors</h2>
+<ul>
+<li>“Draw the big shapes first.” → layout and structure in code.</li>
+<li>“Squint to see the values.” → simplify to essential components.</li>
+<li>“Gesture before detail.” → prototype before polish.</li>
+<li>“Negative space is a shape.” → spacing is a design element.</li>
+<li>“Form is light traveling across surfaces.” → shading maps in
+generative art.</li>
+</ul>
+<hr />
+<h2 id="14-practice-prompts-for-students">14. Practice Prompts for
+Students</h2>
+<ul>
+<li>Draw with only circles.</li>
+<li>Draw with only straight lines.</li>
+<li>Draw your hand in 30 seconds (gesture).</li>
+<li>Draw a still life as basic shapes only.</li>
+<li>Create a composition using foreground, midground, background.</li>
+<li>Redraw the same object with three different line qualities.</li>
+</ul>
+<hr />
+<p><em>End of cheat sheet.</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DCDA 30833 — Creative Coding for the Humanities</title>
+  <style>
+    :root {
+      --wall: #f4f3ee;        /* gallery wall, warm white */
+      --wall-2: #ecebe5;
+      --ink: #1a1a18;
+      --ink-soft: #56564f;
+      --faint: #8e8e85;
+      --line: #d8d7cf;
+      --grey-tile: #9b988f;   /* Richter grey — not yet authored */
+      --grey-studio: #c7c4ba; /* lighter grey — studio week */
+      --link-hover: #b5322a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--wall);
+      color: var(--ink);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+    a:hover { color: var(--link-hover); border-color: var(--link-hover); }
+
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem 5rem; }
+
+    /* ---- Hero color chart (Richter "256 Colours") ---- */
+    .chart-band {
+      display: grid;
+      grid-template-columns: repeat(26, 1fr);
+      width: 100%;
+      height: 64px;
+      gap: 0;
+    }
+    .chart-band span { display: block; }
+
+    header { padding: 2.4rem 0 1.6rem; border-bottom: 1px solid var(--line); }
+    .course-id { font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-soft); }
+    h1 { font-size: 2.15rem; font-weight: 700; letter-spacing: -0.02em; margin: 0.3rem 0 0.2rem; }
+    .term { color: var(--ink-soft); font-size: 0.95rem; }
+    .through-line { color: var(--faint); font-style: italic; margin-top: 0.7rem; font-size: 0.92rem; }
+
+    .quicklinks { margin-top: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .quicklinks a {
+      border: 1px solid var(--line); border-radius: 2px; padding: 0.3rem 0.8rem;
+      font-size: 0.8rem; background: #fff;
+    }
+    .quicklinks a:hover { border-color: var(--link-hover); }
+
+    /* in-page nav */
+    nav.toc { display: flex; flex-wrap: wrap; gap: 1.4rem; margin: 1.6rem 0 0; font-size: 0.82rem; }
+    nav.toc a { border: none; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.1em; }
+    nav.toc a:hover { color: var(--link-hover); }
+
+    h2.section {
+      font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.18em;
+      color: var(--ink-soft); margin: 3rem 0 0.4rem; padding-top: 1rem;
+    }
+    .section-note { color: var(--faint); font-size: 0.84rem; margin: 0 0 1.3rem; }
+
+    /* ---- Semester grid = color chart ---- */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+    .card { background: #fff; border: 1px solid var(--line); display: flex; flex-direction: column; }
+    .swatch { height: 58px; width: 100%; }
+    .body { padding: 0.8rem 0.95rem 0.95rem; display: flex; flex-direction: column; flex: 1; }
+    .wk { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--faint); }
+    .card h3 { font-size: 0.97rem; font-weight: 600; margin: 0.2rem 0 0.1rem; letter-spacing: -0.01em; line-height: 1.25; }
+    .mode { font-size: 0.72rem; color: var(--ink-soft); margin-bottom: 0.45rem; }
+    .topics { font-size: 0.79rem; color: var(--faint); margin: 0 0 0.75rem; }
+    .due { margin-top: auto; border-top: 1px solid var(--line); padding-top: 0.6rem; display: flex; flex-direction: column; gap: 0.32rem; }
+    .item { font-size: 0.82rem; display: flex; gap: 0.45rem; align-items: baseline; }
+    .item .label { color: var(--faint); font-size: 0.68rem; min-width: 3.4em; text-transform: uppercase; letter-spacing: 0.04em; }
+    .item.todo .name { color: var(--faint); }
+    .item.todo .name::after { content: " · not yet authored"; font-size: 0.7rem; font-style: italic; color: var(--faint); }
+    .studio { font-size: 0.78rem; color: var(--faint); font-style: italic; }
+
+    /* ---- Resource panels ---- */
+    .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 10px; }
+    .panel { background: #fff; border: 1px solid var(--line); padding: 1.1rem 1.3rem; }
+    .panel h3 { margin: 0 0 0.8rem; font-size: 0.95rem; }
+    .panel ul { margin: 0; padding: 0; list-style: none; }
+    .panel li { padding: 0.3rem 0; font-size: 0.86rem; border-bottom: 1px solid var(--line); }
+    .panel li:last-child { border-bottom: none; }
+    .panel li .sub { color: var(--faint); font-size: 0.76rem; }
+
+    footer { margin-top: 3.5rem; padding-top: 1.4rem; border-top: 1px solid var(--line); color: var(--faint); font-size: 0.78rem; line-height: 1.7; }
+    footer a { color: var(--ink-soft); }
+    .colophon { margin-top: 0.6rem; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero: a Richter-style color chart strip -->
+  <div class="chart-band" aria-hidden="true">
+    <span style="background:#c1352b"></span><span style="background:#e0792e"></span><span style="background:#f2c12e"></span><span style="background:#a7b53b"></span><span style="background:#3f8a4f"></span><span style="background:#2f8f86"></span><span style="background:#4aa8c4"></span><span style="background:#3f7cc4"></span><span style="background:#2f4b9b"></span><span style="background:#6b4a9e"></span><span style="background:#a8408b"></span><span style="background:#d56a8f"></span><span style="background:#8a5a3c"></span>
+    <span style="background:#6e7038"></span><span style="background:#d9603f"></span><span style="background:#c98a3c"></span><span style="background:#6fb38a"></span><span style="background:#7a3b5c"></span><span style="background:#2f4b9b"></span><span style="background:#f2c12e"></span><span style="background:#3f8a4f"></span><span style="background:#c1352b"></span><span style="background:#6b4a9e"></span><span style="background:#2f8f86"></span><span style="background:#e0792e"></span><span style="background:#a8408b"></span>
+  </div>
+
+  <div class="wrap">
+
+    <header>
+      <div class="course-id">DCDA 30833 · Spring 2026</div>
+      <h1>Creative Coding for the Humanities</h1>
+      <div class="term">Generative art · interactive poetry · sound · data — as humanities inquiry</div>
+      <div class="through-line">Form = Content · Systems Dramatize States · Discovery over Expression</div>
+
+      <div class="quicklinks">
+        <a href="https://github.com/TCU-DCDA/dcda30833_workspace">GitHub Repository</a>
+        <a href="https://editor.p5js.org/" target="_blank" rel="noopener">p5.js Editor</a>
+        <a href="context/student_calendar.md">Student Calendar</a>
+      </div>
+
+      <nav class="toc">
+        <a href="#schedule">Schedule</a>
+        <a href="#theory">Theory Sheets</a>
+        <a href="#decks">Slide Decks</a>
+        <a href="#resources">Tools &amp; Resources</a>
+      </nav>
+    </header>
+
+    <h2 class="section" id="schedule">Semester Schedule</h2>
+    <p class="section-note">
+      TR · 80-minute sessions. Each week is a tile in the chart — color where the assignment is written,
+      <span style="color:var(--grey-tile)">Richter grey</span> where it is still to come.
+    </p>
+
+    <div class="grid">
+
+      <!-- Week 1 -->
+      <div class="card">
+        <div class="swatch" style="background:#c1352b"></div>
+        <div class="body">
+          <div class="wk">Week 1</div>
+          <h3>Structure → Surface → Behavior</h3>
+          <div class="mode">Structure &amp; Interface</div>
+          <p class="topics">HTML as structure · CSS as rule system · Canvas · enable GitHub Pages</p>
+          <div class="due">
+            <div class="item"><span class="label">Lab 0</span><span class="name"><a href="labs/lab_00_structure_surface.html">Structure &amp; Surface as Systems</a></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 2 -->
+      <div class="card">
+        <div class="swatch" style="background:#2f4b9b"></div>
+        <div class="body">
+          <div class="wk">Week 2</div>
+          <h3>Time Enters the System</h3>
+          <div class="mode">Image / Motion</div>
+          <p class="topics">p5.js animation · frameCount · deterministic motion</p>
+          <div class="due">
+            <div class="item"><span class="label">Lab 1</span><span class="name"><a href="labs/lab_01_rule_without_random.html">Rule Without Random</a></span></div>
+            <div class="item"><span class="label">Proj 1</span><span class="name"><a href="projects/project_01_system_based_shape_self_portrait.html">System-Based Shape Self-Portrait</a></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 3 -->
+      <div class="card">
+        <div class="swatch" style="background:#f2c12e"></div>
+        <div class="body">
+          <div class="wk">Week 3</div>
+          <h3>Randomness as Material</h3>
+          <div class="mode">Image / Motion</div>
+          <p class="topics">random() vs rules · probability as design</p>
+          <div class="due">
+            <div class="item"><span class="label">Lab 2</span><span class="name"><a href="labs/lab_02_random_without_design.html">Random Without Design</a></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 4 -->
+      <div class="card">
+        <div class="swatch" style="background:#3f8a4f"></div>
+        <div class="body">
+          <div class="wk">Week 4</div>
+          <h3>Generative Visual Identity</h3>
+          <div class="mode">Image / Emergence</div>
+          <p class="topics">Larger rule-based systems</p>
+          <div class="due">
+            <div class="item"><span class="label">Lab 3</span><span class="name"><a href="labs/lab_03_controlled_randomness.html">Controlled Randomness</a></span></div>
+            <div class="item"><span class="label">Proj 2</span><span class="name"><a href="projects/project_02_generative_visual_study.html">Generative Visual Study</a></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 5 -->
+      <div class="card">
+        <div class="swatch" style="background:#6b4a9e"></div>
+        <div class="body">
+          <div class="wk">Week 5</div>
+          <h3>Color as Structure</h3>
+          <div class="mode">Image / Color</div>
+          <p class="topics">HSB vs RGB · palette as constraint</p>
+          <div class="due">
+            <div class="item"><span class="label">Lab 4</span><span class="name"><a href="labs/lab_04_one_hue_world.html">One-Hue World</a></span></div>
+            <div class="item"><span class="label">Lab 5</span><span class="name"><a href="labs/lab_05_palette_as_prison.html">Palette as Prison</a></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 6 -->
+      <div class="card">
+        <div class="swatch" style="background:#e0792e"></div>
+        <div class="body">
+          <div class="wk">Week 6</div>
+          <h3>Algorithmic Drawing &amp; Mark-Making</h3>
+          <div class="mode">Image / Gesture</div>
+          <p class="topics">Particle marks · opacity &amp; layering</p>
+          <div class="due">
+            <div class="item"><span class="label">Proj 3</span><span class="name"><a href="projects/project_03_algorithmic_color_composition.html">Algorithmic Color Composition</a></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 7 -->
+      <div class="card">
+        <div class="swatch" style="background:#2f8f86"></div>
+        <div class="body">
+          <div class="wk">Week 7</div>
+          <h3>Text as Spatial Material</h3>
+          <div class="mode">Text / Visual Language</div>
+          <p class="topics">Text as shape · letter-level animation</p>
+          <div class="due">
+            <div class="item todo"><span class="label">Lab 6</span><span class="name">Text as Object</span></div>
+            <div class="item"><span class="label">Lab 7</span><span class="name"><a href="labs/lab_07_prompt_as_material.html">Prompt as Material</a></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 8 -->
+      <div class="card">
+        <div class="swatch" style="background:var(--grey-tile)"></div>
+        <div class="body">
+          <div class="wk">Week 8</div>
+          <h3>Interactive Poetry Systems</h3>
+          <div class="mode">Text / Interaction</div>
+          <p class="topics">Motion + text + interaction</p>
+          <div class="due">
+            <div class="item todo"><span class="label">Proj 4</span><span class="name">Animated &amp; Interactive Concrete Poem</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 9 -->
+      <div class="card">
+        <div class="swatch" style="background:#a8408b"></div>
+        <div class="body">
+          <div class="wk">Week 9</div>
+          <h3>Sound as Expressive System</h3>
+          <div class="mode">Sound / Time</div>
+          <p class="topics">Tone.js · synthesis fundamentals</p>
+          <div class="due">
+            <div class="item"><span class="label">Lab 8</span><span class="name"><a href="labs/lab_08_envelope_only.html">Envelope Only</a></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 10 -->
+      <div class="card">
+        <div class="swatch" style="background:var(--grey-tile)"></div>
+        <div class="body">
+          <div class="wk">Week 10</div>
+          <h3>Rhythm &amp; Sonification</h3>
+          <div class="mode">Sound / Pattern</div>
+          <p class="topics">Sequencing · pattern over melody</p>
+          <div class="due">
+            <div class="item todo"><span class="label">Lab 9</span><span class="name">Rhythm Without Notes</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 11 -->
+      <div class="card">
+        <div class="swatch" style="background:var(--grey-tile)"></div>
+        <div class="body">
+          <div class="wk">Week 11</div>
+          <h3>Interactive Audio Systems</h3>
+          <div class="mode">Sound / Interaction</div>
+          <p class="topics">Multimodal mapping</p>
+          <div class="due">
+            <div class="item todo"><span class="label">Proj 5</span><span class="name">Generative Sound / Sonified System</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 12 -->
+      <div class="card">
+        <div class="swatch" style="background:var(--grey-tile)"></div>
+        <div class="body">
+          <div class="wk">Week 12</div>
+          <h3>Data as Poetic Constraint</h3>
+          <div class="mode">Data / Mapping</div>
+          <p class="topics">CSV / JSON · data → behavior</p>
+          <div class="due">
+            <div class="item todo"><span class="label">Lab 10</span><span class="name">Mapping Without Message</span></div>
+            <div class="item todo"><span class="label">Lab 11</span><span class="name">Three Mappings, Same Data</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 13 -->
+      <div class="card">
+        <div class="swatch" style="background:var(--grey-tile)"></div>
+        <div class="body">
+          <div class="wk">Week 13</div>
+          <h3>Data-Driven Systems</h3>
+          <div class="mode">Data / Emergence</div>
+          <p class="topics">Expressive data systems</p>
+          <div class="due">
+            <div class="item todo"><span class="label">Proj 6</span><span class="name">Data-Driven Expressive System</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 14 -->
+      <div class="card">
+        <div class="swatch" style="background:var(--grey-tile)"></div>
+        <div class="body">
+          <div class="wk">Week 14</div>
+          <h3>Translation &amp; Failure</h3>
+          <div class="mode">Conceptual Transfer</div>
+          <p class="topics">System identity across rewrites · glitch as generative force</p>
+          <div class="due">
+            <div class="item todo"><span class="label">Lab 12</span><span class="name">System Identity Translation</span></div>
+            <div class="item todo"><span class="label">Lab 13</span><span class="name">Failure Harvest</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 15 -->
+      <div class="card">
+        <div class="swatch" style="background:var(--grey-studio)"></div>
+        <div class="body">
+          <div class="wk">Week 15</div>
+          <h3>Final System Studio</h3>
+          <div class="mode">Integration</div>
+          <p class="topics">Full build · critique &amp; refinement</p>
+          <div class="due">
+            <div class="studio">Studio — no new assignment due</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 16 -->
+      <div class="card">
+        <div class="swatch" style="background:var(--grey-tile)"></div>
+        <div class="body">
+          <div class="wk">Week 16</div>
+          <h3>Exhibition &amp; Publication</h3>
+          <div class="mode">Public Systems</div>
+          <p class="topics">Polish live portfolio · public demo</p>
+          <div class="due">
+            <div class="item todo"><span class="label">Final</span><span class="name">Final Project — Public Exhibition</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finals -->
+      <div class="card">
+        <div class="swatch" style="background:var(--grey-tile)"></div>
+        <div class="body">
+          <div class="wk">Finals Week</div>
+          <h3>Portfolio &amp; Reflection</h3>
+          <div class="mode">Public Systems</div>
+          <p class="topics">GitHub Pages portfolio · written reflection</p>
+          <div class="due">
+            <div class="item todo"><span class="label">Final</span><span class="name">Final Portfolio — Pages + Reflection</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section" id="theory">Theory Sheets</h2>
+    <p class="section-note">Reference cheat sheets — technical concepts framed for humanities inquiry.</p>
+    <div class="cols">
+      <div class="panel">
+        <h3>Cheat sheets</h3>
+        <ul>
+          <li><a href="theory_sheets/color_theory_cheatsheet.html">Color Theory</a></li>
+          <li><a href="theory_sheets/drawing_theory_cheatsheet.html">Drawing Theory</a></li>
+          <li><a href="theory_sheets/generative_art_cheatsheet.html">Generative Art</a></li>
+          <li><a href="theory_sheets/interactive_poetry_cheatsheet.html">Interactive Poetry</a></li>
+          <li><a href="theory_sheets/sound_design_cheatsheet.html">Sound Design</a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Course foundations</h3>
+        <ul>
+          <li><a href="context/theory_foundations.md">Theory Foundations</a></li>
+          <li><a href="context/labs_and_projects.md">Labs &amp; Projects Overview</a></li>
+          <li><a href="context/semester_schedule.md">Semester Schedule</a> <span class="sub">— instructor</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section" id="decks">Slide Decks</h2>
+    <p class="section-note">In-class conceptual and technical presentations.</p>
+    <div class="cols">
+      <div class="panel">
+        <h3>Decks</h3>
+        <ul>
+          <li><a href="slide_decks/discovery_over_expression/index.html">Discovery over Expression</a></li>
+          <li><a href="slide_decks/the_sublime/index.html">The Sublime &amp; Discovery</a></li>
+          <li><a href="slide_decks/deployment/index.html">Publishing as Part of the System</a> <span class="sub">— deployment</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section" id="resources">Tools &amp; Resources</h2>
+    <p class="section-note">External platforms and documentation.</p>
+    <div class="cols">
+      <div class="panel">
+        <h3>Make</h3>
+        <ul>
+          <li><a href="https://editor.p5js.org/" target="_blank" rel="noopener">p5.js Web Editor</a></li>
+          <li><a href="https://p5js.org/reference/" target="_blank" rel="noopener">p5.js Reference</a></li>
+          <li><a href="https://tonejs.github.io/" target="_blank" rel="noopener">Tone.js</a> <span class="sub">— sound</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Publish</h3>
+        <ul>
+          <li><a href="https://github.com/TCU-DCDA/dcda30833_workspace">Course GitHub Repository</a></li>
+          <li><a href="context/github_classroom_structure.md">GitHub Classroom &amp; Deployment</a></li>
+          <li><a href="https://docs.github.com/pages" target="_blank" rel="noopener">GitHub Pages Docs</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      DCDA 30833 — Creative Coding for the Humanities · Spring 2026 · Dr. Curt Rode<br>
+      <a href="https://github.com/TCU-DCDA/dcda30833_workspace">github.com/TCU-DCDA/dcda30833_workspace</a>
+      <div class="colophon">
+        Visual design after Gerhard Richter's <em>Color Charts</em> — flat color arranged within a fixed system,
+        and grey where a work is yet to be made. The schedule mirrors <code>context/semester_schedule.md</code>;
+        grey tiles mark content not yet authored.
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

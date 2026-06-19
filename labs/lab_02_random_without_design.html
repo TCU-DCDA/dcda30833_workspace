@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAB 2 — Random Without Design — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #f2c12e; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Labs</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="lab-2--random-without-design">LAB 2 — Random Without Design</h1>
+<p><strong>Course:</strong> DCDA 30833 — Creative Coding for the
+Humanities<br />
+<strong>Due:</strong> Week 3 (Thursday)<br />
+<strong>Tools:</strong> p5.js<br />
+<strong>Submission:</strong> GitHub link to your sketch</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This lab explores the opposite extreme of Lab 1. Where Lab 1 was
+<strong>all rule and no chance</strong>, this lab is <strong>all chance
+and no rule</strong>.</p>
+<p>You will build a sketch that uses <strong>raw, unfiltered
+randomness</strong> to generate visual output.</p>
+<p>The goal is not to make something "beautiful" or "composed." The goal
+is to experience:</p>
+<ul>
+<li><strong>Chaos</strong></li>
+<li><strong>Visual overload</strong></li>
+<li><strong>Instability</strong></li>
+<li><strong>Unpredictability</strong></li>
+</ul>
+<p>You are exploring what happens when you remove all constraints and
+let the machine roll the dice on every decision. This is
+<strong>randomness without design</strong>.</p>
+<hr />
+<h2 id="restrictions">Restrictions</h2>
+<p>You <strong>must use</strong>:</p>
+<ul>
+<li><code>random()</code> (heavily and frequently)</li>
+<li><code>background()</code> (or lack thereof for trails)</li>
+<li>Shapes, lines, and colors determined by chance</li>
+</ul>
+<p>You <strong>may not use</strong>:</p>
+<ul>
+<li><code>for</code> or <code>while</code> loops to create structured
+grids or patterns</li>
+<li><code>map()</code> or <code>constrain()</code> to tame the
+values</li>
+<li><code>if</code> statements that impose strict order or
+composition</li>
+<li><code>noise()</code> (Perlin noise is too smooth for this lab; we
+want raw chaos)</li>
+</ul>
+<p><strong>Let the randomness be unfiltered.</strong> If a shape draws
+off-screen, let it. If colors clash, let them. Do not try to "fix" the
+output.</p>
+<hr />
+<h2 id="starter-template">Starter Template</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">setup</span>() {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">createCanvas</span>(windowWidth<span class="op">,</span> windowHeight)<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">background</span>(<span class="dv">240</span>)<span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// frameRate(10); // Optional: slow down the chaos if needed</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">draw</span>() {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Use random() for everything: position, size, color</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> x <span class="op">=</span> <span class="fu">random</span>(width)<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> y <span class="op">=</span> <span class="fu">random</span>(height)<span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Random colors</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> r <span class="op">=</span> <span class="fu">random</span>(<span class="dv">255</span>)<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> g <span class="op">=</span> <span class="fu">random</span>(<span class="dv">255</span>)<span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> b <span class="op">=</span> <span class="fu">random</span>(<span class="dv">255</span>)<span class="op">;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fill</span>(r<span class="op">,</span> g<span class="op">,</span> b<span class="op">,</span> <span class="fu">random</span>(<span class="dv">50</span><span class="op">,</span> <span class="dv">200</span>))<span class="op">;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">noStroke</span>()<span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Draw something chaotic</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Try changing the shape or adding more random parameters</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ellipse</span>(x<span class="op">,</span> y<span class="op">,</span> <span class="fu">random</span>(<span class="dv">10</span><span class="op">,</span> <span class="dv">200</span>))<span class="op">;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<hr />
+<h2 id="reflection-35-sentences">Reflection (3–5 Sentences)</h2>
+<p>Answer briefly:</p>
+<ol type="1">
+<li>How does this "pure randomness" feel compared to the "pure rules" of
+Lab 1?</li>
+<li>What is frustrating or limiting about having no control over the
+composition?</li>
+<li>Did any interesting visual moments happen purely by accident?</li>
+</ol>
+<hr />
+<h2 id="what-this-lab-prepares-you-for">What This Lab Prepares You
+For</h2>
+<p>Next week, in <strong>Lab 3 (Controlled Randomness)</strong>, you
+will combine these two worlds. You will learn to:</p>
+<ul>
+<li>Tame randomness</li>
+<li>Use probability</li>
+<li>Apply constraints to chance</li>
+</ul>
+<p>This lab shows you why <strong>unfiltered randomness</strong> is
+rarely enough on its own—it needs design to become art.</p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

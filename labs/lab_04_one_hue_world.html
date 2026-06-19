@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAB 4 — One-Hue World — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #6b4a9e; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Labs</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="lab-4-----one-hue-world">LAB 4 --- One-Hue World</h1>
+<p><strong>Course:</strong> DCDA 30833 --- Creative Coding for the
+Humanities<br />
+<strong>Due:</strong> Week 5 (Tuesday)<br />
+<strong>Tools:</strong> p5.js<br />
+<strong>Submission:</strong> GitHub link to your sketch</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This lab introduces <strong>color as a structured system</strong>,
+not decoration.</p>
+<p>You will build a generative sketch that uses <strong>only one
+hue</strong>, with all variation coming from:</p>
+<ul>
+<li>value (light ↔︎ dark)</li>
+<li>saturation (dull ↔︎ intense)</li>
+<li>opacity</li>
+</ul>
+<p>By stripping away hue choice, you will discover how much
+<strong>behavior, contrast, and mood</strong> can emerge from a single
+color family.</p>
+<p>This lab prepares you for:</p>
+<ul>
+<li><strong>LAB 5 --- Palette as Prison</strong></li>
+<li><strong>PROJECT 3 --- Algorithmic Color Composition</strong></li>
+</ul>
+<hr />
+<h2 id="core-idea">Core Idea</h2>
+<p>You are not designing a <em>color scheme</em>.</p>
+<p>You are designing a <strong>color behavior system</strong>.</p>
+<p>One hue. Many states.</p>
+<hr />
+<h2 id="restrictions">Restrictions</h2>
+<p>You <strong>must use</strong>:</p>
+<ul>
+<li>A <strong>single hue only</strong></li>
+<li>Variation through:
+<ul>
+<li>brightness / value</li>
+<li>saturation</li>
+<li>alpha (opacity)</li>
+</ul></li>
+<li>Generative rules (not hand composition)</li>
+</ul>
+<p>You <strong>may not use</strong>:</p>
+<ul>
+<li>Multiple unrelated hues</li>
+<li>Full RGB randomness</li>
+<li>Pre-made color palettes</li>
+<li>Images or external assets</li>
+</ul>
+<p>If your sketch "feels colorful," you have probably violated the
+constraint.</p>
+<hr />
+<h2
+id="suggested-system-prompts-choose-one-or-invent-your-own">Suggested
+System Prompts (Choose One or Invent Your Own)</h2>
+<ul>
+<li><strong>Breathing Field:</strong> A grid where brightness pulses
+over time.</li>
+<li><strong>Fading Orbits:</strong> Rotating elements that shift only in
+opacity.</li>
+<li><strong>Depth Illusion:</strong> Brightness mapped to distance from
+center.</li>
+<li><strong>Drifting Density:</strong> Saturation increases as particles
+overlap.</li>
+<li><strong>Value Waves:</strong> Light-to-dark bands that scroll across
+the canvas.</li>
+</ul>
+<hr />
+<h2 id="starter-template">Starter Template</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> hueValue <span class="op">=</span> <span class="dv">210</span><span class="op">;</span> <span class="co">// pick ONE hue and never change it</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">setup</span>() {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">createCanvas</span>(<span class="dv">400</span><span class="op">,</span> <span class="dv">400</span>)<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colorMode</span>(HSB<span class="op">,</span> <span class="dv">360</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">100</span>)<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">noStroke</span>()<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">draw</span>() {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">background</span>(hueValue<span class="op">,</span> <span class="dv">20</span><span class="op">,</span> <span class="dv">15</span><span class="op">,</span> <span class="dv">20</span>)<span class="op">;</span> <span class="co">// soft trail</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> x <span class="op">=</span> <span class="fu">random</span>(width)<span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> y <span class="op">=</span> <span class="fu">random</span>(height)<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> bright <span class="op">=</span> <span class="fu">random</span>(<span class="dv">30</span><span class="op">,</span> <span class="dv">100</span>)<span class="op">;</span>   <span class="co">// value only</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> sat <span class="op">=</span> <span class="fu">random</span>(<span class="dv">40</span><span class="op">,</span> <span class="dv">100</span>)<span class="op">;</span>      <span class="co">// saturation only</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> alpha <span class="op">=</span> <span class="fu">random</span>(<span class="dv">30</span><span class="op">,</span> <span class="dv">90</span>)<span class="op">;</span>     <span class="co">// opacity only</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fill</span>(hueValue<span class="op">,</span> sat<span class="op">,</span> bright<span class="op">,</span> alpha)<span class="op">;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ellipse</span>(x<span class="op">,</span> y<span class="op">,</span> <span class="fu">random</span>(<span class="dv">10</span><span class="op">,</span> <span class="dv">60</span>))<span class="op">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<hr />
+<h2 id="reflection-3--5-sentences">Reflection (3--5 Sentences)</h2>
+<p>Answer briefly:</p>
+<ol type="1">
+<li>What did restricting hue remove from your decision-making?</li>
+<li>Which variation mattered most: brightness, saturation, or
+opacity?</li>
+<li>Did the sketch feel more unified or more limited? Why?</li>
+</ol>
+<hr />
+<h2 id="what-this-lab-prepares-you-for">What This Lab Prepares You
+For</h2>
+<p>Next, in <strong>LAB 5 --- Palette as Prison</strong>, you will
+expand from:</p>
+<ul>
+<li><strong>one hue</strong></li>
+<li>to <strong>a tightly controlled set of multiple colors</strong></li>
+</ul>
+<p>You are learning how <strong>color constraints create
+identity</strong> before learning how palettes create harmony.</p>
+<hr />
+<p><em>End of LAB 4</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

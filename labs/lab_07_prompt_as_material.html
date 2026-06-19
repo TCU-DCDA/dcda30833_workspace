@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAB 7 — Prompt as Material — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #2f8f86; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Labs</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="lab-7--prompt-as-material">LAB 7 — Prompt as Material</h1>
+<p><strong>Course:</strong> DCDA 30833 — Creative Coding for the
+Humanities <strong>Due:</strong> Week 7 (Thursday)
+<strong>Tools:</strong> p5.js + AI assistant (Claude, ChatGPT, or
+similar) <strong>Submission:</strong> GitHub link to your lab folder</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This lab introduces <strong>AI prompting as a creative coding
+discipline</strong>.</p>
+<p>You will build a generative sketch by working <em>through</em> an AI
+assistant, treating the conversation as a constraint system — not a
+shortcut. The goal is <strong>discovery</strong>, not delivery.</p>
+<p>This lab asks: What happens when natural language becomes your
+creative code?</p>
+<hr />
+<h2 id="core-tension">Core Tension</h2>
+<p>This course teaches: <em>"What can this system reveal?"</em></p>
+<p>AI prompting often defaults to: <em>"Make me a thing that does
+X."</em></p>
+<p>Your task is to resist the second impulse. You are not ordering a
+product. You are <strong>negotiating with a system</strong> that has its
+own behaviors, defaults, and surprises. The AI is a collaborator that
+pushes back — like <code>random()</code>, like <code>noise()</code>,
+like data.</p>
+<hr />
+<h2 id="part-a-prompt-as-constraint">Part A: Prompt as Constraint</h2>
+<h3 id="the-rule">The Rule</h3>
+<p>You may describe <strong>constraints, rules, and behaviors</strong> —
+but not <strong>outcomes</strong>.</p>
+<p><strong>Allowed:</strong></p>
+<ul>
+<li>"Use only circles and the sin() function"</li>
+<li>"Create variation through rotation and scale"</li>
+<li>"The system should respond to frameCount"</li>
+</ul>
+<p><strong>Not allowed:</strong></p>
+<ul>
+<li>"Make a pulsing mandala"</li>
+<li>"I want floating particles that glow"</li>
+<li>"Create something that looks like rain"</li>
+</ul>
+<p>The moment you specify what it should <em>look like</em>, you've
+stopped discovering.</p>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Minimum <strong>3 prompt iterations</strong> (you must respond to
+what the AI gives you)</li>
+<li>You may edit the AI's code, but each edit should prompt a new
+conversation turn</li>
+<li>Document which AI tool you used</li>
+</ul>
+<hr />
+<h2 id="part-b-curate-the-machine">Part B: Curate the Machine</h2>
+<h3 id="the-rule-1">The Rule</h3>
+<p>Generate more than you need. The creative act is
+<strong>selection</strong>.</p>
+<h3 id="requirements-1">Requirements</h3>
+<ul>
+<li>Generate at least <strong>5 variations</strong> through
+prompting</li>
+<li>Select <strong>2-3</strong> that interest you</li>
+<li>Combine, edit, or sequence them into a final sketch</li>
+<li>In your reflection, explain: Why these? What did you reject?</li>
+</ul>
+<hr />
+<h2 id="deliverables">Deliverables</h2>
+<p>Your lab folder should contain:</p>
+<pre><code>lab-07-prompt-as-material/
+├── index.html
+├── sketch.js
+├── conversation.md      # Annotated excerpts (see below)
+└── reflection.md</code></pre>
+<h3 id="conversationmd-format">conversation.md Format</h3>
+<p>Document <strong>3-5 key moments</strong> from your AI conversation.
+For each:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Moment 1: [Brief title]</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>**My prompt:**</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">What you asked</span><span class="co">]</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>**AI response (summary or excerpt):**</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">What it gave you — can be abbreviated</span><span class="co">]</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>**Why this mattered:**</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Surprise? Redirection? Failure? Discovery? What did you learn or decide?</span><span class="co">]</span></span></code></pre></div>
+<p>This is not a full transcript. It's an <strong>annotated
+selection</strong> of the turns that shaped your work.</p>
+<hr />
+<h2 id="restrictions">Restrictions</h2>
+<p>You <strong>must</strong>:</p>
+<ul>
+<li>Use an AI assistant for code generation</li>
+<li>Work iteratively (no single-prompt submissions)</li>
+<li>Document your conversation</li>
+<li>Run and respond to every piece of AI-generated code</li>
+</ul>
+<p>You <strong>may not</strong>:</p>
+<ul>
+<li>Specify visual outcomes in your prompts</li>
+<li>Submit code you haven't run and evaluated</li>
+<li>Use AI-generated code without understanding what it does</li>
+<li>Skip the conversation documentation</li>
+</ul>
+<hr />
+<h2 id="example-prompts-constraint-based">Example Prompts
+(Constraint-Based)</h2>
+<p>Use these as starting points, or invent your own:</p>
+<ul>
+<li>"Write a p5.js sketch that uses only <code>line()</code> and
+<code>rotate()</code>"</li>
+<li>"Create a grid where each cell follows a different rule based on its
+position"</li>
+<li>"Generate three variations of a system that uses
+<code>noise()</code> for movement"</li>
+<li>"Build something using <code>frameCount</code> and modular
+arithmetic"</li>
+<li>"Make the background the most important visual element"</li>
+</ul>
+<h3 id="anti-examples-outcome-based--avoid-these">Anti-Examples
+(Outcome-Based — Avoid These)</h3>
+<ul>
+<li>"Make generative art that looks organic"</li>
+<li>"Create a beautiful particle system"</li>
+<li>"I want something that feels calm and meditative"</li>
+<li>"Make it look like the night sky"</li>
+</ul>
+<hr />
+<h2 id="reflection-35-sentences">Reflection (3–5 Sentences)</h2>
+<p>Answer briefly:</p>
+<ol type="1">
+<li>What did the AI give you that you wouldn't have made yourself?</li>
+<li>Where did you have to push back or redirect? What does that reveal
+about the system?</li>
+<li>How is prompting similar to or different from writing code
+directly?</li>
+</ol>
+<hr />
+<h2 id="what-this-lab-prepares-you-for">What This Lab Prepares You
+For</h2>
+<p>In <strong>Project 4 — Animated &amp; Interactive Concrete
+Poem</strong>, you may choose to incorporate AI:</p>
+<ul>
+<li>AI-generated text fragments as material</li>
+<li>Prompt-assisted animation or interaction logic</li>
+<li>Collaborative human-AI composition</li>
+</ul>
+<p>If you use AI in Project 4, your artist statement should address:
+What did the AI contribute? What did you contribute? What emerged from
+the collaboration?</p>
+<p>More broadly, this lab teaches you to treat <strong>any generative
+system</strong> — AI, randomness, data, interaction — as a collaborator
+that pushes back, not a tool that obeys.</p>
+<hr />
+<h2 id="a-note-on-discovery">A Note on Discovery</h2>
+<p>The course principle <em>"Discovery over Expression"</em> applies
+here.</p>
+<p>When you write code directly, you make every decision. When you
+prompt an AI, you relinquish some control — and that's the point. The AI
+will make choices you wouldn't. Some will be boring. Some will be wrong.
+Some will be genuinely surprising.</p>
+<p>Your job is to <strong>notice</strong>, <strong>respond</strong>, and
+<strong>curate</strong>. The conversation is the creative work.</p>
+<hr />
+<p><em>End of LAB 7</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

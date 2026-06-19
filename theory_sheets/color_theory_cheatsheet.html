@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Theory — Cheat Sheet — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #6b4a9e; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Theory Sheets</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="art-color-theory-cheat-sheet-for-creative-coding">🎨 Color
+Theory Cheat Sheet for Creative Coding</h1>
+<p>A practical, coding-oriented introduction to color theory for
+students working with p5.js, CSS, and generative art.</p>
+<hr />
+<h2 id="1-the-three-core-components-of-color">1. The Three Core
+Components of Color</h2>
+<h3 id="hue">Hue</h3>
+<ul>
+<li>The <em>color family</em> (red, blue, green, etc.).</li>
+<li>Represented as degrees on a color wheel (0–360).</li>
+</ul>
+<h3 id="saturation">Saturation</h3>
+<ul>
+<li>Intensity or purity of a color.</li>
+<li>0% = gray</li>
+<li>100% = vivid</li>
+</ul>
+<h3 id="brightness--value">Brightness / Value</h3>
+<ul>
+<li>How light or dark a color is.</li>
+<li>High value = light</li>
+<li>Low value = dark</li>
+</ul>
+<hr />
+<h2 id="2-color-modes-in-code">2. Color Modes in Code</h2>
+<h3 id="rgb-red-green-blue">RGB (Red, Green, Blue)</h3>
+<ul>
+<li>The default for p5.js.</li>
+<li>Values: <code>0–255</code> each.</li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fill</span>(<span class="dv">120</span><span class="op">,</span> <span class="dv">200</span><span class="op">,</span> <span class="dv">255</span>)<span class="op">;</span></span></code></pre></div>
+<h3 id="hsb--hsl-hue-saturation-brightnesslightness">HSB / HSL (Hue,
+Saturation, Brightness/Lightness)</h3>
+<ul>
+<li>More intuitive for design work.</li>
+<li>Great for generative palettes.</li>
+</ul>
+<p>Enable HSB in p5.js:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colorMode</span>(HSB<span class="op">,</span> <span class="dv">360</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">100</span>)<span class="op">;</span></span></code></pre></div>
+<hr />
+<h2 id="3-essential-color-harmonies">3. Essential Color Harmonies</h2>
+<p>These help students pick <em>intentional</em>, visually pleasing
+palettes.</p>
+<h3 id="complementary">Complementary</h3>
+<p>Colors opposite on the wheel.</p>
+<ul>
+<li>High contrast</li>
+<li>Good for highlight/attention</li>
+</ul>
+<h3 id="analogous">Analogous</h3>
+<p>Colors next to each other.</p>
+<ul>
+<li>Calm, cohesive</li>
+<li>Great for backgrounds</li>
+</ul>
+<h3 id="triadic">Triadic</h3>
+<p>Three colors evenly spaced.</p>
+<ul>
+<li>Balanced energy</li>
+<li>Great for bold generative art</li>
+</ul>
+<h3 id="monochromatic">Monochromatic</h3>
+<p>Variations of one hue.</p>
+<ul>
+<li>Simple and elegant</li>
+<li>Good for mood pieces</li>
+</ul>
+<hr />
+<h2 id="4-temperature-warm-vs-cool">4. Temperature: Warm vs. Cool</h2>
+<h3 id="warm-colors">Warm Colors</h3>
+<ul>
+<li>Red, orange, yellow</li>
+<li>Feel energetic, emotional, active</li>
+<li>Move <em>forward</em> in composition</li>
+</ul>
+<h3 id="cool-colors">Cool Colors</h3>
+<ul>
+<li>Blue, green, violet</li>
+<li>Calm, distant, quiet</li>
+<li>Move <em>back</em> in composition</li>
+</ul>
+<p>Useful for depth and emotional tone.</p>
+<hr />
+<h2 id="5-value--contrast-the-most-important-concept">5. Value &amp;
+Contrast (The Most Important Concept)</h2>
+<p>Value contrast determines readability and visual hierarchy.</p>
+<p>High contrast:</p>
+<ul>
+<li>bright vs. dark</li>
+<li>ideal for focal points</li>
+</ul>
+<p>Low contrast:</p>
+<ul>
+<li>smooth, subtle</li>
+<li>ideal for backgrounds</li>
+</ul>
+<p>Example in p5.js:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">background</span>(<span class="dv">20</span>)<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fill</span>(<span class="dv">220</span>)<span class="op">;</span></span></code></pre></div>
+<hr />
+<h2 id="6-designing-a-color-palette">6. Designing a Color Palette</h2>
+<h3 id="method-1-pick-a-base-hue">Method 1: Pick a Base Hue</h3>
+<p>Then adjust saturation and brightness:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colorMode</span>(HSB<span class="op">,</span> <span class="dv">360</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">100</span>)<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fill</span>(baseHue<span class="op">,</span> <span class="fu">random</span>(<span class="dv">40</span><span class="op">,</span> <span class="dv">90</span>)<span class="op">,</span> <span class="fu">random</span>(<span class="dv">40</span><span class="op">,</span> <span class="dv">90</span>))<span class="op">;</span></span></code></pre></div>
+<h3 id="method-2-use-a-fixed-palette">Method 2: Use a Fixed Palette</h3>
+<p>Many artists use curated palettes.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> palette <span class="op">=</span> [</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;#4d1979&quot;</span><span class="op">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;#ffb700&quot;</span><span class="op">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;#7ac7ff&quot;</span><span class="op">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;#e63946&quot;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">fill</span>(palette[<span class="fu">int</span>(<span class="fu">random</span>(palette<span class="op">.</span><span class="at">length</span>))])<span class="op">;</span></span></code></pre></div>
+<h3 id="method-3-procedural-palettes">Method 3: Procedural Palettes</h3>
+<p>Use noise for softness:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> h <span class="op">=</span> <span class="fu">noise</span>(frameCount <span class="op">*</span> <span class="fl">0.01</span>) <span class="op">*</span> <span class="dv">360</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fill</span>(h<span class="op">,</span> <span class="dv">80</span><span class="op">,</span> <span class="dv">90</span>)<span class="op">;</span></span></code></pre></div>
+<hr />
+<h2 id="7-color-psychology-lightweight--useful">7. Color Psychology
+(Lightweight + Useful)</h2>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Associations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red</td>
+<td>energy, passion, urgency</td>
+</tr>
+<tr>
+<td>Orange</td>
+<td>creativity, warmth</td>
+</tr>
+<tr>
+<td>Yellow</td>
+<td>optimism, attention</td>
+</tr>
+<tr>
+<td>Green</td>
+<td>nature, tranquility, growth</td>
+</tr>
+<tr>
+<td>Blue</td>
+<td>trust, calm, distance</td>
+</tr>
+<tr>
+<td>Purple</td>
+<td>mystery, luxury, imagination</td>
+</tr>
+<tr>
+<td>Black</td>
+<td>power, elegance, emptiness</td>
+</tr>
+<tr>
+<td>White</td>
+<td>clarity, simplicity</td>
+</tr>
+</tbody>
+</table>
+<p>Use sparingly—helpful for guiding emotion in generative art or
+interactive text.</p>
+<hr />
+<h2 id="8-backgroundforeground-rules-of-thumb">8. Background–Foreground
+Rules of Thumb</h2>
+<ul>
+<li>Dark background + light foreground = cinematic</li>
+<li>Light background + dark foreground = clean</li>
+<li>Avoid medium-on-medium (poor contrast)</li>
+<li>Don’t use full-saturated colors everywhere</li>
+<li>Use one dominant color, one accent, one neutral</li>
+</ul>
+<hr />
+<h2 id="9-accessibility--color-safety">9. Accessibility &amp; Color
+Safety</h2>
+<h3 id="contrast-ratio">Contrast Ratio</h3>
+<p>Aim for WCAG AA:</p>
+<ul>
+<li>4.5:1 minimum for normal text</li>
+<li>3:1 for large text</li>
+</ul>
+<h3 id="avoid-relying-on-color-alone">Avoid relying on color alone</h3>
+<ul>
+<li>Always pair with shape, size, texture, or motion.</li>
+</ul>
+<p>Tools:</p>
+<ul>
+<li>contrastchecker.com</li>
+<li>color.review</li>
+</ul>
+<hr />
+<h2 id="10-useful-p5js-tricks">10. Useful p5.js Tricks</h2>
+<h3 id="random-harmonies">Random Harmonies</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> h <span class="op">=</span> <span class="fu">random</span>(<span class="dv">360</span>)<span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> complement <span class="op">=</span> (h <span class="op">+</span> <span class="dv">180</span>) <span class="op">%</span> <span class="dv">360</span><span class="op">;</span></span></code></pre></div>
+<h3 id="subtle-palettes-using-noise">Subtle Palettes Using Noise</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> h <span class="op">=</span> <span class="fu">noise</span>(x <span class="op">*</span> <span class="fl">0.01</span><span class="op">,</span> y <span class="op">*</span> <span class="fl">0.01</span>) <span class="op">*</span> <span class="dv">360</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fill</span>(h<span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">90</span>)<span class="op">;</span></span></code></pre></div>
+<h3 id="fade-colors">Fade Colors</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> c <span class="op">=</span> <span class="fu">color</span>(<span class="dv">200</span><span class="op">,</span> <span class="dv">80</span><span class="op">,</span> <span class="dv">90</span><span class="op">,</span> <span class="fl">0.5</span>)<span class="op">;</span> <span class="co">// last value = alpha</span></span></code></pre></div>
+<hr />
+<h2 id="11-common-mistakes-students-make">11. Common Mistakes Students
+Make</h2>
+<ul>
+<li>Choosing all saturated colors</li>
+<li>Not considering value contrast</li>
+<li>Putting complementary colors at equal intensity (visual
+“vibration”)</li>
+<li>Ignoring background–foreground relationships</li>
+<li>Using too many colors (limit to 3–5)</li>
+</ul>
+<hr />
+<h2 id="12-teaching-metaphors">12. Teaching Metaphors</h2>
+<ul>
+<li>Color is <strong>emotion</strong>; value is
+<strong>structure</strong>.</li>
+<li>Hue picks the mood; brightness picks the clarity.</li>
+<li>Saturation is your spice rack—use sparingly.</li>
+<li>Palettes are <strong>agreements</strong> among colors.</li>
+<li>The background sets the stage; the foreground performs.</li>
+</ul>
+<hr />
+<h2 id="13-recommended-palette-resources">13. Recommended Palette
+Resources</h2>
+<ul>
+<li><a href="https://coolors.co">https://coolors.co</a></li>
+<li><a href="https://colorhunt.co">https://colorhunt.co</a></li>
+<li><a href="https://huemint.com">https://huemint.com</a></li>
+<li><a href="https://paletton.com">https://paletton.com</a></li>
+<li><a
+href="https://lospec.com/palette-list">https://lospec.com/palette-list</a>
+(great for generative art)</li>
+</ul>
+<hr />
+<p><em>End of cheat sheet.</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

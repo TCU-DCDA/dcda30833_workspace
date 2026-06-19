@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sound Design — Cheat Sheet — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #a8408b; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Theory Sheets</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1
+id="musical_note-sound-design-cheat-sheet-for-creative-coding-tonejs-edition">🎵
+Sound Design Cheat Sheet for Creative Coding (Tone.js Edition)</h1>
+<p>A practical reference for students working with sound in the browser
+using Tone.js.</p>
+<h2 id="1-core-sound-concepts">1. Core Sound Concepts</h2>
+<h3 id="frequency-pitch">Frequency (Pitch)</h3>
+<ul>
+<li>Measured in Hz (cycles per second).</li>
+<li>Low frequency = low pitch; high frequency = high pitch.</li>
+<li>Reference: A4 = 440 Hz.</li>
+</ul>
+<h3 id="amplitude-loudness">Amplitude (Loudness)</h3>
+<ul>
+<li>Loudness represented as gain or decibels (dB).</li>
+<li>0 dB = maximum; -6 dB or lower is safer.</li>
+</ul>
+<h3 id="waveforms-oscillator-types">Waveforms (Oscillator Types)</h3>
+<ul>
+<li>sine – smooth, pure</li>
+<li>square – hollow, buzzy</li>
+<li>sawtooth – bright, harsh</li>
+<li>triangle – soft, mellow</li>
+</ul>
+<h2 id="2-envelopes-adsr">2. Envelopes (ADSR)</h2>
+<p>ADSR = Attack, Decay, Sustain, Release.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> synth <span class="op">=</span> <span class="kw">new</span> Tone<span class="op">.</span><span class="fu">Synth</span>({</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">envelope</span><span class="op">:</span> {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">attack</span><span class="op">:</span> <span class="fl">0.2</span><span class="op">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">decay</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">sustain</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">release</span><span class="op">:</span> <span class="fl">0.8</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">toDestination</span>()<span class="op">;</span></span></code></pre></div>
+<h2 id="3-filters-tone-shaping">3. Filters (Tone Shaping)</h2>
+<ul>
+<li>lowpass – muffles highs</li>
+<li>highpass – thins lows</li>
+<li>bandpass – isolates a band</li>
+<li>notch – removes a narrow band</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> filter <span class="op">=</span> <span class="kw">new</span> Tone<span class="op">.</span><span class="fu">Filter</span>(<span class="dv">800</span><span class="op">,</span> <span class="st">&quot;lowpass&quot;</span>)<span class="op">.</span><span class="fu">toDestination</span>()<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> synth <span class="op">=</span> <span class="kw">new</span> Tone<span class="op">.</span><span class="fu">Synth</span>()<span class="op">.</span><span class="fu">connect</span>(filter)<span class="op">;</span></span></code></pre></div>
+<h2 id="4-rhythm--timing">4. Rhythm &amp; Timing</h2>
+<h3 id="bpm-tempo">BPM (Tempo)</h3>
+<ul>
+<li>Beats per minute; 120 BPM is common.</li>
+</ul>
+<h3 id="subdivisions">Subdivisions</h3>
+<ul>
+<li>"4n" = quarter note</li>
+<li>"8n" = eighth note</li>
+<li>"16n" = sixteenth note</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Tone<span class="op">.</span><span class="at">Transport</span><span class="op">.</span><span class="at">bpm</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> <span class="dv">120</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Tone<span class="op">.</span><span class="at">Transport</span><span class="op">.</span><span class="fu">scheduleRepeat</span>((time) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  synth<span class="op">.</span><span class="fu">triggerAttackRelease</span>(<span class="st">&quot;C4&quot;</span><span class="op">,</span> <span class="st">&quot;8n&quot;</span><span class="op">,</span> time)<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="st">&quot;4n&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<h2 id="5-scales--harmony-minimal-music-theory">5. Scales &amp; Harmony
+(Minimal Music Theory)</h2>
+<h3 id="major-scale-pattern">Major Scale Pattern</h3>
+<p>Whole–Whole–Half–Whole–Whole–Whole–Half</p>
+<h3 id="minor-scale-pattern">Minor Scale Pattern</h3>
+<p>Whole–Half–Whole–Whole–Half–Whole–Whole</p>
+<h3 id="useful-beginner-scales">Useful Beginner Scales</h3>
+<ul>
+<li>Pentatonic major (safe, bright)</li>
+<li>Pentatonic minor (emotional)</li>
+<li>Blues scale (expressive)</li>
+</ul>
+<h2 id="6-mapping-data-to-sound">6. Mapping Data to Sound</h2>
+<p>Common mappings:</p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Sound Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>frequency</td>
+</tr>
+<tr>
+<td>category</td>
+<td>instrument/timbre</td>
+</tr>
+<tr>
+<td>range</td>
+<td>amplitude or filter cutoff</td>
+</tr>
+<tr>
+<td>time series</td>
+<td>rhythmic pattern</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> value <span class="op">=</span> <span class="fl">0.7</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> freq <span class="op">=</span> Tone<span class="op">.</span><span class="fu">Frequency</span>(<span class="dv">200</span> <span class="op">+</span> value <span class="op">*</span> <span class="dv">600</span><span class="op">,</span> <span class="st">&quot;hz&quot;</span>)<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>synth<span class="op">.</span><span class="fu">triggerAttackRelease</span>(freq<span class="op">,</span> <span class="st">&quot;8n&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<h2 id="7-tonejs-building-blocks">7. Tone.js Building Blocks</h2>
+<h3 id="synth">Synth</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> Tone<span class="op">.</span><span class="fu">Synth</span>()</span></code></pre></div>
+<h3 id="polysynth">PolySynth</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> Tone<span class="op">.</span><span class="fu">PolySynth</span>(Tone<span class="op">.</span><span class="at">Synth</span>)</span></code></pre></div>
+<h3 id="sampler">Sampler</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> Tone<span class="op">.</span><span class="fu">Sampler</span>({<span class="op">...</span>})</span></code></pre></div>
+<h3 id="effects-chain">Effects Chain</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>synth<span class="op">.</span><span class="fu">chain</span>(filter<span class="op">,</span> reverb<span class="op">,</span> Tone<span class="op">.</span><span class="at">Destination</span>)<span class="op">;</span></span></code></pre></div>
+<h2 id="8-interaction-patterns-p5js--tonejs">8. Interaction Patterns
+(p5.js + Tone.js)</h2>
+<p>Tone.js must be started by a user gesture:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">mousePressed</span>() {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  Tone<span class="op">.</span><span class="fu">start</span>()<span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;audio ready&quot;</span>)<span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Common mappings:</p>
+<ul>
+<li>Mouse position → pitch</li>
+<li>Drag → filter sweep</li>
+<li>Click → note trigger</li>
+<li>frameCount → rhythm</li>
+</ul>
+<h2 id="9-sound-design-strategies">9. Sound Design Strategies</h2>
+<h3 id="for-warm-sounds">For warm sounds:</h3>
+<ul>
+<li>sine or triangle wave</li>
+<li>lowpass filter</li>
+<li>longer attack</li>
+</ul>
+<h3 id="for-punchy-sounds">For punchy sounds:</h3>
+<ul>
+<li>saw or square wave</li>
+<li>short attack/decay</li>
+</ul>
+<h3 id="for-ambient-pads">For ambient pads:</h3>
+<ul>
+<li>long attack &amp; release</li>
+<li>reverb</li>
+<li>noise + filters</li>
+</ul>
+<h3 id="for-generative-melodies">For generative melodies:</h3>
+<ul>
+<li>choose a scale</li>
+<li>randomly pick notes from it</li>
+<li>vary rhythm with "8n"/"16n"</li>
+</ul>
+<h2 id="10-starter-sound-recipes">10. Starter Sound Recipes</h2>
+<h3 id="soft-pad">Soft Pad</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> synth <span class="op">=</span> <span class="kw">new</span> Tone<span class="op">.</span><span class="fu">Synth</span>({</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">oscillator</span><span class="op">:</span> { <span class="dt">type</span><span class="op">:</span> <span class="st">&quot;sine&quot;</span> }<span class="op">,</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">envelope</span><span class="op">:</span> { <span class="dt">attack</span><span class="op">:</span> <span class="fl">1.2</span><span class="op">,</span> <span class="dt">release</span><span class="op">:</span> <span class="dv">2</span> }</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<h3 id="lead-synth">Lead Synth</h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> synth <span class="op">=</span> <span class="kw">new</span> Tone<span class="op">.</span><span class="fu">Synth</span>({</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">oscillator</span><span class="op">:</span> { <span class="dt">type</span><span class="op">:</span> <span class="st">&quot;sawtooth&quot;</span> }<span class="op">,</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">envelope</span><span class="op">:</span> { <span class="dt">attack</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">decay</span><span class="op">:</span> <span class="fl">0.2</span><span class="op">,</span> <span class="dt">sustain</span><span class="op">:</span> <span class="fl">0.4</span><span class="op">,</span> <span class="dt">release</span><span class="op">:</span> <span class="fl">0.3</span> }</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<h3 id="bass">Bass</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> synth <span class="op">=</span> <span class="kw">new</span> Tone<span class="op">.</span><span class="fu">MonoSynth</span>({</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">oscillator</span><span class="op">:</span> { <span class="dt">type</span><span class="op">:</span> <span class="st">&quot;square&quot;</span> }<span class="op">,</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">filterEnvelope</span><span class="op">:</span> { <span class="dt">baseFrequency</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span> <span class="dt">octaves</span><span class="op">:</span> <span class="dv">2</span> }</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<h2 id="11-sound-thinking-prompts">11. Sound Thinking Prompts</h2>
+<ul>
+<li>What emotion should the sound carry?</li>
+<li>Should it evolve slowly or quickly?</li>
+<li>Is the sound warm or bright?</li>
+<li>Should it react to data or gestures?</li>
+<li>How do multiple sounds balance each other?</li>
+</ul>
+<h2 id="12-teaching-metaphors">12. Teaching Metaphors</h2>
+<ul>
+<li>Waveforms are flavors.</li>
+<li>Envelopes tell sound how to move.</li>
+<li>Filters are audio sunglasses.</li>
+<li>Rhythm = timed events.</li>
+<li>Scales are safe containers for randomness.</li>
+</ul>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

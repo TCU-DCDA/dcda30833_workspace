@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAB 5 — Palette as Prison — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #6b4a9e; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Labs</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="lab-5-----palette-as-prison">LAB 5 --- Palette as Prison</h1>
+<p><strong>Course:</strong> DCDA 30833 --- Creative Coding for the
+Humanities<br />
+<strong>Due:</strong> Week 5 (Thursday)<br />
+<strong>Tools:</strong> p5.js<br />
+<strong>Submission:</strong> GitHub link to your sketch</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This lab expands your color system from <strong>one hue</strong> to a
+<strong>tightly controlled palette</strong>.</p>
+<p>Instead of choosing colors freely, you will work inside a
+<strong>small, fixed set of colors</strong> and allow:</p>
+<ul>
+<li>probability</li>
+<li>selection</li>
+<li>repetition</li>
+</ul>
+<p>to create variation.</p>
+<p>This lab teaches you that <strong>identity often comes from
+restriction</strong>, not abundance.</p>
+<p>This lab prepares you directly for:</p>
+<ul>
+<li><strong>PROJECT 3 --- Algorithmic Color Composition</strong></li>
+</ul>
+<hr />
+<h2 id="core-idea">Core Idea</h2>
+<p>You are no longer designing individual colors.</p>
+<p>You are designing a <strong>population of colors</strong> and letting
+rules decide:</p>
+<ul>
+<li>which appear</li>
+<li>how often</li>
+<li>and where</li>
+</ul>
+<p>The palette is your <strong>prison</strong>. Everything must happen
+inside it.</p>
+<hr />
+<h2 id="restrictions">Restrictions</h2>
+<p>You <strong>must use</strong>:</p>
+<ul>
+<li>A fixed array of <strong>3--5 colors maximum</strong></li>
+<li>Random selection <strong>only from that array</strong></li>
+<li>Generative placement and behavior</li>
+</ul>
+<p>You <strong>may not use</strong>:</p>
+<ul>
+<li>Unrestricted RGB randomness</li>
+<li>Continuous hue shifting</li>
+<li>External palettes or images</li>
+<li>Manual color placement for composition</li>
+</ul>
+<p>If a color appears that is not in your array, the rule is broken.</p>
+<hr />
+<h2
+id="suggested-system-prompts-choose-one-or-invent-your-own">Suggested
+System Prompts (Choose One or Invent Your Own)</h2>
+<ul>
+<li><strong>Probability Field:</strong> One palette color appears 70% of
+the time, others rarely.</li>
+<li><strong>Palette Tiling:</strong> A grid populated only by random
+palette choices.</li>
+<li><strong>Dominant vs Accent:</strong> One background color, two rare
+highlight colors.</li>
+<li><strong>Drifting Swarm:</strong> Particles that switch palette
+colors on collision.</li>
+<li><strong>Layered Density:</strong> Overdraw builds color intensity
+through repetition.</li>
+</ul>
+<hr />
+<h2 id="starter-template">Starter Template</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> palette <span class="op">=</span> [</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">color</span>(<span class="dv">20</span><span class="op">,</span> <span class="dv">90</span><span class="op">,</span> <span class="dv">90</span>)<span class="op">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">color</span>(<span class="dv">210</span><span class="op">,</span> <span class="dv">80</span><span class="op">,</span> <span class="dv">90</span>)<span class="op">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">color</span>(<span class="dv">50</span><span class="op">,</span> <span class="dv">85</span><span class="op">,</span> <span class="dv">95</span>)<span class="op">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">color</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">setup</span>() {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">createCanvas</span>(<span class="dv">400</span><span class="op">,</span> <span class="dv">400</span>)<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colorMode</span>(HSB<span class="op">,</span> <span class="dv">360</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">100</span>)<span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">noStroke</span>()<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">background</span>(palette[<span class="dv">0</span>])<span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">draw</span>() {</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> c <span class="op">=</span> <span class="fu">random</span>(palette)<span class="op">;</span> <span class="co">// only choose from the prison</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fill</span>(c)<span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ellipse</span>(<span class="fu">random</span>(width)<span class="op">,</span> <span class="fu">random</span>(height)<span class="op">,</span> <span class="fu">random</span>(<span class="dv">10</span><span class="op">,</span> <span class="dv">60</span>))<span class="op">;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<hr />
+<h2 id="reflection-3--5-sentences">Reflection (3--5 Sentences)</h2>
+<p>Answer briefly:</p>
+<ol type="1">
+<li>How did the fixed palette change your sense of freedom?</li>
+<li>Which color took over the system the most?</li>
+<li>Did repetition create harmony or tension? Why?</li>
+</ol>
+<hr />
+<h2 id="what-this-lab-prepares-you-for">What This Lab Prepares You
+For</h2>
+<p>You now have the full color toolkit:</p>
+<ul>
+<li><strong>LAB 4:</strong> One-hue systems\</li>
+<li><strong>LAB 5:</strong> Palette-based systems</li>
+</ul>
+<p>You are now fully prepared for:</p>
+<p>➡ <strong>PROJECT 3 --- Algorithmic Color Composition</strong></p>
+<p>Where color is no longer decoration, but the <strong>engine of the
+system</strong>.</p>
+<hr />
+<p><em>End of LAB 5</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

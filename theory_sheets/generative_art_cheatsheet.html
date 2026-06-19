@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generative Art — Cheat Sheet — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #3f8a4f; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Theory Sheets</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="art-generative-art-theory-cheat-sheet">🎨 Generative Art Theory
+Cheat Sheet</h1>
+<p>A compact, practical guide to the key artistic, conceptual, and
+computational principles behind generative and algorithmic art. Designed
+for creative coding students working with p5.js, JS, Python, or creative
+AI tools.</p>
+<hr />
+<h2 id="1-what-is-generative-art">1. What Is Generative Art?</h2>
+<p>Generative art is created <strong>with systems</strong>, not by
+hand.<br />
+A generative artwork is produced using:</p>
+<ul>
+<li>rules</li>
+<li>algorithms</li>
+<li>randomness</li>
+<li>data</li>
+<li>interactions</li>
+<li>simulations</li>
+</ul>
+<p>The artist designs the <strong>system</strong>, not the final
+image.</p>
+<hr />
+<h2 id="2-the-core-logic-of-generative-systems">2. The Core Logic of
+Generative Systems</h2>
+<h3 id="deterministic-rules">Deterministic Rules</h3>
+<p>If you give the same inputs → you get the same output.</p>
+<h3 id="randomness">Randomness</h3>
+<p>A source of variation; makes each run unique.</p>
+<h3 id="controlled-randomness">Controlled Randomness</h3>
+<p>Use constraints to shape the output:</p>
+<ul>
+<li>ranges</li>
+<li>weights</li>
+<li>probabilities</li>
+</ul>
+<h3 id="emergence">Emergence</h3>
+<p>Simple rules → complex behaviors.</p>
+<h3 id="iteration">Iteration</h3>
+<p>Loops build structure:</p>
+<ul>
+<li>grids</li>
+<li>spirals</li>
+<li>noise fields</li>
+</ul>
+<hr />
+<h2 id="3-visual-building-blocks">3. Visual Building Blocks</h2>
+<h3 id="shapes">Shapes</h3>
+<ul>
+<li>circles</li>
+<li>lines</li>
+<li>polygons</li>
+<li>Bézier curves</li>
+</ul>
+<h3 id="primitives-for-complexity">Primitives for Complexity</h3>
+<ul>
+<li>repeated elements</li>
+<li>scaled patterns</li>
+<li>rotation/translation</li>
+<li>layering</li>
+</ul>
+<h3 id="negative-space">Negative Space</h3>
+<p>Design the empty space as carefully as the marks.</p>
+<hr />
+<h2 id="4-randomness-vs-noise">4. Randomness vs. Noise</h2>
+<h3 id="randomness-1">Randomness</h3>
+<ul>
+<li>abrupt, unpredictable</li>
+<li>good for spark, energy, scatter</li>
+</ul>
+<h3 id="perlin-noise">Perlin Noise</h3>
+<ul>
+<li>smooth, continuous</li>
+<li>natural variation</li>
+<li>good for clouds, terrain, organic movement</li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> x <span class="op">=</span> <span class="fu">noise</span>(t) <span class="op">*</span> width<span class="op">;</span></span></code></pre></div>
+<hr />
+<h2 id="5-systems-for-generative-art">5. Systems for Generative Art</h2>
+<h3 id="grids">Grids</h3>
+<p>Divide space into columns/rows; apply variations.</p>
+<h3 id="fields">Fields</h3>
+<p>Vector fields or noise fields that direct motion.</p>
+<h3 id="agents">Agents</h3>
+<p>Autonomous particles that:</p>
+<ul>
+<li>wander</li>
+<li>follow rules</li>
+<li>avoid/seek targets</li>
+</ul>
+<h3 id="recursion">Recursion</h3>
+<p>Functions calling themselves to create:</p>
+<ul>
+<li>fractals</li>
+<li>branching trees</li>
+<li>subdivision patterns</li>
+</ul>
+<h3 id="l-systems">L-Systems</h3>
+<p>Grammar rules for growing organic forms.</p>
+<hr />
+<h2 id="6-color-strategy-for-generative-art">6. Color Strategy for
+Generative Art</h2>
+<ul>
+<li>choose a <strong>limited palette</strong> (3–5 colors)</li>
+<li>base hue + variation via saturation/value</li>
+<li>noise for softer gradients</li>
+<li>contrast to create depth</li>
+<li>randomness for accents only</li>
+</ul>
+<hr />
+<h2 id="7-motion--animation-principles">7. Motion &amp; Animation
+Principles</h2>
+<p>Borrowed from animation and physics:</p>
+<ul>
+<li>easing</li>
+<li>acceleration</li>
+<li>friction</li>
+<li>oscillation</li>
+<li>repetition</li>
+<li>rhythm</li>
+</ul>
+<p>Movement should reflect the “logic” of the system.</p>
+<hr />
+<h2 id="8-composition-in-generative-art">8. Composition in Generative
+Art</h2>
+<p>Traditional principles still matter:</p>
+<ul>
+<li>balance (symmetry/asymmetry)</li>
+<li>visual hierarchy</li>
+<li>focal points</li>
+<li>density vs open space</li>
+<li>directional flow</li>
+</ul>
+<p>Use randomness inside structure, not instead of structure.</p>
+<hr />
+<h2 id="9-interaction-as-a-generative-force">9. Interaction as a
+Generative Force</h2>
+<p>User input becomes part of the system:</p>
+<ul>
+<li>mouse position → noise seed</li>
+<li>click → state change</li>
+<li>drag → force applied</li>
+<li>keyboard → mode switch</li>
+<li>audio → reactive elements</li>
+</ul>
+<p>Interactive generative art invites exploration.</p>
+<hr />
+<h2 id="10-data-driven-generative-art">10. Data-Driven Generative
+Art</h2>
+<p>Data can shape:</p>
+<ul>
+<li>position</li>
+<li>color</li>
+<li>motion</li>
+<li>text</li>
+<li>sound</li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fill</span>(<span class="fu">map</span>(value<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">255</span>)<span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">200</span>)<span class="op">;</span></span></code></pre></div>
+<p>Common data sources:</p>
+<ul>
+<li>APIs</li>
+<li>sensors</li>
+<li>text frequency</li>
+<li>time and weather</li>
+</ul>
+<hr />
+<h2 id="11-algorithmic-composition-techniques">11. Algorithmic
+Composition Techniques</h2>
+<h3 id="rule-variations">Rule Variations</h3>
+<p>Add or subtract rules to shift complexity.</p>
+<h3 id="weighted-randomness">Weighted Randomness</h3>
+<p>Some choices are more likely than others.</p>
+<h3 id="cellular-automata">Cellular Automata</h3>
+<p>Simple cell rules → complex patterns.<br />
+(e.g., Conway’s Game of Life)</p>
+<h3 id="layered-systems">Layered Systems</h3>
+<p>Combine:</p>
+<ul>
+<li>grid + noise</li>
+<li>agents + color gradients</li>
+<li>rules + randomness</li>
+</ul>
+<p>Most strong generative pieces use <strong>multiple
+systems</strong>.</p>
+<hr />
+<h2 id="12-aesthetics-of-generative-work">12. Aesthetics of Generative
+Work</h2>
+<h3 id="coherence-vs-variation">Coherence vs Variation</h3>
+<p>A good system maintains identity across outputs.</p>
+<h3 id="signature-behavior">Signature Behavior</h3>
+<p>Every algorithm produces a distinct “voice.”</p>
+<h3 id="controlled-surprise">Controlled Surprise</h3>
+<p>Too much randomness → chaos<br />
+Too much structure → boring</p>
+<h3 id="complexity-at-the-edge-of-chaos">Complexity at the Edge of
+Chaos</h3>
+<p>Most compelling generative art sits between order and noise.</p>
+<hr />
+<h2 id="13-typical-student-pitfalls">13. Typical Student Pitfalls</h2>
+<ul>
+<li>throwing randomness everywhere</li>
+<li>ignoring composition</li>
+<li>using too many colors</li>
+<li>inconsistent scale or spacing</li>
+<li>no system identity</li>
+<li>no constraints (everything moves!)</li>
+<li>lack of iteration/refinement</li>
+</ul>
+<hr />
+<h2 id="14-ethical--conceptual-contexts">14. Ethical &amp; Conceptual
+Contexts</h2>
+<p>Generative art touches:</p>
+<ul>
+<li>authorship</li>
+<li>agency</li>
+<li>procedural creativity</li>
+<li>automation</li>
+<li>computational aesthetics</li>
+<li>digital materiality</li>
+</ul>
+<p>Useful to reference:</p>
+<ul>
+<li>Sol LeWitt: “The idea becomes the machine.”</li>
+<li>Vera Molnar</li>
+<li>Casey Reas &amp; Ben Fry</li>
+<li>Manfred Mohr</li>
+<li>L-Systems research (Lindenmayer)</li>
+</ul>
+<hr />
+<h2 id="15-teaching-metaphors">15. Teaching Metaphors</h2>
+<ul>
+<li>“The system is the artwork.”</li>
+<li>“Randomness is spice—don’t use the whole jar.”</li>
+<li>“Rules are your paintbrush.”</li>
+<li>“Noise is nature’s randomness.”</li>
+<li>“Composition still matters.”</li>
+<li>“Let the viewer explore the system, not the code.”</li>
+</ul>
+<hr />
+<h2 id="16-project-prompts-for-students">16. Project Prompts for
+Students</h2>
+<ul>
+<li>Noise-driven landscape generator</li>
+<li>A grid that evolves each frame</li>
+<li>A self-portrait using only algorithmic strokes</li>
+<li>Particle agents responding to mouse movement</li>
+<li>Infinite generative poem-visual hybrid</li>
+<li>Randomized color field compositions (Rothko-inspired)</li>
+<li>A rule-based decorative pattern generator</li>
+<li>Generative typography (letters as particles)</li>
+</ul>
+<hr />
+<p><em>End of cheat sheet.</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

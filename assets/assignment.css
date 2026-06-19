@@ -1,0 +1,143 @@
+/* DCDA 30833 — shared styles for lab & project pages
+   Gallery-white "museum label" reading page, after Richter's Color Charts.
+   Each page sets its own --accent (its week's swatch color) inline. */
+
+:root {
+  --wall: #f4f3ee;
+  --paper: #ffffff;
+  --ink: #1a1a18;
+  --ink-soft: #56564f;
+  --faint: #8e8e85;
+  --line: #d8d7cf;
+  --code-bg: #f0efe9;
+  --accent: #1a1a18; /* overridden per page */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--wall);
+  color: var(--ink);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Top color band = this assignment's week swatch */
+.accent-band { height: 14px; width: 100%; background: var(--accent); }
+
+.sheet {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.2rem 1.5rem 5rem;
+}
+
+/* Breadcrumb back to the schedule */
+.crumb {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  margin-bottom: 0.7rem;
+}
+.crumb a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--line); }
+.crumb a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* Site navigation (same destinations as the index TOC) */
+.subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  margin: 0 0 1.9rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.76rem;
+}
+.subnav a {
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border: none;
+}
+.subnav a:hover { color: var(--accent); }
+
+/* The markdown body */
+.content h1 {
+  font-size: 1.95rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 0.4rem;
+}
+.content h1 + p,
+.content h1 + p strong { color: var(--ink-soft); }
+
+.content h2 {
+  font-size: 1.18rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin: 2.4rem 0 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+.content h3 { font-size: 1.0rem; font-weight: 650; margin: 1.6rem 0 0.4rem; }
+.content h4 { font-size: 0.9rem; font-weight: 650; color: var(--ink-soft); margin: 1.2rem 0 0.3rem; }
+
+.content p { margin: 0.7rem 0; }
+.content ul, .content ol { margin: 0.6rem 0; padding-left: 1.4rem; }
+.content li { margin: 0.3rem 0; }
+
+.content a { color: var(--ink); border-bottom: 1px solid var(--accent); text-decoration: none; }
+.content a:hover { color: var(--accent); }
+
+.content strong { font-weight: 650; }
+
+.content blockquote {
+  margin: 1.2rem 0;
+  padding: 0.4rem 0 0.4rem 1.2rem;
+  border-left: 4px solid var(--accent);
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.content hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 2.2rem 0;
+}
+
+/* Code */
+.content code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.86em;
+  background: var(--code-bg);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+.content pre {
+  background: var(--code-bg);
+  border-left: 4px solid var(--accent);
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+.content pre code { background: none; padding: 0; font-size: 1em; }
+
+/* Tables (rare, but a few sheets use them) */
+.content table { border-collapse: collapse; margin: 1.2rem 0; font-size: 0.9rem; width: 100%; }
+.content th, .content td { border: 1px solid var(--line); padding: 0.5rem 0.8rem; text-align: left; }
+.content th { background: var(--code-bg); }
+
+.sheet-footer {
+  margin-top: 3.5rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+  color: var(--faint);
+  font-size: 0.78rem;
+}
+.sheet-footer a { color: var(--ink-soft); }
