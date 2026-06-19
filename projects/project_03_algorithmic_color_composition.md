@@ -31,6 +31,39 @@ This project synthesizes:
 
 ------------------------------------------------------------------------
 
+## Precedents --- System Autopsy (In-Class)
+
+Before you build, take apart how others have treated color as a system
+rather than decoration. The point is not to imitate a palette but to
+**reverse-engineer behavior**: recover the rules that govern *which*
+colors appear, *where*, and *how often.*
+
+**Look at:**
+
+-   **Josef Albers --- *Homage to the Square*:** color as relational and
+    behavioral --- the same color reads differently depending on its
+    neighbors.
+-   **Gerhard Richter --- *Color Charts*:** a fixed palette arranged by
+    chance within a strict system (the logic behind this course site).
+-   **Bridget Riley:** systematic color and the perceptual effects of
+    constrained repetition.
+
+**Autopsy questions (ask of each):**
+
+1.  What is the color rule? Could you restate it as a few lines of
+    pseudocode?
+2.  What is fixed about the palette, and where does selection or chance
+    enter?
+3.  Which single constraint is doing the most work?
+4.  What state or behavior does the color system dramatize, setting aside
+    "what it means"?
+5.  If you changed one rule, what would happen?
+
+*In class: examine 2--3 of these together at the project's launch
+(~20--30 minutes), then carry the same questions into your own build.*
+
+------------------------------------------------------------------------
+
 ## Core Requirements
 
 Your system must:

@@ -62,6 +62,9 @@ exploratory, not polished - Directly scaffold the next lab or project
 -   Title (e.g., "PROJECT X --- \[System Title\]")
 -   Course, Due Week, Tools, Submission
 -   Purpose
+-   Precedents / System Autopsy (2--3 mode-relevant exemplars to
+    reverse-engineer in class, framed as system study not style
+    imitation; reuse the shared autopsy questions)
 -   Core Requirements
 -   System Requirements (rules, behaviors, constraints)
 -   Interaction Requirements (if applicable)

@@ -33,6 +33,36 @@ chance.
 
 ------------------------------------------------------------------------
 
+## Precedents --- System Autopsy (In-Class)
+
+Before you build, take apart how others have made systems in this mode.
+The point is not to imitate a look but to **reverse-engineer behavior**:
+treat each work as a rule set to recover, not a style to copy.
+
+**Look at:**
+
+-   **Sol LeWitt --- Wall Drawings:** the written instruction *is* the
+    work; many different executions satisfy the same rule.
+-   **Vera Molnár:** geometric systems built from repetition and small,
+    controlled deviations.
+-   **Manfred Mohr:** forms generated algorithmically from a single
+    underlying structure (the cube).
+
+**Autopsy questions (ask of each):**
+
+1.  What is the generating rule? Could you restate it as a few lines of
+    pseudocode?
+2.  What is fixed, and where --- if anywhere --- does variation enter?
+3.  Which single constraint is doing the most work?
+4.  What state or behavior does the system dramatize, setting aside
+    "what it means"?
+5.  If you changed one rule, what would happen?
+
+*In class: examine 2--3 of these together at the project's launch
+(~20--30 minutes), then carry the same questions into your own build.*
+
+------------------------------------------------------------------------
+
 ## Core Requirements
 
 -   Use **p5.js**
