@@ -8,8 +8,9 @@ Legend
 
 ## Week 1 — Structure & Surface (HTML/CSS)
 - TUE: Intro + HTML structure  
-- THU: CSS as rule system  
+- THU: CSS as rule system + enable GitHub Pages (serve from repo root)  
 ✅ 🧪 LAB 0 DUE — Structure & Surface as Systems  
+🌐 Enable GitHub Pages once this week — every lab/project you push afterward is automatically live at its own URL. You deploy all semester, not just at the end.
 
 ---
 
@@ -117,7 +118,7 @@ Legend
 ---
 
 ## Week 16 — Exhibition & Publication
-- TUE: Final deployment  
+- TUE: Polish live portfolio (Pages has been running since Week 1); check every URL resolves  
 - THU:  
 ✅ 🎯 FINAL PROJECT DUE — Public Exhibition / Demo  
 

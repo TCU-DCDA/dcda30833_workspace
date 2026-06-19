@@ -103,7 +103,7 @@ project-XX-[name]/
 
 #### Portfolio (`portfolio/`)
 
-The portfolio folder becomes the GitHub Pages root:
+GitHub Pages serves from the repo root, so the portfolio lives at `/portfolio/` and every lab/project is reachable at its own path (see GitHub Pages Setup below):
 ```
 portfolio/
 ├── index.html          # Landing page linking to all work
@@ -298,6 +298,10 @@ function draw() {
 2. Clone your repo locally
 3. Open in VS Code
 4. Familiarize yourself with the folder structure
+5. **Enable GitHub Pages now, not at the end of the semester** (Settings → Pages → Source: Deploy from a branch → Branch: `main`, folder: `/ (root)` → Save). Once Lab 0 is pushed, it is live on the web — and so is every lab and project after it. Deployment becomes a routine part of each assignment, not a finals-week scramble.
+
+Your live site root will be:
+`https://[username].github.io/[repo-name]/`
 
 ### Weekly Lab Workflow
 
@@ -322,8 +326,8 @@ function draw() {
 
 1. Populate `portfolio/index.html` with links to your best work
 2. Write your final reflection in `portfolio/reflection.md`
-3. Enable GitHub Pages (Settings → Pages → Source: main branch)
-4. Submit your portfolio URL
+3. Confirm GitHub Pages is still serving (enabled back in Week 1) — your work has been live all semester
+4. Submit your portfolio URL: `https://[username].github.io/[repo-name]/portfolio/`
 
 ---
 
@@ -373,16 +377,35 @@ git push                 # Upload to GitHub
 
 ## GitHub Pages Setup
 
-For the final portfolio, students enable GitHub Pages:
+Students enable GitHub Pages **once, in Week 1**, and it serves their work for the rest of the semester.
 
 1. Go to repo Settings → Pages
 2. Source: Deploy from a branch
-3. Branch: `main`, folder: `/portfolio`
+3. Branch: `main`, folder: **`/ (root)`**
 4. Save
 
-Portfolio will be live at: `https://[username].github.io/dcda30833-[username]/`
+**Serve from the repo root, not `/portfolio`.** GitHub Pages' branch-source menu only offers `/ (root)` or `/docs` — an arbitrary subfolder like `/portfolio` is not selectable. Serving from root is also what makes *every* lab and project live, not just the portfolio.
 
-**Note:** Individual sketches can also be accessed directly via GitHub Pages by navigating to their folder paths.
+### URL structure
+
+With root serving, everything is reachable by its folder path:
+
+| Work | Live URL |
+|------|----------|
+| Repo root | `https://[username].github.io/[repo-name]/` |
+| Final portfolio | `https://[username].github.io/[repo-name]/portfolio/` |
+| Any lab | `https://[username].github.io/[repo-name]/labs/lab-03-controlled-randomness/` |
+| Any project | `https://[username].github.io/[repo-name]/projects/project-01-self-portrait/` |
+
+A URL resolves to a folder only if that folder contains an `index.html`. (Optionally, add an `index.html` at the repo root that links to all work — a semester-long landing page.)
+
+### Troubleshooting (the common failures)
+
+- **Blank page / 404 right after enabling:** Pages can take 1–2 minutes to build and publish the first time. Wait, then hard-refresh.
+- **404 on a sketch folder:** that folder is missing an `index.html`, or the URL doesn't match the folder name.
+- **Works locally, blank when live:** almost always a **case-sensitivity** mismatch. GitHub Pages is case-sensitive; `Sketch.js` referenced as `sketch.js` fails on the server though it worked on macOS/Windows. Match capitalization exactly.
+- **Sketch loads but is empty:** open the browser console (F12). A failed `<script src>` path or a missing library tag is the usual cause.
+- **Old version showing:** the browser cached it — hard-refresh (Cmd/Ctrl+Shift+R), and confirm the latest commit was actually pushed.
 
 ---
 

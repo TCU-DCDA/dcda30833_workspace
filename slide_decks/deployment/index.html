@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publishing as Part of the System — DCDA 30833</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/black.css">
+  <style>
+    :root {
+      --r-background-color: #0a0a0a;
+      --r-main-font: system-ui, -apple-system, sans-serif;
+      --r-heading-font: system-ui, -apple-system, sans-serif;
+      --r-main-color: #eee;
+      --r-heading-color: #fff;
+      --r-link-color: #94a;
+    }
+
+    .reveal { font-size: 32px; }
+
+    .reveal h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: -0.02em;
+    }
+
+    .reveal h2 {
+      font-size: 1.8em;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5em;
+    }
+
+    .reveal h3 {
+      font-size: 1.2em;
+      font-weight: 400;
+      text-transform: none;
+      color: #999;
+    }
+
+    .reveal blockquote {
+      background: transparent;
+      border-left: 4px solid #94a;
+      padding: 0.5em 1em;
+      margin: 1em 0;
+      font-style: italic;
+      font-size: 1.3em;
+      width: 85%;
+      text-align: left;
+    }
+
+    .reveal .subtitle { font-size: 1.2em; color: #888; margin-top: 0.5em; }
+    .reveal .highlight { color: #94a; }
+    .reveal .dim { color: #666; }
+
+    .reveal .section-marker {
+      font-size: 0.7em;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 1em;
+    }
+
+    .reveal .big-idea {
+      font-size: 1.5em;
+      line-height: 1.6;
+      color: #ccc;
+      margin: 1em 0;
+    }
+
+    .reveal .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3em;
+      align-items: start;
+      text-align: left;
+      padding: 0 3%;
+    }
+
+    .reveal .comparison-box {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 1.2em;
+      border-radius: 8px;
+      margin: 0.8em 0;
+    }
+
+    .reveal .comparison-box h3 {
+      color: #94a;
+      font-size: 1.1em;
+      margin-bottom: 0.5em;
+      font-weight: 500;
+    }
+
+    .reveal .comparison-box p { margin: 0.3em 0; font-size: 0.9em; line-height: 1.5; }
+
+    .reveal .definition-box {
+      background: #1a1a2e;
+      padding: 1.5em;
+      border-radius: 8px;
+      border-left: 6px solid #94a;
+      text-align: left;
+      margin: 1em 0;
+    }
+
+    .reveal .definition-box h3 { color: #94a; margin-top: 0; font-size: 1.1em; }
+    .reveal .definition-box p { margin: 0.5em 0; line-height: 1.6; }
+
+    .reveal .discussion-prompt {
+      background: #1a1a2e;
+      padding: 1.5em;
+      border-radius: 8px;
+      text-align: left;
+      border: 2px solid #333;
+    }
+
+    .reveal .discussion-prompt h3 { color: #94a; margin-bottom: 0.5em; }
+    .reveal .discussion-prompt ol,
+    .reveal .discussion-prompt ul { margin-left: 1.5em; line-height: 1.8; }
+
+    .reveal ul { line-height: 1.8; }
+    .reveal li { margin-bottom: 0.5em; }
+
+    /* Code + terminal styling for deployment commands and paths */
+    .reveal pre {
+      width: 90%;
+      margin: 1em auto;
+      font-size: 0.6em;
+      box-shadow: none;
+    }
+
+    .reveal pre code {
+      background: #14141c;
+      border-radius: 8px;
+      border-left: 4px solid #94a;
+      padding: 1em 1.2em;
+      line-height: 1.6;
+      color: #d6d6e0;
+      max-height: none;
+    }
+
+    .reveal .terminal {
+      background: #14141c;
+      border-radius: 8px;
+      border-left: 4px solid #5a9;
+      padding: 1em 1.2em;
+      text-align: left;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.7em;
+      line-height: 1.7;
+      color: #cfe;
+      width: 85%;
+      margin: 1em auto;
+    }
+
+    .reveal .terminal .prompt { color: #5a9; }
+    .reveal .terminal .comment { color: #666; }
+
+    .reveal .url-pill {
+      display: inline-block;
+      background: #1a1a2e;
+      border: 1px solid #94a;
+      border-radius: 999px;
+      padding: 0.2em 0.8em;
+      font-family: ui-monospace, monospace;
+      font-size: 0.8em;
+      color: #cbd;
+    }
+
+    .reveal table { margin: 1em auto; border-collapse: collapse; font-size: 0.7em; }
+    .reveal table th, .reveal table td {
+      padding: 0.5em 1em;
+      border: 1px solid #444;
+      text-align: left;
+    }
+    .reveal table th { background: #1a1a1a; color: #94a; }
+    .reveal table td code { color: #cbd; font-size: 0.95em; }
+
+    .reveal .steps {
+      counter-reset: step;
+      text-align: left;
+      width: 85%;
+      margin: 1em auto;
+      list-style: none;
+    }
+    .reveal .steps li {
+      counter-increment: step;
+      padding: 0.6em 0 0.6em 2.4em;
+      position: relative;
+      line-height: 1.5;
+    }
+    .reveal .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 1.5em;
+      height: 1.5em;
+      background: #94a;
+      color: #0a0a0a;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.5em;
+      font-weight: 600;
+      font-size: 0.85em;
+    }
+
+    .reveal .callout {
+      background: linear-gradient(135deg, #2a1a2e 0%, #1a1a3e 100%);
+      padding: 1em 1.4em;
+      border-radius: 8px;
+      border-left: 6px solid #94a;
+      font-size: 0.95em;
+      line-height: 1.5;
+      margin: 1em auto;
+      max-width: 90%;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title -->
+      <section>
+        <p class="section-marker">Week 1 · Mode: Structure &amp; Interface</p>
+        <h1>Publishing as Part of the System</h1>
+        <p class="subtitle">Putting your work on the open web with GitHub Pages</p>
+        <p class="dim" style="margin-top: 2em; font-size: 0.6em;">DCDA 30833 — Creative Coding for the Humanities</p>
+        <aside class="notes">
+          This is a short Week 1 segment that runs alongside Lab 0 and the Git basics intro.
+          The goal today is not mastery — it's that every student leaves with GitHub Pages
+          enabled, so the rest of the semester their work is automatically live.
+          Frame it conceptually first (publishing is part of the work), then do it together.
+        </aside>
+      </section>
+
+      <!-- Slide 2: Why this matters -->
+      <section>
+        <h2>Why This Matters</h2>
+        <blockquote>
+          A system that only runs on your laptop is a system no one else can encounter.
+        </blockquote>
+        <p style="line-height: 1.7; margin-top: 1em;">
+          In this course, a sketch isn't finished when it runs locally.<br>
+          It's finished when it <span class="highlight">lives somewhere others can reach it</span>.
+        </p>
+        <aside class="notes">
+          Connect to course philosophy: systems dramatize states through what they DO, in front
+          of others. Local-only work is private rehearsal. Publishing makes the system a public
+          system. This is why deployment is a Week 1 habit, not a finals-week chore. Ask the room:
+          where does your work actually live right now? (On a hard drive no one can see.)
+        </aside>
+      </section>
+
+      <!-- Slide 3: The big idea -->
+      <section>
+        <p class="section-marker">The Big Idea</p>
+        <div class="big-idea">
+          Your repository <span class="highlight">is</span> your website.
+        </div>
+        <p class="dim" style="line-height: 1.7;">
+          Every folder you push becomes a page you can link to.<br>
+          Publishing is not a separate step at the end — it's a side effect of the work you're already doing.
+        </p>
+        <aside class="notes">
+          The mental model to install: the repo and the website are the same thing. There's no
+          "export" or "upload to a server" step. You commit and push (which you already learned for
+          submitting work), and the same push publishes it. Set up once, benefit all semester.
+        </aside>
+      </section>
+
+      <!-- Slide 4: What is GitHub Pages -->
+      <section>
+        <h2>What Is GitHub Pages?</h2>
+        <div class="two-col">
+          <div class="comparison-box">
+            <h3>What it is</h3>
+            <p>Free web hosting built into every GitHub repo</p>
+            <p>Serves your HTML/CSS/JS exactly as written</p>
+            <p>Updates automatically when you push</p>
+          </div>
+          <div class="comparison-box">
+            <h3>What it isn't</h3>
+            <p>No servers to configure</p>
+            <p>No build tools or accounts to manage</p>
+            <p>No cost</p>
+          </div>
+        </div>
+        <p class="dim" style="margin-top: 1em; font-size: 0.8em;">If it runs by opening <code>index.html</code> locally, it will run on Pages.</p>
+        <aside class="notes">
+          Reassure humanities students: this is the simplest possible hosting. Because our sketches
+          are plain static files (HTML + p5.js from a CDN), Pages is a perfect fit — there's nothing
+          to compile. The one rule: a folder is viewable on the web only if it contains an index.html.
+        </aside>
+      </section>
+
+      <!-- Slide 5: Setup walkthrough -->
+      <section>
+        <h2>Enable It Once (Week 1)</h2>
+        <ul class="steps">
+          <li>In your repo on GitHub, go to <strong>Settings → Pages</strong></li>
+          <li>Source: <strong>Deploy from a branch</strong></li>
+          <li>Branch: <strong>main</strong>, folder: <strong>/ (root)</strong></li>
+          <li>Click <strong>Save</strong> — wait ~1–2 minutes for the first build</li>
+        </ul>
+        <div class="callout">
+          <strong>Serve from the root</strong>, not a subfolder. GitHub only offers
+          <code>/ (root)</code> or <code>/docs</code> — and root is what makes <em>every</em> lab and
+          project live, not just your portfolio.
+        </div>
+        <aside class="notes">
+          Do this live, projected, and have students do it on their own repos at the same time.
+          The most common mistake is trying to serve from /portfolio — that option does not exist
+          in the menu, and even if it did it would hide all the labs. Root serving is the whole trick.
+          The first build takes a minute or two; don't panic at an initial 404.
+        </aside>
+      </section>
+
+      <!-- Slide 6: URL structure -->
+      <section>
+        <h2>Where Everything Lives</h2>
+        <p class="dim" style="font-size: 0.85em;">Once Pages serves from root, every folder has its own address:</p>
+        <table>
+          <tr><th>Work</th><th>Live URL</th></tr>
+          <tr><td>Site root</td><td><code>…github.io/[repo]/</code></td></tr>
+          <tr><td>A lab</td><td><code>…github.io/[repo]/labs/lab-03-controlled-randomness/</code></td></tr>
+          <tr><td>A project</td><td><code>…github.io/[repo]/projects/project-01-self-portrait/</code></td></tr>
+          <tr><td>Portfolio</td><td><code>…github.io/[repo]/portfolio/</code></td></tr>
+        </table>
+        <p class="dim" style="font-size: 0.8em; margin-top: 0.8em;">A URL resolves to a folder only if that folder has an <code>index.html</code>.</p>
+        <aside class="notes">
+          The folder path IS the URL. This is worth dwelling on — it means linking to your own work
+          is trivial, and it means the structure you keep in the repo directly shapes your public site.
+          Reinforce the index.html rule: no index.html, no page (you'll get a 404 or a file listing).
+        </aside>
+      </section>
+
+      <!-- Slide 7: The publish loop -->
+      <section>
+        <h2>The Publish Loop</h2>
+        <p class="dim" style="font-size: 0.85em;">After Week 1, publishing is just your normal Git workflow:</p>
+        <div class="terminal">
+          <span class="comment"># work on your sketch, then…</span><br>
+          <span class="prompt">$</span> git add .<br>
+          <span class="prompt">$</span> git commit -m "Add Lab 3 controlled randomness"<br>
+          <span class="prompt">$</span> git push<br>
+          <span class="comment"># ~1 minute later, the live URL shows your changes</span>
+        </div>
+        <p style="font-size: 0.9em; margin-top: 0.5em;">
+          Push to submit. The same push <span class="highlight">publishes</span>.
+        </p>
+        <aside class="notes">
+          Tie this back to the Git commands they learn for submission. There is no extra deployment
+          step — commit and push is the whole loop. Encourage them to open their live URL after each
+          push to confirm it worked, and to paste the live URL into their reflection/README.
+          GUI users (GitHub Desktop / VS Code Source Control) get the same result via buttons.
+        </aside>
+      </section>
+
+      <!-- Slide 8: Live demo outline -->
+      <section>
+        <h2>Live Demo</h2>
+        <div class="discussion-prompt">
+          <h3>Watch (then you'll do it):</h3>
+          <ol>
+            <li>Enable Pages on a fresh repo (root serving)</li>
+            <li>Open the live root URL — see Lab 0 already there</li>
+            <li>Edit one CSS rule, commit, push</li>
+            <li>Refresh the live URL — watch the change appear</li>
+            <li>Navigate directly to a lab subfolder URL</li>
+          </ol>
+        </div>
+        <aside class="notes">
+          Keep the demo to ~5 minutes. The payoff moment is step 4 — editing a color, pushing, and
+          seeing it change on the public web. That's what makes "the repo is the website" concrete.
+          Have a repo prepared with Lab 0 already committed so there's something to show immediately.
+        </aside>
+      </section>
+
+      <!-- Slide 9: When it breaks -->
+      <section>
+        <h2>When It Breaks</h2>
+        <div class="two-col">
+          <div class="comparison-box">
+            <h3>Symptom</h3>
+            <p>Blank page right after enabling</p>
+            <p>Live page is blank, worked locally</p>
+            <p>404 on a sketch folder</p>
+            <p>Old version still showing</p>
+          </div>
+          <div class="comparison-box">
+            <h3>Cause / Fix</h3>
+            <p>Still building — wait 1–2 min, hard-refresh</p>
+            <p><span class="highlight">Case-sensitivity:</span> match <code>sketch.js</code> exactly</p>
+            <p>Folder missing an <code>index.html</code></p>
+            <p>Browser cache — hard-refresh; confirm you pushed</p>
+          </div>
+        </div>
+        <p class="dim" style="font-size: 0.8em; margin-top: 0.8em;">Open the browser console (F12) — a failed <code>&lt;script src&gt;</code> path is the usual culprit.</p>
+        <aside class="notes">
+          The case-sensitivity issue is the one that catches everyone: macOS and Windows ignore
+          capitalization, but the Pages server does not. "It works on my machine but not live" is
+          almost always Sketch.js vs sketch.js, or Index.html vs index.html. Teach them to read the
+          console — a red 404 on a file tells you exactly what's wrong.
+        </aside>
+      </section>
+
+      <!-- Slide 10: In-class exercise -->
+      <section>
+        <h2>In-Class Exercise (10 min)</h2>
+        <div class="discussion-prompt">
+          <h3>On your own repo, right now:</h3>
+          <ol>
+            <li>Enable GitHub Pages (root serving)</li>
+            <li>Confirm your Lab 0 page loads at its live URL</li>
+            <li>Make one visible change, commit, and push</li>
+            <li>Refresh and confirm the change is live</li>
+            <li>Paste your live URL in the class channel</li>
+          </ol>
+        </div>
+        <aside class="notes">
+          This is the real objective of the session: everyone leaves with Pages enabled and one
+          confirmed publish. Circulate and help — the blockers will be (a) serving from the wrong
+          folder, (b) the first-build delay, (c) a missing index.html. Posting the URL to the channel
+          doubles as a quick check that it actually works for everyone.
+        </aside>
+      </section>
+
+      <!-- Slide 11: Studio work -->
+      <section>
+        <h2>Studio Work</h2>
+        <ul style="font-size: 1em;">
+          <li>Finish Lab 0 and confirm it's live</li>
+          <li>Browse two classmates' live pages — notice how structure reads as a public artifact</li>
+          <li>Optional: add an <code>index.html</code> at your repo root that links to your work as you build it</li>
+        </ul>
+        <div class="callout">
+          From now on, "done" means <span class="highlight">pushed and live</span> — not just running locally.
+        </div>
+        <aside class="notes">
+          Set the semester-long expectation here. The optional root landing page is a nice habit —
+          it becomes the seed of their final portfolio, growing all semester instead of being built
+          from scratch in Week 16. Browsing classmates' pages reinforces that this is a public,
+          shared studio.
+        </aside>
+      </section>
+
+      <!-- Slide 12: Reflection / exit prompt -->
+      <section>
+        <h2>Exit Reflection</h2>
+        <blockquote>
+          What changed about the work once it had a public address?
+        </blockquote>
+        <p class="dim" style="line-height: 1.7; margin-top: 1em;">
+          Did knowing it was reachable by anyone change how you thought about it?<br>
+          Write 2–3 sentences in your reflection notes.
+        </p>
+        <aside class="notes">
+          This ties deployment back to the course's conceptual core rather than treating it as pure
+          logistics. The interesting answers tend to be about audience and exposure — work feels
+          different when it's public. Collect a couple of responses aloud if time allows.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      transition: 'fade',
+      transitionSpeed: 'default',
+      controls: true,
+      progress: true,
+      center: true,
+      width: 1280,
+      height: 720,
+      plugins: [ RevealNotes ]
+    });
+  </script>
+</body>
+</html>

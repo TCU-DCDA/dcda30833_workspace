@@ -12,7 +12,10 @@ Mode: Structure & Interface
 - HTML as structure system  
 - CSS as rule system  
 - Canvas as embedded environment  
-- LAB 0 due  
+- Git basics + **enable GitHub Pages (serve from repo root)**  
+- LAB 0 due — and published live via GitHub Pages  
+
+> Deployment note: Pages is enabled once in Week 1 and serves all work for the rest of the semester. From here on, every lab/project is pushed *and* live at its own URL — deployment is routine, not a finals-week task. See context/github_classroom_structure.md.
 
 ---
 
@@ -132,7 +135,8 @@ Mode: Integration
 
 ## Week 16 — Exhibition & Publication
 Mode: Public Systems  
-- Deployment  
+- Polish the live portfolio (Pages already running since Week 1)  
+- Confirm all sketch URLs resolve; fix broken paths / case-sensitivity issues  
 - Public demo  
 - FINAL PROJECT due  
 
