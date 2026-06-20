@@ -134,6 +134,13 @@ fill(220);
 
 ---
 
+<aside class="swatchboard">
+<div class="sw-title">Building a palette</div>
+<div class="sw"><span class="sw-label">Base hue, varied</span><div class="sw-bar sw-base"></div><span class="sw-cap">one hue · shift value &amp; saturation</span></div>
+<div class="sw"><span class="sw-label">Fixed palette</span><div class="sw-bar sw-fixed"></div><span class="sw-cap">3–5 curated colors</span></div>
+<div class="sw"><span class="sw-label">Procedural</span><div class="sw-bar sw-proc"></div><span class="sw-cap">noise → smooth drift</span></div>
+</aside>
+
 ## 6. Designing a Color Palette
 
 ### Method 1: Pick a Base Hue
@@ -192,6 +199,13 @@ Use sparingly—helpful for guiding emotion in generative art or interactive tex
 - Use one dominant color, one accent, one neutral
 
 ---
+
+<aside class="swatchboard">
+<div class="sw-title">Contrast &amp; safety</div>
+<div class="sw"><span class="sw-label">Passes AA</span><div class="sw-chip sw-pass">Aa</div><span class="sw-cap">~12:1 · dark on light</span></div>
+<div class="sw"><span class="sw-label">Fails</span><div class="sw-chip sw-fail">Aa</div><span class="sw-cap">~1.6:1 · light gray on white</span></div>
+<div class="sw"><span class="sw-label">Not color alone</span><div class="sw-bar sw-pair"></div><span class="sw-cap">pair color with pattern or shape</span></div>
+</aside>
 
 ## 9. Accessibility & Color Safety
 

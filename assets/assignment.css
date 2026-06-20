@@ -203,6 +203,25 @@ body {
 .sw-hicon  { background: linear-gradient(to right, #111 0 50%, #f2f1ec 50% 100%); }
 .sw-locon  { background: linear-gradient(to right, #8c8c8c 0 50%, #a8a8a4 50% 100%); }
 
+/* palette-building (Section 6) */
+.sw-base   { background: linear-gradient(to right, hsl(210,42%,30%) 0 25%, hsl(210,60%,46%) 25% 50%, hsl(210,72%,62%) 50% 75%, hsl(210,46%,80%) 75% 100%); }
+.sw-fixed  { background: linear-gradient(to right, #4d1979 0 25%, #ffb700 25% 50%, #7ac7ff 50% 75%, #e63946 75% 100%); }
+.sw-proc   { background: linear-gradient(to right, hsl(280,48%,60%), hsl(210,55%,60%), hsl(168,48%,56%)); }
+
+/* accessibility (Section 9) */
+.content .swatchboard .sw-chip {
+  height: 34px; display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.95rem; letter-spacing: 0.05em;
+  border: 1px solid var(--line); border-radius: 3px;
+}
+.sw-pass { background: #1a1a18; color: #f4f3ee; }
+.sw-fail { background: #ffffff; color: #cdcdc7; }
+.sw-pair {
+  background:
+    linear-gradient(to right, hsl(150,46%,46%) 0 50%, #0000 50% 100%),
+    repeating-linear-gradient(45deg, hsl(150,46%,46%) 0 5px, hsl(150,30%,36%) 5px 10px);
+}
+
 @media (max-width: 760px) {
   .content .swatchboard { float: none; width: 100%; margin: 1.2rem 0; border-left: none; padding-left: 0; }
 }
