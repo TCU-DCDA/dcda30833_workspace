@@ -1,4 +1,4 @@
-# 🎵 Sound Design Cheat Sheet for Creative Coding (Tone.js Edition)
+# Sound Design Cheat Sheet for Creative Coding (Tone.js Edition)
 
 A practical reference for students working with sound in the browser using Tone.js.
 

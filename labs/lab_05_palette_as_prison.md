@@ -123,7 +123,7 @@ You now have the full color toolkit:
 
 You are now fully prepared for:
 
-➡ **PROJECT 3 --- Algorithmic Color Composition**
+→ **PROJECT 3 --- Algorithmic Color Composition**
 
 Where color is no longer decoration, but the **engine of the system**.
 

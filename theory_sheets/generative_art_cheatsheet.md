@@ -1,4 +1,4 @@
-# 🎨 Generative Art Theory Cheat Sheet
+# Generative Art Theory Cheat Sheet
 
 A compact, practical guide to the key artistic, conceptual, and computational principles behind generative and algorithmic art. Designed for creative coding students working with p5.js, JS, Python, or creative AI tools.
 

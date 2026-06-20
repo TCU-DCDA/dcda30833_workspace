@@ -13,11 +13,11 @@ instructive mistakes, and re-run to show the *range* one system produces.
 
 | Week | Focus | Status |
 |------|-------|--------|
-| 3 | Randomness as Material | ✅ drafted ([week_03_randomness.md](week_03_randomness.md)) |
-| 5 | Color as Structure | ◻️ skeleton |
-| 6 | Algorithmic Drawing & Mark-Making | ◻️ skeleton |
-| 7 | Text as Spatial Material | ◻️ skeleton |
-| 8 | Interactive Poetry Systems | ◻️ skeleton |
+| 3 | Randomness as Material | drafted ([week_03_randomness.md](week_03_randomness.md)) |
+| 5 | Color as Structure | skeleton |
+| 6 | Algorithmic Drawing & Mark-Making | skeleton |
+| 7 | Text as Spatial Material | skeleton |
+| 8 | Interactive Poetry Systems | skeleton |
 
 Use [week_03_randomness.md](week_03_randomness.md) as the model when filling in
 the others. See `context/build_status.md` for why these weeks are live-coded

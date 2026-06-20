@@ -6,7 +6,7 @@ This repository contains the curriculum, assignments, and theory materials for *
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 - **`labs/`** — Weekly low-stakes exercises focused on specific techniques (e.g., "Rule Without Random", "Controlled Randomness").
 - **`projects/`** — Major assignments requiring synthesis of multiple concepts (e.g., "Generative Visual Study").
@@ -20,7 +20,7 @@ This repository contains the curriculum, assignments, and theory materials for *
 
 ---
 
-## 🧪 Current Labs
+## Current Labs
 
 1.  **Lab 0:** Structure & Surface as Systems (HTML/CSS)
 2.  **Lab 1:** Rule Without Random (p5.js)
@@ -31,7 +31,7 @@ This repository contains the curriculum, assignments, and theory materials for *
 
 ---
 
-## 🎯 Current Projects
+## Current Projects
 
 1.  **Project 1:** System-Based Shape Self-Portrait
 2.  **Project 2:** Generative Visual Study
@@ -39,7 +39,7 @@ This repository contains the curriculum, assignments, and theory materials for *
 
 ---
 
-## 📖 Course Philosophy
+## Course Philosophy
 
 This course moves away from "self-expression" and towards **system discovery**. We treat code not as a tool to execute a pre-planned image, but as a medium to dramatize behaviors, probabilities, and logic.
 

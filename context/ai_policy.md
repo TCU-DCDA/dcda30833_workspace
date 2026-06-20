@@ -43,8 +43,8 @@ of discovery over expression.)*
 
 (Carried from LAB 7.) Describe **rules and behaviors**, not the finished look.
 
-- ✅ "Use only circles and `sin()`; vary through rotation and scale."
-- ❌ "Make a pulsing mandala." / "Make it look like the night sky."
+- Good: "Use only circles and `sin()`; vary through rotation and scale."
+- Avoid: "Make a pulsing mandala." / "Make it look like the night sky."
 
 The moment you specify what it should *look like*, you've stopped discovering.
 

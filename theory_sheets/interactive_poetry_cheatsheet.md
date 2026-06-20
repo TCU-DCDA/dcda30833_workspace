@@ -1,4 +1,4 @@
-# ✍️ Interactive Poetry & Text Art Theory Cheat Sheet
+# Interactive Poetry & Text Art Theory Cheat Sheet
 
 A practical guide to help students create poetic, narrative, and text-based interactive works using JavaScript, p5.js, HTML, and creative coding techniques.
 

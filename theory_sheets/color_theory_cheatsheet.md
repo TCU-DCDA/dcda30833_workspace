@@ -1,4 +1,4 @@
-# 🎨 Color Theory Cheat Sheet for Creative Coding
+# Color Theory Cheat Sheet for Creative Coding
 
 A practical, coding-oriented introduction to color theory for students working with p5.js, CSS, and generative art.
 

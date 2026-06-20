@@ -1,4 +1,4 @@
-# ✏️ Drawing Theory Cheat Sheet for Creative Coding
+# Drawing Theory Cheat Sheet for Creative Coding
 
 A practical guide to essential drawing concepts useful for generative art, p5.js sketches, interaction design, and visual composition.
 
