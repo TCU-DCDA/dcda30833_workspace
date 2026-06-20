@@ -68,6 +68,14 @@ Saturation, Brightness/Lightness)</h3>
 <p>Enable HSB in p5.js:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colorMode</span>(HSB<span class="op">,</span> <span class="dv">360</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">100</span>)<span class="op">;</span></span></code></pre></div>
 <hr />
+<aside class="swatchboard">
+<div class="sw-title">Color harmonies</div>
+<div class="sw"><span class="sw-label">Complementary</span><div class="sw-bar sw-comp"></div><span class="sw-cap">opposite on the wheel</span></div>
+<div class="sw"><span class="sw-label">Analogous</span><div class="sw-bar sw-analog"></div><span class="sw-cap">neighbors on the wheel</span></div>
+<div class="sw"><span class="sw-label">Triadic</span><div class="sw-bar sw-triad"></div><span class="sw-cap">three evenly spaced</span></div>
+<div class="sw"><span class="sw-label">Monochromatic</span><div class="sw-bar sw-mono"></div><span class="sw-cap">one hue, many values</span></div>
+</aside>
+
 <h2 id="3-essential-color-harmonies">3. Essential Color Harmonies</h2>
 <p>These help students pick <em>intentional</em>, visually pleasing
 palettes.</p>
@@ -96,6 +104,12 @@ palettes.</p>
 <li>Good for mood pieces</li>
 </ul>
 <hr />
+<aside class="swatchboard">
+<div class="sw-title">Temperature</div>
+<div class="sw"><span class="sw-label">Warm</span><div class="sw-bar sw-warm"></div><span class="sw-cap">reds → yellows · advance</span></div>
+<div class="sw"><span class="sw-label">Cool</span><div class="sw-bar sw-cool"></div><span class="sw-cap">cyans → violets · recede</span></div>
+</aside>
+
 <h2 id="4-temperature-warm-vs-cool">4. Temperature: Warm vs. Cool</h2>
 <h3 id="warm-colors">Warm Colors</h3>
 <ul>
@@ -111,6 +125,12 @@ palettes.</p>
 </ul>
 <p>Useful for depth and emotional tone.</p>
 <hr />
+<aside class="swatchboard">
+<div class="sw-title">Value contrast</div>
+<div class="sw"><span class="sw-label">High</span><div class="sw-bar sw-hicon"></div><span class="sw-cap">bright vs. dark · focal</span></div>
+<div class="sw"><span class="sw-label">Low</span><div class="sw-bar sw-locon"></div><span class="sw-cap">close values · subtle</span></div>
+</aside>
+
 <h2 id="5-value--contrast-the-most-important-concept">5. Value &amp;
 Contrast (The Most Important Concept)</h2>
 <p>Value contrast determines readability and visual hierarchy.</p>
@@ -227,6 +247,18 @@ Safety</h2>
 <h3 id="random-harmonies">Random Harmonies</h3>
 <div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> h <span class="op">=</span> <span class="fu">random</span>(<span class="dv">360</span>)<span class="op">;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> complement <span class="op">=</span> (h <span class="op">+</span> <span class="dv">180</span>) <span class="op">%</span> <span class="dv">360</span><span class="op">;</span></span></code></pre></div>
+<blockquote>
+<p><strong>Why <code>% 360</code>?</strong> The wheel is a circle, so
+the complement (180° across) can overshoot 360°. Modulo wraps it back
+on. Example: <code>270 + 180 = 450</code>, and
+<code>450 % 360 = 90</code>. Read it as <code>450 / 360 = 1.25</code> —
+<strong>one full lap plus a quarter</strong>; modulo throws away the
+whole lap and keeps the leftover (<code>0.25 × 360 = 90°</code>), which
+is where you actually land. Same trick as a clock:
+<code>14 % 12 = 2</code> → 2 o'clock. Use it anytime a value should
+<em>come back around</em> instead of running off the edge (cycling a
+palette, looping motion).</p>
+</blockquote>
 <h3 id="subtle-palettes-using-noise">Subtle Palettes Using Noise</h3>
 <div class="sourceCode" id="cb8"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> h <span class="op">=</span> <span class="fu">noise</span>(x <span class="op">*</span> <span class="fl">0.01</span><span class="op">,</span> y <span class="op">*</span> <span class="fl">0.01</span>) <span class="op">*</span> <span class="dv">360</span><span class="op">;</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fill</span>(h<span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">90</span>)<span class="op">;</span></span></code></pre></div>

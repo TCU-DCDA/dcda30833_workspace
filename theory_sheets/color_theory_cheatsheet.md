@@ -52,6 +52,14 @@ colorMode(HSB, 360, 100, 100);
 
 ---
 
+<aside class="swatchboard">
+<div class="sw-title">Color harmonies</div>
+<div class="sw"><span class="sw-label">Complementary</span><div class="sw-bar sw-comp"></div><span class="sw-cap">opposite on the wheel</span></div>
+<div class="sw"><span class="sw-label">Analogous</span><div class="sw-bar sw-analog"></div><span class="sw-cap">neighbors on the wheel</span></div>
+<div class="sw"><span class="sw-label">Triadic</span><div class="sw-bar sw-triad"></div><span class="sw-cap">three evenly spaced</span></div>
+<div class="sw"><span class="sw-label">Monochromatic</span><div class="sw-bar sw-mono"></div><span class="sw-cap">one hue, many values</span></div>
+</aside>
+
 ## 3. Essential Color Harmonies
 
 These help students pick *intentional*, visually pleasing palettes.
@@ -78,6 +86,12 @@ Variations of one hue.
 
 ---
 
+<aside class="swatchboard">
+<div class="sw-title">Temperature</div>
+<div class="sw"><span class="sw-label">Warm</span><div class="sw-bar sw-warm"></div><span class="sw-cap">reds → yellows · advance</span></div>
+<div class="sw"><span class="sw-label">Cool</span><div class="sw-bar sw-cool"></div><span class="sw-cap">cyans → violets · recede</span></div>
+</aside>
+
 ## 4. Temperature: Warm vs. Cool
 
 ### Warm Colors
@@ -93,6 +107,12 @@ Variations of one hue.
 Useful for depth and emotional tone.
 
 ---
+
+<aside class="swatchboard">
+<div class="sw-title">Value contrast</div>
+<div class="sw"><span class="sw-label">High</span><div class="sw-bar sw-hicon"></div><span class="sw-cap">bright vs. dark · focal</span></div>
+<div class="sw"><span class="sw-label">Low</span><div class="sw-bar sw-locon"></div><span class="sw-cap">close values · subtle</span></div>
+</aside>
 
 ## 5. Value & Contrast (The Most Important Concept)
 
@@ -196,6 +216,14 @@ Tools:
 let h = random(360);
 let complement = (h + 180) % 360;
 ```
+
+> **Why `% 360`?** The wheel is a circle, so the complement (180° across) can
+> overshoot 360°. Modulo wraps it back on. Example: `270 + 180 = 450`, and
+> `450 % 360 = 90`. Read it as `450 / 360 = 1.25` — **one full lap plus a
+> quarter**; modulo throws away the whole lap and keeps the leftover
+> (`0.25 × 360 = 90°`), which is where you actually land. Same trick as a
+> clock: `14 % 12 = 2` → 2 o'clock. Use it anytime a value should *come back
+> around* instead of running off the edge (cycling a palette, looping motion).
 
 ### Subtle Palettes Using Noise
 ```js

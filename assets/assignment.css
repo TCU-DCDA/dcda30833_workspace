@@ -162,6 +162,7 @@ body {
 /* ---- Color Theory sheet: illustration column (pure-CSS gradients) ---- */
 .content .swatchboard {
   float: right;
+  clear: right;
   width: 234px;
   margin: 2.4rem 0 1.4rem 2rem;
   border-left: 1px solid var(--line);
@@ -187,6 +188,20 @@ body {
     linear-gradient(to right, hsla(265,70%,52%,0), hsla(265,70%,52%,1)),
     repeating-conic-gradient(#cfcfcf 0% 25%, #fff 0% 50%) 0 / 14px 14px;
 }
+
+/* harmonies (hard stops = discrete palette colors) */
+.sw-comp   { background: linear-gradient(to right, hsl(210,70%,52%) 0 50%, hsl(30,85%,55%) 50% 100%); }
+.sw-analog { background: linear-gradient(to right, hsl(190,62%,50%) 0 33.33%, hsl(215,64%,52%) 33.33% 66.66%, hsl(245,52%,56%) 66.66% 100%); }
+.sw-triad  { background: linear-gradient(to right, hsl(350,64%,55%) 0 33.33%, hsl(130,52%,44%) 33.33% 66.66%, hsl(220,64%,55%) 66.66% 100%); }
+.sw-mono   { background: linear-gradient(to right, hsl(265,45%,24%) 0 25%, hsl(265,52%,42%) 25% 50%, hsl(265,55%,60%) 50% 75%, hsl(265,42%,80%) 75% 100%); }
+
+/* temperature */
+.sw-warm   { background: linear-gradient(to right, hsl(0,75%,52%), hsl(30,85%,55%), hsl(55,85%,55%)); }
+.sw-cool   { background: linear-gradient(to right, hsl(180,52%,48%), hsl(215,64%,52%), hsl(270,42%,55%)); }
+
+/* value contrast */
+.sw-hicon  { background: linear-gradient(to right, #111 0 50%, #f2f1ec 50% 100%); }
+.sw-locon  { background: linear-gradient(to right, #8c8c8c 0 50%, #a8a8a4 50% 100%); }
 
 @media (max-width: 760px) {
   .content .swatchboard { float: none; width: 100%; margin: 1.2rem 0; border-left: none; padding-left: 0; }
