@@ -93,6 +93,11 @@ for the instructor rationale):
 > no result to match: a strong system can generate many different outcomes,
 > including ones no one has made yet.
 
+Follow the blurb with a one-line pointer to the collaboration framing (the
+*why* of the autopsy), e.g.: *Why take other makers' work apart? Because you are
+always collaborating with what came before — the autopsy just makes it
+deliberate. See [Collaboration in Computer Art](../context/collaboration.html).*
+
 ------------------------------------------------------------------------
 
 ## Technical Stack Defaults

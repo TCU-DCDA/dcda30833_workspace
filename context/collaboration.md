@@ -76,7 +76,9 @@ So reading is not a threat to your voice; it is how a voice is built. Voice is
 yours — not an echo of one source, but a synthesis no one else could assemble.
 That is the same move this course asks of every system: not to express a self
 you already have, but to discover what becomes possible inside a tradition
-you've actually let in.
+you've actually let in. In your projects this is the work of the **System
+Autopsy**: take a precedent apart, recover its rules, and build knowing exactly
+what you are in dialogue with.
 
 ## Collaborating is not the same as handing off
 

@@ -35,6 +35,8 @@ insistence, erosion, swarming, refusal.
 > There is no result to match: a strong system can generate many different
 > outcomes, including ones no one has made yet.
 
+*Why take other makers' work apart? Because you are always collaborating with what came before — the autopsy just makes it deliberate. See [Collaboration in Computer Art](../context/collaboration.html).*
+
 Before you build, take apart how others have made text *behave*. The
 point is not to imitate a look but to **reverse-engineer behavior**: what
 rule moves the text, and what does the reader's action actually change?
