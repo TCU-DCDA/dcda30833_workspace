@@ -49,6 +49,35 @@ medium has always required. If anything it is the most *honest* of the three
 about the fact of collaboration: writing from scratch hides your collaborators,
 while a conversation with AI makes the deferral impossible to ignore.
 
+## Reading won't cost you your voice
+
+The collaborator makers most often resist is **tradition**. The worry runs: if
+I read other poets, or take apart other artists' systems, their voices will
+contaminate the one I'm trying to keep pure — so I protect mine by not looking.
+
+It's worth knowing that the two most influential theorists of poetic
+originality, T. S. Eliot and Harold Bloom, disagreed about nearly everything
+except this. For Eliot, tradition is an order the new work joins and quietly
+rearranges; for Bloom, originality is a *combat* with strong predecessors.
+Neither imagined a third option in which you simply avoid them — influence,
+Bloom wrote, is the water all writers swim in. The question was never *whether*
+you engage what came before, only *how*.
+
+And the fear gets the mechanism backwards. **You can only avoid what you can
+recognize.** Skip the reading and your "original" voice doesn't come from
+nowhere — it comes from the little you've absorbed without noticing: ad copy,
+song lyrics, the nearest clichés. Reading widely is what gives you both *more
+choices* and the *awareness* to catch yourself reaching for the obvious.
+Avoiding tradition is the surest route to being derivative — and to not knowing
+that you are.
+
+So reading is not a threat to your voice; it is how a voice is built. Voice is
+**made, not found.** The more widely you read, the more your voice becomes
+yours — not an echo of one source, but a synthesis no one else could assemble.
+That is the same move this course asks of every system: not to express a self
+you already have, but to discover what becomes possible inside a tradition
+you've actually let in.
+
 ## Collaborating is not the same as handing off
 
 If collaboration is always present, the interesting question is no longer
