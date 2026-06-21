@@ -10,8 +10,25 @@ shows it visually (color tiles = authored, grey = not yet).
 ## Milestone: First Half (Weeks 1–8)
 
 The first half is the image-and-text arc (structure → motion → randomness →
-color → gesture → text). **Assignments authored, site/decks polished and
-accessibility-checked; the only open item is a curricular deck-coverage decision.**
+color → gesture → text). **Assignments authored, site polished,
+accessibility-checked, all links verified.**
+
+### Readiness for day 1 — ~80%
+
+Target: all of Weeks 1–8 prepared before the term begins. Estimate by bucket:
+
+- **Assignments** (Labs 0–7, Projects 1–4): ~100% — authored and live
+- **Infrastructure & policies** (site, build pipeline, Pages, theory sheets,
+  AI/collaboration/examples policies, deployment docs, link checker): ~95%
+- **Teaching/session plans** (decks + live-coding): ~50%
+- **Syllabus & admin**: ~70%
+
+Path to 100% (priority order):
+
+1. **Fill the Week 5/6/7/8 live-coding plans** (Week 3 is the model) — the bulk of what's left.
+2. **Finalize the syllabus**; add the AI-policy / collaboration references.
+3. **Make the student-repo a real GitHub *template repository*** (manual toggle on GitHub; day-1 critical, files are ready).
+4. **Confirm the Weeks 1/2/4 session approach** (likely covered by existing decks).
 
 ### Remaining for the first half (polish)
 
