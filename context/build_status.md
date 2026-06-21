@@ -32,7 +32,13 @@ accessibility-checked; the only open item is a curricular deck-coverage decision
 - **Projects 1–4** (Project 4 completes the first-half assignments)
 - **Site & infrastructure:** Richter-style home page, HTML build pipeline
   (`build.sh` + pandoc), GitHub Pages enabled (serving `master` root),
-  student-repo template
+  student-repo template, link checker (`check-links.sh`)
+- **Visual design & accessibility:** home tiles as color plates with a
+  per-section accent; Color Theory sheet illustration column (dimensions,
+  harmonies, temperature, contrast, palette, accessibility); the collaboration
+  piece's "three registers" diagram + live precedent thumbnail strips (also on
+  Project 1); emoji-free, WCAG-AA contrast; all deck images local (no hotlinks);
+  all links verified
 - **Precedents on the schedule:** four live, responsive p5.js recreations —
   Interruptions (Molnár), Schotter (Nees), Homage (Albers), and kinetic
   Silencio (Gomringer) — embedded as inline cards that close each first-half
