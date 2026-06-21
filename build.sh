@@ -58,6 +58,7 @@ convert theory_sheets/interactive_poetry_cheatsheet.md "#2f8f86" "Interactive Po
 convert theory_sheets/sound_design_cheatsheet.md      "#a8408b" "Sound Design — Cheat Sheet"        "Theory Sheets"
 
 # ---- Course policy ----
+convert context/collaboration.md "#2f8f86" "Collaboration in Computer Art" "Course Reading"
 convert context/ai_policy.md "#2f8f86" "AI in This Course — Policy & Practice" "Course Policy"
 
 echo "Done."

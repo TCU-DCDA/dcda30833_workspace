@@ -7,6 +7,11 @@ pushes back, like randomness, noise, and data — not an answer machine and not 
 shortcut. The point is the same as everywhere else in the course: *what can this
 system reveal?*
 
+> AI sits within a longer history of collaboration in computer art — you are
+> always collaborating, with the language, the machine, the community, and the
+> medium itself. This policy is the practical half of that frame; read it
+> alongside [Collaboration in Computer Art](collaboration.html).
+
 *(Instructor note: this is the student-facing companion to
 [examples_policy.md](examples_policy.md); both keep AI and exemplars in service
 of discovery over expression.)*

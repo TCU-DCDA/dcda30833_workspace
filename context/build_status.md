@@ -58,6 +58,11 @@ Material; PROJECT 4 allows AI-generated text). Make it a coherent thread:
 
 - [x] **Seed early** — the Week 3 live-coding plan connects "the machine
   decides" (chance) to AI as another deciding system.
+- [x] **Collaboration framing** — [collaboration.md](collaboration.md): "you
+  are always collaborating" (with the medium, the community, AI, language, art
+  history); AI as the newest *register*, not a rupture; collaboration vs.
+  abdication. Rendered, linked both ways with the AI policy, and on the home
+  page. *Draft — open to further refinement.*
 - [x] **DCDA AI policy written** — [ai_policy.md](ai_policy.md): WRIT's
   discipline (Explanation Test, document/cite, no AI on learning labs, stay
   critical) reframed for creative coding (AI as collaborator/material,
