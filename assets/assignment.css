@@ -225,3 +225,34 @@ body {
 @media (max-width: 760px) {
   .content .swatchboard { float: none; width: 100%; margin: 1.2rem 0; border-left: none; padding-left: 0; }
 }
+
+/* ---- Collaboration piece: registers diagram + precedent thumbnails ---- */
+.content .registers {
+  background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--accent);
+  padding: 1.1rem 1.3rem 1.2rem; margin: 1.6rem 0;
+}
+.content .registers .reg-banner {
+  font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.12em;
+  font-weight: 600; color: var(--ink-soft);
+}
+.content .registers .reg-banner span {
+  text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--faint);
+}
+.content .registers .reg-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0 0.7rem;
+}
+.content .registers .reg { text-align: center; }
+.content .registers .reg strong { display: block; font-size: 0.92rem; }
+.content .registers .reg span { display: block; font-size: 0.75rem; color: var(--faint); margin-top: 0.15rem; }
+.content .registers .reg-axis {
+  display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--faint);
+  border-top: 2px solid var(--line); padding-top: 0.35rem;
+}
+
+.content .sketch-strip { display: flex; flex-wrap: wrap; gap: 0.9rem; margin: 1.4rem 0; }
+.content .sketch-strip figure { margin: 0; width: 150px; }
+.content .sketch-strip iframe { width: 150px; height: 150px; border: 1px solid var(--line); display: block; background: var(--wall); }
+.content .sketch-strip figcaption { font-size: 0.72rem; color: var(--ink-soft); margin-top: 0.35rem; line-height: 1.4; }
+.content .sketch-strip figcaption a { color: var(--ink); }
+
+@media (max-width: 760px) { .content .registers .reg-row { grid-template-columns: 1fr; } }

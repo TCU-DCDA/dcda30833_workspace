@@ -29,6 +29,16 @@ like working alone — but even here you collaborate with the medium: what the
 language makes easy or hard, how `random()` behaves, where the frame loop pushes
 back, what the canvas will and won't do.
 
+<div class="registers">
+<div class="reg-banner">Always collaborating <span>— with the medium, the community, AI, language, and the history of art</span></div>
+<div class="reg-row">
+<div class="reg"><strong>From scratch</strong><span>the medium</span></div>
+<div class="reg"><strong>Frankencoding</strong><span>the community</span></div>
+<div class="reg"><strong>AI conversation</strong><span>a synthesis</span></div>
+</div>
+<div class="reg-axis"><span>more autonomy</span><span>more deferral</span></div>
+</div>
+
 ## The collaborators are always there
 
 Notice what the three share. Whether you keep full authorial control or hand the
@@ -125,6 +135,15 @@ the system offers; keep nothing you can't explain; document the exchange. Those
 are not special precautions against AI. They are what collaborating well has
 always asked of you — now made explicit, because the newest collaborator makes
 the stakes harder to ignore.
+
+The course's live precedent recreations — systems you can take apart, eyes open:
+
+<div class="sketch-strip">
+<figure><iframe src="../sketches/interruptions.html" title="Interruptions (live)" loading="lazy"></iframe><figcaption><strong>Interruptions</strong> — after Molnár</figcaption></figure>
+<figure><iframe src="../sketches/schotter.html" title="Schotter (live)" loading="lazy"></iframe><figcaption><strong>Schotter</strong> — after Nees</figcaption></figure>
+<figure><iframe src="../sketches/homage.html" title="Homage (live)" loading="lazy"></iframe><figcaption><strong>Homage</strong> — after Albers</figcaption></figure>
+<figure><iframe src="../sketches/concrete_poem.html" title="Silencio (live)" loading="lazy"></iframe><figcaption><strong>Silencio</strong> — after Gomringer</figcaption></figure>
+</div>
 
 ---
 
