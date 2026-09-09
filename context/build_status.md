@@ -13,29 +13,39 @@ The first half is the image-and-text arc (structure → motion → randomness �
 color → gesture → text). **Assignments authored, site polished,
 accessibility-checked, all links verified.**
 
-### Readiness for day 1 — ~80%
+### Readiness for day 1 — ~95%
+
+The course runs **Spring 2027 on a MW 80-minute schedule**. The registrar's
+calendar affords **15 instructional weeks**, not 16: Weeks 1–15 map 1:1, and
+Week 16 (Exhibition & Publication) moves to the assigned final exam block,
+May 10–14. MLK (Mon, Jan 18) leaves Week 1 with a single meeting on Wed, Jan 20.
 
 Target: all of Weeks 1–8 prepared before the term begins. Estimate by bucket:
 
 - **Assignments** (Labs 0–7, Projects 1–4): ~100% — authored and live
 - **Infrastructure & policies** (site, build pipeline, Pages, theory sheets,
   AI/collaboration/examples policies, deployment docs, link checker): ~95%
-- **Teaching/session plans** (decks + live-coding): ~50%
-- **Syllabus & admin**: ~70%
+- **Teaching/session plans** (decks + live-coding): ~100% — all five live-coding
+  plans drafted (Weeks 3, 5, 6, 7, 8)
+- **Syllabus & admin**: ~90% — delivery syllabus authored and live; placeholders
+  remain for section number, room, meeting time, and the Final Portfolio date
 
 Path to 100% (priority order):
 
-1. **Fill the Week 5/6/7/8 live-coding plans** (Week 3 is the model) — the bulk of what's left.
-2. **Finalize the syllabus**; add the AI-policy / collaboration references.
+1. ~~Fill the Week 5/6/7/8 live-coding plans~~ — **done.**
+2. ~~Finalize the syllabus~~ — **done:** [syllabus.md](syllabus.md), built and
+   linked from the home page, with the AI-policy and collaboration references in.
 3. **Make the student-repo a real GitHub *template repository*** (manual toggle on GitHub; day-1 critical, files are ready).
 4. **Confirm the Weeks 1/2/4 session approach** (likely covered by existing decks).
+5. **Fill the four syllabus placeholders** once the registrar assigns a room,
+   time, section number, and final exam block.
 
 ### Remaining for the first half (polish)
 
 - [x] **Project 4 — Animated & Interactive Concrete Poem (Week 8)** — authored; closes the text arc fed by Labs 6 & 7.
-- [ ] **Deck coverage decision** — Weeks 3, 5, 6, 7, 8 have no dedicated slide deck. *(Only remaining first-half item.)*
+- [x] **Deck coverage decision** — Weeks 3, 5, 6, 7, 8 have no dedicated slide deck; all five are now taught from drafted **live-coding plans** instead.
   - **Direction:** these are hands-on technique weeks (randomness, color, mark-making, text), likely taught better through **live coding** than slides — build a sketch with the class in the p5.js editor, and teach from the assignment page + live precedent sketches projected on the site. Reserve committed decks for big conceptual framing (already built: Discovery, the Sublime, Deployment).
-  - **Plans live in `live_coding/`** — Week 3 (Randomness) is drafted as the model; Weeks 5, 6, 7, 8 are skeletons ready to fill. To do: complete the four skeletons; confirm which—if any—still warrant a saved deck.
+  - **Plans live in `live_coding/`** — all five drafted. Weeks 5 and 7 introduce technique and scaffold two labs each; Weeks 6 and 8 protect studio time and carry the in-class System Autopsy beat for PROJECT 3 and PROJECT 4. No saved deck appears warranted for these weeks.
 - [x] **`slide_decks/the_sublime/`** — was text-only (nothing broken); enriched with Richter and Klee images on their quote slides.
 - [x] **Accessibility (WAVE)** — fixed across the course site and all three decks: contrast (faint grey, dark-theme dim greys, accent text, precedent-card labels) and very-small text raised to a readable floor; deck content no longer runs below the fold; deck images have descriptive alt text.
 - [x] **Live verify** — first-half pages and decks confirmed rendering correctly on GitHub Pages.
@@ -45,6 +55,10 @@ Path to 100% (priority order):
 
 ## Authored (done)
 
+- **Delivery syllabus** — [syllabus.md](syllabus.md), on the TCU template, with
+  the DCDA program outcomes, ungrading model, policy cross-links, and the real
+  Spring 2027 MW schedule
+- **Live-coding plans** — Weeks 3, 5, 6, 7, 8
 - **Labs 0–8** (Lab 8 is Week 9, already drafted)
 - **Projects 1–4** (Project 4 completes the first-half assignments)
 - **Site & infrastructure:** Richter-style home page, HTML build pipeline
@@ -66,11 +80,16 @@ Path to 100% (priority order):
 
 ---
 
-## Remaining — Second Half (Weeks 9–16 + finals)
+## Remaining — Second Half (Weeks 9–15 + finals)
 
 - [ ] **Labs:** 9 (Rhythm Without Notes), 10 (Mapping Without Message), 11 (Three Mappings), 12 (System Identity Translation), 13 (Failure Harvest)
 - [ ] **Projects:** 5 (Generative Sound), 6 (Data-Driven), Final Project, Final Portfolio
-- [ ] **Decks** for second-half weeks (sound, data, translation)
+- [ ] **Decks or live-coding plans** for second-half weeks (sound, data,
+  translation) — the first half settled on live-coding plans for technique weeks;
+  the same call likely applies here.
+
+> Note: the Exhibition & Publication session formerly numbered Week 16 now runs
+> in the assigned final exam block (May 10–14). See the readiness note above.
 
 ---
 
@@ -90,8 +109,8 @@ Material; PROJECT 4 allows AI-generated text). Make it a coherent thread:
   discipline (Explanation Test, document/cite, no AI on learning labs, stay
   critical) reframed for creative coding (AI as collaborator/material,
   discovery over expression). Rendered to `context/ai_policy.html` and linked
-  from LAB 7, and listed under "Course foundations" on the home page. *Still to
-  do: reference it in the syllabus.*
+  from LAB 7, and listed under "Course foundations" on the home page. Referenced
+  in the delivery syllabus under Course Policies.
 - [ ] **Roll AI into later projects** — deliberate, scaffolded AI use in the
   back half (e.g., Projects 5/6/Final), analogous to WRIT's AI-assisted capstone
   "Project Zed," with an AI-collaboration log + citation.

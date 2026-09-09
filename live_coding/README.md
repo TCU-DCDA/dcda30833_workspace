@@ -14,11 +14,13 @@ instructive mistakes, and re-run to show the *range* one system produces.
 | Week | Focus | Status |
 |------|-------|--------|
 | 3 | Randomness as Material | drafted ([week_03_randomness.md](week_03_randomness.md)) |
-| 5 | Color as Structure | skeleton |
-| 6 | Algorithmic Drawing & Mark-Making | skeleton |
-| 7 | Text as Spatial Material | skeleton |
-| 8 | Interactive Poetry Systems | skeleton |
+| 5 | Color as Structure | drafted ([week_05_color.md](week_05_color.md)) |
+| 6 | Algorithmic Drawing & Mark-Making | drafted ([week_06_markmaking.md](week_06_markmaking.md)) |
+| 7 | Text as Spatial Material | drafted ([week_07_text.md](week_07_text.md)) |
+| 8 | Interactive Poetry Systems | drafted ([week_08_interactive_poetry.md](week_08_interactive_poetry.md)) |
 
-Use [week_03_randomness.md](week_03_randomness.md) as the model when filling in
-the others. See `context/build_status.md` for why these weeks are live-coded
-rather than decked.
+All five plans are drafted; [week_03_randomness.md](week_03_randomness.md) was
+the model. Weeks 5 and 7 introduce technique and scaffold two labs each; Weeks 6
+and 8 protect studio time and carry the in-class **System Autopsy** beat for
+PROJECT 3 and PROJECT 4. See `context/build_status.md` for why these weeks are
+live-coded rather than decked.
