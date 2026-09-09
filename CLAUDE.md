@@ -4,6 +4,10 @@
 
 This repository contains course development materials for **DCDA 30833 – Creative Coding for the Humanities**, an upper-division elective that teaches creative coding as a method for artistic, literary, and critical expression within digital culture.
 
+**Offering:** Spring 2027 · MW, 80-minute sessions · 15 instructional weeks + a finals block (May 10–14). The registrar's calendar affords 15 teaching weeks, not 16 — Weeks 1–15 map 1:1 and the Exhibition & Publication session runs in the assigned final exam block.
+
+**Status:** all assignments (Labs 0–13, Projects 1–6, Final Project, Final Portfolio) and all session plans are authored. See [context/build_status.md](context/build_status.md) for the current checklist.
+
 **Course Focus Areas:**
 - Generative art
 - Interactive poetry
@@ -17,16 +21,30 @@ This repository contains course development materials for **DCDA 30833 – Creat
 
 ```
 dcda30833_workspace/
-├── labs/                 # Weekly low-stakes exercises
-├── projects/             # Major synthesis assignments
-├── context/              # Course description, rationale, pedagogical theory
+├── index.html            # Student-facing home page (hand-maintained, not generated)
+├── build.sh              # Regenerates .html from .md via pandoc
+├── check-links.sh        # Verifies internal + external links
+├── labs/                 # Low-stakes exercises, one technique each (Labs 0–13)
+├── projects/             # Synthesis assignments (Projects 1–6, Final, Portfolio)
+├── live_coding/          # Per-session teaching plans for every teaching week
+├── context/              # Syllabus, schedules, policies, theory, build status
 ├── theory_sheets/        # Technical reference materials (cheat sheets)
-├── sketches/             # Example code demonstrations
-├── assets/               # Images, fonts, media files
-├── slide_decks/          # Presentation materials
+├── sketches/             # Live p5.js recreations of precedent works
+├── templates/            # Student repo / portfolio starter
+├── proposal/             # Approval-process documents — historical record only
+├── assets/               # Page template, stylesheet, media
+├── slide_decks/          # Decks for the conceptual framing weeks
 ├── readings/             # Course readings and reference texts
 └── old_files/            # Archived materials
 ```
+
+**The `.md` files are the source of truth; the `.html` files are generated.** Edit
+Markdown, then run `bash build.sh`. Never hand-edit a generated `.html`.
+`index.html` is the exception — it is hand-maintained.
+
+**`proposal/` is a historical record** of the course approval, not the live course
+documents. Do not update it or correct dates inside it; the delivery syllabus is
+[context/syllabus.md](context/syllabus.md).
 
 ## Pedagogical Philosophy
 
@@ -53,6 +71,16 @@ This course material is built on specific theoretical foundations that should in
    - Constraints don't limit creativity; they generate it
    - Systems push back—and that pushback is productive
    - Use randomness, noise, thresholds, and interaction as creative constraints
+
+### Recurring Structures
+
+Several patterns run through the whole course; match them when authoring anything new.
+
+- **Lab → Autopsy → Project.** Labs isolate one technique; the *System Autopsy* reverse-engineers a precedent as a system to take apart, not an image to reproduce; the project synthesizes both. Every project carries the standard autopsy opener — see [context/meta_labs_projects.md](context/meta_labs_projects.md).
+- **Cadence.** A week's technique is taught Monday; the lab on it is due that Wednesday; a second lab, where a week has one, the following Monday. Projects are due Wednesday. **Nothing is ever due at the session that teaches it.**
+- **One-thing constraints.** One hue (LAB 4), one word (LAB 6), one pitch (LAB 8), one column (LAB 10). Each isolates a variable by freezing everything else.
+- **Publish continuously.** GitHub Pages is enabled in Week 1; every assignment is pushed *and* live at its own URL. Deployment is routine, not a finals-week task.
+- **The AI thread.** LAB 7 (Prompt as Material) → PROJECT 5 → PROJECT 6 → Final Project, escalating from demonstration to a required `ai_log.md`. The constant is the Explanation Test: keep nothing you can't explain. Opting out is a documented choice, not an omission.
 
 ## AI Assistance Guidelines
 
@@ -146,6 +174,9 @@ Materials are designed for:
 - **Emergence**: Behavior that arises from system rules rather than explicit programming
 - **Constraint**: A generative limitation that produces creative possibilities
 - **Form = Content**: The structural/behavioral qualities *are* the meaning, not a vessel for it
+- **System Autopsy**: The in-class beat where a precedent work is taken apart to recover its rules
+- **The Refusal** (PROJECT 6): Naming what a system deliberately will not represent — every mapping loses something, and the loss is worth stating rather than hiding
+- **Explanation Test**: You must be able to explain every line you submit; the governing standard for AI use
 
 ## Notes for AI Assistants
 
