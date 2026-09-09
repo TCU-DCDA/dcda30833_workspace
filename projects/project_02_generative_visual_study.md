@@ -1,7 +1,7 @@
 # PROJECT 2 --- Generative Visual Study
 
 **Course:** DCDA 30833 --- Creative Coding for the Humanities\
-**Due:** Week 4 (Thursday)\
+**Due:** Week 4 (Wednesday)\
 **Tools:** p5.js\
 **Submission:** GitHub link to your project folder + short written
 reflection

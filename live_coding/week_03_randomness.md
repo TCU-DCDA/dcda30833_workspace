@@ -1,6 +1,6 @@
 # Week 3 — Randomness as Material · Live-Coding Plan
 
-**Mode:** Image / Motion · **TR, 80 min** · scaffolds LAB 2 (Random Without Design) → LAB 3 (Controlled Randomness)
+**Mode:** Image / Motion · **MW, 80 min** · scaffolds LAB 2 (Random Without Design) → LAB 3 (Controlled Randomness)
 **Where we work:** p5.js Web Editor, projected. Build from a blank sketch — including the mistakes.
 
 ## Through-line (the one idea)

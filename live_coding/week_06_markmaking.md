@@ -1,6 +1,6 @@
 # Week 6 — Algorithmic Drawing & Mark-Making · Live-Coding Plan
 
-**Mode:** Image / Gesture · **TR, 80 min** · supports PROJECT 3 studio (Algorithmic Color Composition)
+**Mode:** Image / Gesture · **MW, 80 min** · supports PROJECT 3 studio (Algorithmic Color Composition)
 **Where we work:** p5.js Web Editor, projected. Build from a blank sketch.
 
 > Skeleton — fill in following the model in [week_03_randomness.md](week_03_randomness.md).

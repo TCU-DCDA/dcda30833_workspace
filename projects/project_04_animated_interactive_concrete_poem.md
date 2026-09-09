@@ -1,7 +1,7 @@
 # PROJECT 4 --- Animated & Interactive Concrete Poem
 
 **Course:** DCDA 30833 --- Creative Coding for the Humanities\
-**Due:** Week 8 (Thursday)\
+**Due:** Week 8 (Wednesday)\
 **Tools:** p5.js (optionally with AI-generated text from LAB 7)\
 **Submission:** GitHub link to your project folder + short written
 reflection

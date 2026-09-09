@@ -1,7 +1,7 @@
 # LAB 6 — Text as Object
 
 **Course:** DCDA 30833 — Creative Coding for the Humanities\
-**Due:** Week 7 (Tuesday)\
+**Due:** Week 7 (Monday)\
 **Tools:** p5.js\
 **Submission:** GitHub link to your sketch
 

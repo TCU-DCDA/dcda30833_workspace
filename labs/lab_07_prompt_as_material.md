@@ -1,7 +1,7 @@
 # LAB 7 — Prompt as Material
 
 **Course:** DCDA 30833 — Creative Coding for the Humanities
-**Due:** Week 7 (Thursday)
+**Due:** Week 7 (Wednesday)
 **Tools:** p5.js + AI assistant (Claude, ChatGPT, or similar)
 **Submission:** GitHub link to your lab folder
 

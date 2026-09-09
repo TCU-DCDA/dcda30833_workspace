@@ -1,7 +1,7 @@
 # LAB 3 — Controlled Randomness
 
 **Course:** DCDA 30833 — Creative Coding for the Humanities  
-**Due:** Week 4 (Thursday)  
+**Due:** Week 4 (Monday)  
 **Tools:** p5.js  
 **Submission:** GitHub link to your sketch
 

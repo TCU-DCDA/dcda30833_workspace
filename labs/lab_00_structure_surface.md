@@ -1,7 +1,7 @@
 # LAB 0 --- Structure & Surface as Systems
 
 **Course:** DCDA 30833 --- Creative Coding for the Humanities\
-**Due:** Week 1 (Thursday)\
+**Due:** Week 2 (Monday)\
 **Tools:** HTML + CSS\
 **Submission:** GitHub link to your lab folder
 

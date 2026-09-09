@@ -1,6 +1,6 @@
 # DCDA 30833 — Semester Schedule (Instructor Reference)
 Creative Coding for the Humanities  
-TR · 80 minutes · Junior Level
+MW · 80 minutes · Junior Level
 
 Through-line:
 Form = Content · Systems Dramatize States · Discovery over Expression

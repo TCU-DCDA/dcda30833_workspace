@@ -1,7 +1,7 @@
 # LAB 8 — Envelope Only
 
 **Course:** DCDA 30833 — Creative Coding for the Humanities
-**Due:** Week 9 (Thursday)
+**Due:** Week 9 (Wednesday)
 **Tools:** p5.js + Tone.js
 **Submission:** GitHub link to your sketch
 

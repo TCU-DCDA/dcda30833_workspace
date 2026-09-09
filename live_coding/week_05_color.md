@@ -1,6 +1,6 @@
 # Week 5 — Color as Structure · Live-Coding Plan
 
-**Mode:** Image / Color · **TR, 80 min** · scaffolds LAB 4 (One-Hue World) → LAB 5 (Palette as Prison)
+**Mode:** Image / Color · **MW, 80 min** · scaffolds LAB 4 (One-Hue World) → LAB 5 (Palette as Prison)
 **Where we work:** p5.js Web Editor, projected. Build from a blank sketch.
 
 > Skeleton — fill in following the model in [week_03_randomness.md](week_03_randomness.md).

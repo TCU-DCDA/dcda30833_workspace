@@ -1,7 +1,7 @@
 # PROJECT 3 --- Algorithmic Color Composition
 
 **Course:** DCDA 30833 --- Creative Coding for the Humanities\
-**Due:** Week 6 (Thursday)\
+**Due:** Week 6 (Wednesday)\
 **Tools:** p5.js\
 **Submission:** GitHub link to your project folder + short written
 reflection

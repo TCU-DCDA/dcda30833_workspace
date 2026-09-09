@@ -1,128 +1,131 @@
-# DCDA 30833 — Student Calendar (TR · 80 Minutes)
+# DCDA 30833 — Student Calendar (MW · 80 Minutes)
 
-Legend  
-Lab — due Tuesday  
-Project — due Thursday
+Spring 2027 · Creative Coding for the Humanities
+
+Legend
+Lab / Project — the day it is due is listed with the session.
+Every lab and project is pushed to GitHub *and* live on GitHub Pages.
 
 ---
 
 ## Week 1 — Structure & Surface (HTML/CSS)
-- TUE: Intro + HTML structure  
-- THU: CSS as rule system + enable GitHub Pages (serve from repo root)  
-LAB 0 DUE — Structure & Surface as Systems  
-Enable GitHub Pages once this week — every lab/project you push afterward is automatically live at its own URL. You deploy all semester, not just at the end.
+- MON Jan 18: **MLK holiday — no class**
+- WED Jan 20: Intro; HTML as structure; CSS as rule system; **enable GitHub Pages** (serve from repo root)
+
+Enable Pages once this week — every lab and project you push afterward is automatically live at its own URL. You deploy all semester, not just at the end.
 
 ---
 
 ## Week 2 — Motion & Time
-- TUE: p5.js animation (no randomness)  
-- THU:  
-LAB 1 DUE — Rule Without Random  
-PROJECT 1 DUE — Shape Self-Portrait  
+- MON Jan 25:
+LAB 0 DUE — Structure & Surface as Systems
+- WED Jan 27: p5.js animation, no randomness
+LAB 1 DUE — Rule Without Random
+PROJECT 1 DUE — System-Based Shape Self-Portrait
 
 ---
 
 ## Week 3 — Randomness & Probability
-- TUE:  
-LAB 2 DUE — Random Without Design  
-- THU:  
-LAB 3 DUE — Controlled Randomness  
+- MON Feb 1: Live build — randomness as material
+- WED Feb 3:
+LAB 2 DUE — Random Without Design
+*(Feb 3 is also the last day to drop a course with a W.)*
 
 ---
 
 ## Week 4 — Generative Visual Systems
-- TUE: Studio work  
-- THU:  
-PROJECT 2 DUE — Generative Visual Study  
+- MON Feb 8:
+LAB 3 DUE — Controlled Randomness
+- WED Feb 10:
+PROJECT 2 DUE — Generative Visual Study
 
 ---
 
 ## Week 5 — Color as System
-- TUE:  
-LAB 4 DUE — One-Hue World  
-- THU:  
-LAB 5 DUE — Palette as Prison  
+- MON Feb 15:
+LAB 4 DUE — One-Hue World
+- WED Feb 17:
+LAB 5 DUE — Palette as Prison
 
 ---
 
 ## Week 6 — Algorithmic Drawing
-- TUE: Studio work  
-- THU:  
-PROJECT 3 DUE — Algorithmic Color Composition  
+- MON Feb 22: Studio work
+- WED Feb 24:
+PROJECT 3 DUE — Algorithmic Color Composition
 
 ---
 
 ## Week 7 — Text as Visual Material
-- TUE:  
-LAB 6 DUE — Text as Object  
-- THU:  
-LAB 7 DUE — One Interaction, No Meaning  
+- MON Mar 1:
+LAB 6 DUE — Text as Object
+- WED Mar 3:
+LAB 7 DUE — Prompt as Material
 
 ---
 
 ## Week 8 — Interactive Poetry
-- TUE: Studio work  
-- THU:  
-PROJECT 4 DUE — Animated & Interactive Concrete Poem  
+- MON Mar 8: Studio work
+- WED Mar 10:
+PROJECT 4 DUE — Animated & Interactive Concrete Poem
+
+---
+
+## Spring Break — March 15–19
+No class. Classes resume Monday, March 22.
 
 ---
 
 ## Week 9 — Sound & Synthesis
-- TUE: Sound fundamentals  
-- THU:  
-LAB 8 DUE — Envelope Only  
+- MON Mar 22: Sound fundamentals
+- WED Mar 24:
+LAB 8 DUE — Envelope Only
 
 ---
 
 ## Week 10 — Rhythm & Sonification
-- TUE:  
-LAB 9 DUE — Rhythm Without Notes  
-- THU: Studio work  
+- MON Mar 29:
+LAB 9 DUE — Rhythm Without Notes
+- WED Mar 31: Studio work
 
 ---
 
 ## Week 11 — Interactive Audio
-- TUE: Studio + critique prep  
-- THU:  
-PROJECT 5 DUE — Generative Sound / Sonified System  
+- MON Apr 5: Studio + critique prep
+- WED Apr 7:
+PROJECT 5 DUE — Generative Sound / Sonified System
 
 ---
 
 ## Week 12 — Data as Material
-- TUE:  
-LAB 10 DUE — Mapping Without Message  
-- THU:  
-LAB 11 DUE — Three Mappings, Same Data  
+- MON Apr 12:
+LAB 10 DUE — Mapping Without Message
+- WED Apr 14:
+LAB 11 DUE — Three Mappings, Same Data
 
 ---
 
 ## Week 13 — Data-Driven Systems
-- TUE: Studio work  
-- THU:  
-PROJECT 6 DUE — Data-Driven Expressive System  
+- MON Apr 19: Studio work
+- WED Apr 21:
+PROJECT 6 DUE — Data-Driven Expressive System
 
 ---
 
 ## Week 14 — Translation & Failure
-- TUE:  
-LAB 12 DUE — System Identity Translation  
-- THU:  
-LAB 13 DUE — Failure Harvest  
+- MON Apr 26:
+LAB 12 DUE — System Identity Translation
+- WED Apr 28:
+LAB 13 DUE — Failure Harvest
 
 ---
 
 ## Week 15 — Final Project Studio
-- TUE: Final build  
-- THU: In-progress critique  
+- MON May 3: Final build
+- WED May 5: In-progress critique — **last day of classes**
 
 ---
 
-## Week 16 — Exhibition & Publication
-- TUE: Polish live portfolio (Pages has been running since Week 1); check every URL resolves  
-- THU:  
-FINAL PROJECT DUE — Public Exhibition / Demo  
-
----
-
-## Finals Week
-FINAL PORTFOLIO DUE — GitHub Pages + Reflection
+## Finals — May 10–14
+FINAL PROJECT DUE — public exhibition / demo at our assigned final exam block
+FINAL PORTFOLIO DUE — GitHub Pages + reflection

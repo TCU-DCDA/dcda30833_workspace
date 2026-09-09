@@ -1,7 +1,7 @@
 # PROJECT 1 --- System-Based Shape Self-Portrait
 
 **Course:** DCDA 30833 --- Creative Coding for the Humanities\
-**Due:** Week 2 (Thursday)\
+**Due:** Week 2 (Wednesday)\
 **Tools:** p5.js\
 **Submission:** GitHub link to your project folder + short written
 reflection

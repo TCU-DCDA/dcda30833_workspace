@@ -1,6 +1,6 @@
 # Week 7 — Text as Spatial Material · Live-Coding Plan
 
-**Mode:** Text / Visual Language · **TR, 80 min** · scaffolds LAB 6 (Text as Object) → LAB 7 (Prompt as Material)
+**Mode:** Text / Visual Language · **MW, 80 min** · scaffolds LAB 6 (Text as Object) → LAB 7 (Prompt as Material)
 **Where we work:** p5.js Web Editor, projected. Build from a blank sketch.
 
 > Skeleton — fill in following the model in [week_03_randomness.md](week_03_randomness.md).

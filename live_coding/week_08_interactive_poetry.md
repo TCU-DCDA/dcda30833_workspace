@@ -1,6 +1,6 @@
 # Week 8 — Interactive Poetry Systems · Live-Coding Plan
 
-**Mode:** Text / Interaction · **TR, 80 min** · supports PROJECT 4 studio (Animated & Interactive Concrete Poem)
+**Mode:** Text / Interaction · **MW, 80 min** · supports PROJECT 4 studio (Animated & Interactive Concrete Poem)
 **Where we work:** p5.js Web Editor, projected. Build from a blank sketch.
 
 > Skeleton — fill in following the model in [week_03_randomness.md](week_03_randomness.md).
