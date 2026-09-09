@@ -1,7 +1,7 @@
 # LAB 5 --- Palette as Prison
 
 **Course:** DCDA 30833 --- Creative Coding for the Humanities\
-**Due:** Week 5 (Wednesday)\
+**Due:** Week 6 (Monday)\
 **Tools:** p5.js\
 **Submission:** GitHub link to your sketch
 

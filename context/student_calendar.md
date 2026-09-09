@@ -4,6 +4,8 @@ Spring 2027 · Creative Coding for the Humanities
 
 Legend
 Lab / Project — the day it is due is listed with the session.
+A week's technique is taught Monday; its lab is due the following Wednesday,
+and a second lab (where there is one) the Monday after that.
 Every lab and project is pushed to GitHub *and* live on GitHub Pages.
 
 ---
@@ -42,30 +44,30 @@ PROJECT 2 DUE — Generative Visual Study
 ---
 
 ## Week 5 — Color as System
-- MON Feb 15:
-LAB 4 DUE — One-Hue World
+- MON Feb 15: Live build — one hue in HSB; palette as a weighted population
 - WED Feb 17:
-LAB 5 DUE — Palette as Prison
+LAB 4 DUE — One-Hue World
 
 ---
 
 ## Week 6 — Algorithmic Drawing
-- MON Feb 22: Studio work
+- MON Feb 22: Mark-making; System Autopsy (Albers, Richter, Riley); PROJECT 3 studio
+LAB 5 DUE — Palette as Prison
 - WED Feb 24:
 PROJECT 3 DUE — Algorithmic Color Composition
 
 ---
 
 ## Week 7 — Text as Visual Material
-- MON Mar 1:
-LAB 6 DUE — Text as Object
+- MON Mar 1: Live build — text as shape; prompting as material (AI demo)
 - WED Mar 3:
-LAB 7 DUE — Prompt as Material
+LAB 6 DUE — Text as Object
 
 ---
 
 ## Week 8 — Interactive Poetry
-- MON Mar 8: Studio work
+- MON Mar 8: Interaction as system input; System Autopsy (Gomringer, bpNichol, Parrish); PROJECT 4 studio
+LAB 7 DUE — Prompt as Material
 - WED Mar 10:
 PROJECT 4 DUE — Animated & Interactive Concrete Poem
 
@@ -98,30 +100,30 @@ PROJECT 5 DUE — Generative Sound / Sonified System
 ---
 
 ## Week 12 — Data as Material
-- MON Apr 12:
-LAB 10 DUE — Mapping Without Message
+- MON Apr 12: Data → behavior; CSV / JSON
 - WED Apr 14:
-LAB 11 DUE — Three Mappings, Same Data
+LAB 10 DUE — Mapping Without Message
 
 ---
 
 ## Week 13 — Data-Driven Systems
-- MON Apr 19: Studio work
+- MON Apr 19: PROJECT 6 studio
+LAB 11 DUE — Three Mappings, Same Data
 - WED Apr 21:
 PROJECT 6 DUE — Data-Driven Expressive System
 
 ---
 
 ## Week 14 — Translation & Failure
-- MON Apr 26:
-LAB 12 DUE — System Identity Translation
+- MON Apr 26: System identity across rewrites; glitch as generative force
 - WED Apr 28:
-LAB 13 DUE — Failure Harvest
+LAB 12 DUE — System Identity Translation
 
 ---
 
 ## Week 15 — Final Project Studio
 - MON May 3: Final build
+LAB 13 DUE — Failure Harvest
 - WED May 5: In-progress critique — **last day of classes**
 
 ---

@@ -5,7 +5,7 @@
 
 > This session carries the course's AI thread from *aside* to *practice*. The
 > stance was planted in Week 3 ("the machine decides"); today it becomes a
-> working method, and LAB 7 is due Wednesday.
+> working method. LAB 6 is due Wednesday, LAB 7 the Monday after.
 
 ## Through-line (the one idea)
 
@@ -148,8 +148,8 @@ framing: collaboration, not abdication.
 
 ## 5 · Studio (~20 min)
 
-Students work on **LAB 6 — Text as Object** (due today) and begin **LAB 7 —
-Prompt as Material** (due Wednesday).
+Students begin **LAB 6 — Text as Object** (due Wednesday) and, if they're ready,
+**LAB 7 — Prompt as Material** (due Monday of Week 8).
 
 While circulating:
 

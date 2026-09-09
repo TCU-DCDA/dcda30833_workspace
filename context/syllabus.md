@@ -174,9 +174,10 @@ Core Curriculum nor Finding Ourselves in Community (FSC) designation.
 
 ### Assignments
 
-Work in this course comes in two forms. **Projects are due Wednesday.** Labs
-fall on either meeting day depending on the week — the schedule below gives the
-exact date for each.
+Work in this course comes in two forms, on a consistent rhythm: **a week's
+technique is taught Monday, its lab is due that Wednesday, and a second lab —
+where there is one — the following Monday. Projects are due Wednesday.** You
+always have at least one session with the material before anything is due on it.
 
 **Labs** are low-stakes, technique-focused exercises that isolate a single
 concept. They are meant to be attempted, broken, and re-run.
@@ -317,7 +318,7 @@ Bring your laptop to every class. All required software is free.
 > learning opportunities; any changes will be communicated in class and posted
 > to the course site.
 
-**Projects are due Wednesday.** Lab due dates are listed per week below.
+**Technique is taught Monday; the lab on it is due Wednesday. Projects are due Wednesday.**
 
 | Week | Module | Focus | Monday | Wednesday |
 | :--- | :--- | :--- | :--- | :--- |
@@ -325,18 +326,18 @@ Bring your laptop to every class. All required software is free.
 | **2** | Structure & Surface | Time Enters the System | Jan 25 — **LAB 0** | Jan 27 — **LAB 1 · PROJECT 1** |
 | **3** | Chaos & Control | Randomness as Material | Feb 1 — Live build: randomness | Feb 3 — **LAB 2**; last day to drop with a W |
 | **4** | Chaos & Control | Generative Visual Systems | Feb 8 — **LAB 3** | Feb 10 — **PROJECT 2** |
-| **5** | Color & Gesture | Color as Structure | Feb 15 — **LAB 4** | Feb 17 — **LAB 5** |
-| **6** | Color & Gesture | Algorithmic Drawing & Mark-Making | Feb 22 — Studio | Feb 24 — **PROJECT 3** |
-| **7** | Language & Text | Text as Spatial Material | Mar 1 — **LAB 6** | Mar 3 — **LAB 7** |
-| **8** | Language & Text | Interactive Poetry Systems | Mar 8 — Studio | Mar 10 — **PROJECT 4** |
+| **5** | Color & Gesture | Color as Structure | Feb 15 — Live build: one hue, then palette | Feb 17 — **LAB 4** |
+| **6** | Color & Gesture | Algorithmic Drawing & Mark-Making | Feb 22 — **LAB 5**; autopsy + studio | Feb 24 — **PROJECT 3** |
+| **7** | Language & Text | Text as Spatial Material | Mar 1 — Live build: text as shape; AI demo | Mar 3 — **LAB 6** |
+| **8** | Language & Text | Interactive Poetry Systems | Mar 8 — **LAB 7**; autopsy + studio | Mar 10 — **PROJECT 4** |
 | — | *Spring Break* | *no class* | *Mar 15* | *Mar 17* |
 | **9** | Sound & Time | Sound as Expressive System | Mar 22 — Sound fundamentals | Mar 24 — **LAB 8** |
 | **10** | Sound & Time | Rhythm & Sonification | Mar 29 — **LAB 9** | Mar 31 — Studio |
 | **11** | Sound & Time | Interactive Audio Systems | Apr 5 — Studio; critique prep | Apr 7 — **PROJECT 5** |
-| **12** | Data & Society | Data as Poetic Constraint | Apr 12 — **LAB 10** | Apr 14 — **LAB 11** |
-| **13** | Data & Society | Data-Driven Systems | Apr 19 — Studio | Apr 21 — **PROJECT 6** |
-| **14** | Synthesis | Translation & Failure | Apr 26 — **LAB 12** | Apr 28 — **LAB 13** |
-| **15** | Synthesis | Final System Studio | May 3 — Final build | May 5 — In-progress critique; last day of classes |
+| **12** | Data & Society | Data as Poetic Constraint | Apr 12 — Data → behavior | Apr 14 — **LAB 10** |
+| **13** | Data & Society | Data-Driven Systems | Apr 19 — **LAB 11**; studio | Apr 21 — **PROJECT 6** |
+| **14** | Synthesis | Translation & Failure | Apr 26 — System identity; glitch | Apr 28 — **LAB 12** |
+| **15** | Synthesis | Final System Studio | May 3 — **LAB 13**; final build | May 5 — In-progress critique; last day of classes |
 | **Finals** | Synthesis | Exhibition & Publication | May 10–14 — **FINAL PROJECT**, public exhibition at our assigned final exam block | **FINAL PORTFOLIO** — Pages + reflection |
 
 A week-by-week student view with the same dates is kept at

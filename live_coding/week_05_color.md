@@ -105,7 +105,8 @@ from?* (Layering. The system exceeds its own materials.)
 
 ## 4 · Studio (~25 min)
 
-Students begin **LAB 4 — One-Hue World**, hue locked from the first line.
+Students begin **LAB 4 — One-Hue World** (due Wednesday), hue locked from the
+first line.
 
 While circulating:
 
@@ -114,7 +115,8 @@ While circulating:
 - Watch for hand-composition — placing shapes to look good. Redirect to the rule
   that would place them.
 - When someone's one-hue sketch is already working, don't let them add a color.
-  Have them add a *behavior* instead. That's the LAB 5 move.
+  Have them add a *behavior* instead. That's the LAB 5 move — LAB 5 is due Monday
+  of Week 6, so build B is their head start.
 
 ## 5 · Exit (5 min)
 

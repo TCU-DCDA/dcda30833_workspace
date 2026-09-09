@@ -52,8 +52,7 @@ Mode: Image / Emergence
 Mode: Image / Color  
 - HSB vs RGB  
 - Palette as constraint  
-- LAB 4 due  
-- LAB 5 due  
+- LAB 4 due (Wed)  
 
 ---
 
@@ -61,7 +60,8 @@ Mode: Image / Color
 Mode: Image / Gesture  
 - Particle marks  
 - Opacity and layering  
-- PROJECT 3 due  
+- LAB 5 due (Mon)  
+- PROJECT 3 due (Wed)  
 
 ---
 
@@ -69,15 +69,15 @@ Mode: Image / Gesture
 Mode: Text / Visual Language  
 - Text as shape  
 - Letter-level animation  
-- LAB 6 due  
-- LAB 7 due  
+- LAB 6 due (Wed)  
 
 ---
 
 ## Week 8 — Interactive Poetry Systems
 Mode: Text / Interaction  
 - Motion + text + interaction  
-- PROJECT 4 due — **completes the first half (Weeks 1–8)**  
+- LAB 7 due (Mon)  
+- PROJECT 4 due (Wed) — **completes the first half (Weeks 1–8)**  
 
 ---
 
@@ -108,15 +108,15 @@ Mode: Sound / Interaction
 Mode: Data / Mapping  
 - CSV / JSON  
 - Data → behavior  
-- LAB 10 due  
-- LAB 11 due  
+- LAB 10 due (Wed)  
 
 ---
 
 ## Week 13 — Data-Driven Systems
 Mode: Data / Emergence  
 - Expressive data systems  
-- PROJECT 6 due  
+- LAB 11 due (Mon)  
+- PROJECT 6 due (Wed)  
 
 ---
 
@@ -124,13 +124,13 @@ Mode: Data / Emergence
 Mode: Conceptual Transfer  
 - System identity across rewrites  
 - Glitch as generative force  
-- LAB 12 due  
-- LAB 13 due  
+- LAB 12 due (Wed)  
 
 ---
 
 ## Week 15 — Final System Studio
 Mode: Integration  
+- LAB 13 due (Mon)  
 - Full build  
 - Critique and refinement  
 

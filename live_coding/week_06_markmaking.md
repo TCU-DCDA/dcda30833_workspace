@@ -4,8 +4,8 @@
 **Where we work:** p5.js Web Editor, projected. Build from a blank sketch — including the mistakes.
 
 > This session does double duty: it introduces mark-making *and* carries
-> PROJECT 3's in-class **System Autopsy** beat. Studio time is protected — the
-> project is due Wednesday.
+> PROJECT 3's in-class **System Autopsy** beat. **LAB 5 is due today**; studio
+> time is protected because PROJECT 3 is due Wednesday.
 
 ## Through-line (the one idea)
 

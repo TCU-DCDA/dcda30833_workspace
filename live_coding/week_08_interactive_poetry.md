@@ -4,8 +4,8 @@
 **Where we work:** p5.js Web Editor, projected. Build from a blank sketch — including the mistakes.
 
 > This session does double duty: it introduces interaction as a system input
-> *and* carries PROJECT 4's in-class **System Autopsy** beat. PROJECT 4 closes
-> the first half of the course and is due Wednesday.
+> *and* carries PROJECT 4's in-class **System Autopsy** beat. **LAB 7 is due
+> today**; PROJECT 4 closes the first half of the course and is due Wednesday.
 
 ## Through-line (the one idea)
 
