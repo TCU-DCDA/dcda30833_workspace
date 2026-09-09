@@ -45,6 +45,8 @@ convert labs/lab_08_envelope_only.md         "#a8408b" "LAB 8 — Envelope Only"
 convert labs/lab_09_rhythm_without_notes.md   "#a8408b" "LAB 9 — Rhythm Without Notes"           "Labs"
 convert labs/lab_10_mapping_without_message.md "#4aa8c4" "LAB 10 — Mapping Without Message"      "Labs"
 convert labs/lab_11_three_mappings.md         "#4aa8c4" "LAB 11 — Three Mappings, Same Data"     "Labs"
+convert labs/lab_12_system_identity_translation.md "#8a5a3c" "LAB 12 — System Identity Translation" "Labs"
+convert labs/lab_13_failure_harvest.md        "#8a5a3c" "LAB 13 — Failure Harvest"               "Labs"
 
 # ---- Projects ----
 convert projects/project_01_system_based_shape_self_portrait.md "#2f4b9b" "PROJECT 1 — System-Based Shape Self-Portrait" "Projects" \
@@ -54,6 +56,8 @@ convert projects/project_03_algorithmic_color_composition.md    "#e0792e" "PROJE
 convert projects/project_04_animated_interactive_concrete_poem.md "#d56a8f" "PROJECT 4 — Animated & Interactive Concrete Poem" "Projects"
 convert projects/project_05_generative_sound_system.md "#a8408b" "PROJECT 5 — Generative Sound / Sonified System" "Projects"
 convert projects/project_06_data_driven_system.md      "#4aa8c4" "PROJECT 6 — Data-Driven Expressive System"      "Projects"
+convert projects/project_07_final_expressive_generative_system.md "#7a3b5c" "FINAL PROJECT — Expressive Generative System" "Projects"
+convert projects/final_portfolio.md "#7a3b5c" "FINAL PORTFOLIO — Published Work & Self-Evaluation" "Projects"
 
 # ---- Theory sheets (accent = nearest related mode color) ----
 convert theory_sheets/generative_art_cheatsheet.md    "#3f8a4f" "Generative Art — Cheat Sheet"      "Theory Sheets"

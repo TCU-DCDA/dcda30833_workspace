@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAB 13 — Failure Harvest — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #8a5a3c; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Labs</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="lab-13--failure-harvest">LAB 13 — Failure Harvest</h1>
+<p><strong>Course:</strong> DCDA 30833 — Creative Coding for the
+Humanities <strong>Due:</strong> Week 15 (Monday)
+<strong>Tools:</strong> p5.js and/or Tone.js
+<strong>Submission:</strong> GitHub link to your lab folder — the
+harvest plus one developed system</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>All semester, when something broke and looked interesting, you were
+told to keep it. This lab makes that instruction into a method.</p>
+<p>You will <strong>break your own systems on purpose</strong>, document
+what happens, and then develop one failure into a working piece. Not
+"make something glitchy" — that is a style, and styles can be applied to
+anything. This is narrower and harder: harvest <em>actual</em> failures
+from <em>your own</em> code, and take one seriously enough to build with
+it.</p>
+<hr />
+<h2 id="core-idea">Core Idea</h2>
+<p>A failure is a behavior you did not design.</p>
+<p>That makes it the most reliable source of genuine novelty available
+to you, because it is the one thing your intentions cannot reach. When
+you set out to make something surprising, you get what you can imagine
+being surprised by. When your code does something wrong, you get
+something outside that.</p>
+<p>The discipline is not in causing failures. It is in <strong>looking
+at them long enough to tell which ones are interesting</strong> — and
+most are not. Harvesting means sorting.</p>
+<hr />
+<h2 id="part-a-the-harvest">Part A: The Harvest</h2>
+<p>Take systems you have already built — any of your labs or projects —
+and break them deliberately. Document <strong>at least eight</strong>
+failures.</p>
+<p>Ways to break a system on purpose:</p>
+<ul>
+<li>Remove a <code>background()</code> call, or add one where there
+wasn't one</li>
+<li>Feed a function a value from the wrong range — negative sizes, alpha
+above the maximum, a frequency below hearing</li>
+<li>Swap two variables that have the same type and different
+meanings</li>
+<li>Delete a <code>constrain()</code> or a <code>%</code> and let values
+run away</li>
+<li>Change a <code>+=</code> to a <code>*=</code></li>
+<li>Let a loop index run past the end of its array</li>
+<li>Set a timing value to something absurd — an interval of 1ms, an
+envelope release of 60 seconds</li>
+<li>Comment out one line at random and run it. Repeat.</li>
+</ul>
+<p>For <strong>each</strong> failure, record in
+<code>harvest.md</code>:</p>
+<ul>
+<li>what you changed (one line is enough)</li>
+<li>what happened</li>
+<li><strong>keep</strong> or <strong>discard</strong>, and one sentence
+on why</li>
+</ul>
+<p>Screenshots or short clips are welcome but the written judgment is
+the point.</p>
+<hr />
+<h2 id="part-b-develop-one">Part B: Develop One</h2>
+<p>Choose one <strong>keep</strong> and build it into a working
+system.</p>
+<p>This means the failure has to stop being an accident. You must be
+able to reproduce it deliberately, control its range, and decide where
+it happens. Domesticating a glitch usually kills it — finding the
+version that keeps the strangeness while becoming reliable is the actual
+work of this part.</p>
+<p>Requirements for the developed piece:</p>
+<ul>
+<li>It runs stably (no console errors, no crash on refresh)</li>
+<li>The behavior that came from the failure is <strong>now intentional
+and parameterized</strong></li>
+<li>You can state, in one sentence, what state or condition it
+dramatizes</li>
+</ul>
+<hr />
+<h2 id="restrictions">Restrictions</h2>
+<p>You <strong>must use</strong>:</p>
+<ul>
+<li>Your <strong>own</strong> prior code as the source of failures</li>
+<li>At least <strong>eight</strong> documented failures in
+<code>harvest.md</code></li>
+<li>One developed system built from one of them</li>
+</ul>
+<p>You <strong>may not use</strong>:</p>
+<ul>
+<li>Failures you read about or reproduced from a tutorial</li>
+<li>Pre-made glitch filters, shaders, or effects libraries</li>
+<li>A new system built from scratch to <em>look</em> broken</li>
+</ul>
+<p>If your developed piece would look the same had nothing ever gone
+wrong, this lab did not happen.</p>
+<hr />
+<h2 id="reflection-35-sentences">Reflection (3–5 Sentences)</h2>
+<p>Answer briefly:</p>
+<ol type="1">
+<li>What was your ratio of <strong>keep</strong> to
+<strong>discard</strong>? What did the discards have in common?</li>
+<li>When you domesticated your chosen failure, did it survive? What did
+you lose in making it reliable?</li>
+<li>Is there a difference between a system that <em>fails</em> and a
+system whose rules you don't yet understand? Where did your eight
+land?</li>
+</ol>
+<hr />
+<h2 id="what-this-lab-prepares-you-for">What This Lab Prepares You
+For</h2>
+<p>The <strong>Final Project</strong>. Two things carry directly: the
+habit of treating unplanned behavior as material rather than as error,
+and the harvest itself — several of your keeps are viable starting
+points, and you have already written down why they interested you.</p>
+<hr />
+<p><em>End of LAB 13</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

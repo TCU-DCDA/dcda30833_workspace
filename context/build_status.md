@@ -82,19 +82,20 @@ Path to 100% (priority order):
 
 ## Remaining — Second Half (Weeks 9–15 + finals)
 
-Sound arc and data arc are authored. Remaining: the Translation & Failure labs
-(Week 14) and the two finals deliverables. Week swatches: sound `#a8408b`,
-data `#4aa8c4`; Week 14 has none assigned yet.
+**All assignments for the whole course are now authored.** Week swatches:
+sound `#a8408b`, data `#4aa8c4`, translation/failure `#8a5a3c`, finals `#7a3b5c`.
+What remains for the back half is session planning, not assignment writing.
 
 - [x] **LAB 9 — Rhythm Without Notes** (Week 10) — authored; closes the sound labs with LAB 8.
 - [x] **LAB 10 — Mapping Without Message** (Week 12) and **LAB 11 — Three Mappings, Same Data** (Week 13) — authored; the data labs.
-- [ ] **Labs:** 12 (System Identity Translation), 13 (Failure Harvest)
+- [x] **LAB 12 — System Identity Translation** (Week 14) and **LAB 13 — Failure Harvest** (Week 15) — authored; the Translation & Failure pair.
 - [x] **PROJECT 5 — Generative Sound / Sonified System** (Week 11) — authored; completes the **sound arc** (LAB 8 → LAB 9 → PROJECT 5). Autopsy precedents: Reich, Riley, Eno/generative.fm.
 - [x] **PROJECT 6 — Data-Driven Expressive System** (Week 13) — authored; completes the **data arc** (LAB 10 → LAB 11 → PROJECT 6). Autopsy precedents: Du Bois, Lupi & Posavec, Lombardi.
-- [ ] **Projects:** Final Project, Final Portfolio
+- [x] **FINAL PROJECT — Expressive Generative System** and **FINAL PORTFOLIO — Published Work & Self-Evaluation** — authored; both due in the finals block (May 10–14).
 - [ ] **Decks or live-coding plans** for second-half weeks (sound, data,
-  translation) — the first half settled on live-coding plans for technique weeks;
-  the same call likely applies here.
+  translation) — **the only remaining build item.** The first half settled on
+  live-coding plans for technique weeks; the same call likely applies to
+  Weeks 9, 10, 12 and 14.
 
 > Note: the Exhibition & Publication session formerly numbered Week 16 now runs
 > in the assigned final exam block (May 10–14). See the readiness note above.
@@ -127,6 +128,9 @@ Material; PROJECT 4 allows AI-generated text). Make it a coherent thread:
 - [x] **Carried into PROJECT 6** — with a data-specific warning: an assistant
   will clean a dataset in ways you did not ask for, and those are mapping
   decisions made by something other than you.
+- [x] **Carried into the FINAL PROJECT** — `ai_log.md` plus the Explanation Test,
+  which the exhibition makes live: students are asked to explain lines on the
+  spot. The thread is now complete end to end (LAB 7 → P5 → P6 → Final).
 
 ---
 

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINAL PROJECT — Expressive Generative System — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #7a3b5c; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Projects</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="final-project--expressive-generative-system">FINAL PROJECT —
+Expressive Generative System</h1>
+<p><strong>Course:</strong> DCDA 30833 — Creative Coding for the
+Humanities <strong>Due:</strong> Finals period, May 10–14 — public
+exhibition at our assigned block <strong>Studio:</strong> Week 15 (final
+build Monday; in-progress critique Wednesday) <strong>Tools:</strong>
+Your choice, from anything the course has used
+<strong>Submission:</strong> GitHub link to your project folder + artist
+statement; live on GitHub Pages</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This is the self-directed work the semester has been building toward:
+<strong>one system, of your own design, that behaves like
+something.</strong></p>
+<p>Everything before this told you what to constrain. This one asks you
+to choose the constraint — which is the harder half, and the reason it
+comes last.</p>
+<p>The exhibition is not a formality. Your system runs in front of
+people who did not build it, on a machine that is not yours, from a URL.
+That has been true of every assignment since Week 1; this is the one
+where it matters.</p>
+<hr />
+<h2 id="precedents--system-autopsy-in-class">Precedents — System Autopsy
+(In-Class)</h2>
+<blockquote>
+<p><strong>How examples work in this course:</strong> you will always be
+shown examples — but here, an example is a <strong>system to take apart,
+not an image to reproduce.</strong> You'll see how a work was made, and
+the range of outcomes its rules can produce, more often than a single
+finished "right answer." There is no result to match: a strong system
+can generate many different outcomes, including ones no one has made
+yet.</p>
+</blockquote>
+<p><em>Why take other makers' work apart? Because you are always
+collaborating with what came before — the autopsy just makes it
+deliberate. See <a href="../context/collaboration.html">Collaboration in
+Computer Art</a>.</em></p>
+<p>The precedents for this project are different in kind. Rather than a
+technique, each is an artist who stayed with <strong>one system long
+enough to find out what it contained</strong> — which is the question a
+final project puts to you in miniature.</p>
+<p><strong>Look at:</strong></p>
+<ul>
+<li><strong>Vera Molnár:</strong> decades spent on a small set of
+constraints — squares, lines, controlled disorder — treating each work
+as another run of a continuing investigation rather than a separate
+statement. Her phrase for the disruption she introduced was <em>1%
+disorder</em>.</li>
+<li><strong>Harold Cohen — AARON:</strong> a drawing program he
+developed and lived with from 1973 until his death in 2016. Over forty
+years the system learned to draw differently, and Cohen kept describing
+himself as its collaborator rather than its author.</li>
+<li><strong>Casey Reas — <em>Software Structures</em>:</strong> one
+written structure, implemented several ways, exhibited side by side —
+the clearest available demonstration that the system and its output are
+different objects.</li>
+</ul>
+<p><strong>Where to find them (free):</strong></p>
+<ul>
+<li>Vera Molnár — our <a href="../sketches/interruptions.html">live
+<em>Interruptions</em> recreation</a> and a <a
+href="https://cagrimmett.com/2022/03/08/how-to-create-vera-molnars-structure-de-quadrilateres-in-p5-js/">p5.js
+walkthrough of <em>Structures de Quadrilatères</em></a></li>
+<li>Harold Cohen — <a
+href="https://computerhistory.org/blog/harold-cohen-and-aaron-a-40-year-collaboration/">the
+Computer History Museum's AARON materials</a></li>
+<li>Casey Reas — <a
+href="https://artport.whitney.org/commissions/software-structures-2016/text.html"><em>Software
+Structures</em> at the Whitney's artport</a></li>
+</ul>
+<p><strong>Autopsy questions (ask of each):</strong></p>
+<ol type="1">
+<li>What is the rule, stated as an instruction someone else could
+follow?</li>
+<li>What is fixed, and where does chance or judgment enter?</li>
+<li>Which single constraint is doing the most work?</li>
+<li>What state or behavior does the system dramatize, setting aside
+"what it means"?</li>
+<li>What would have to change for it to stop being the same system?</li>
+</ol>
+<p><em>In class: examine 2–3 of these together at the project's launch,
+then carry the same questions into your own build.</em></p>
+<hr />
+<h2 id="core-requirements">Core Requirements</h2>
+<p>Your system must:</p>
+<ul>
+<li>Be <strong>generative</strong> — it produces variation from rules,
+and you do not place its parts by hand</li>
+<li>Have a <strong>stated constraint</strong> you imposed on yourself,
+named plainly in the README</li>
+<li>Hold a recognizable <strong>identity</strong> across runs: two
+viewings should be different and evidently the same system</li>
+<li><strong>Dramatize a state</strong> through behavior rather than
+illustrate a subject</li>
+<li>Run in a browser from your GitHub Pages URL, on someone else's
+machine, with no setup and no explanation from you</li>
+</ul>
+<p>It must also <strong>draw on at least two</strong> of the course's
+four materials — image, text, sound, data. Not as a checklist: because
+the interesting systems this semester were the ones where a rule from
+one material got applied to another.</p>
+<hr />
+<h2 id="scope">Scope</h2>
+<p>This is a two-week build with a critique in the middle, not a
+capstone thesis.</p>
+<p>A good final project here is <strong>one clear system explored
+properly</strong>, not four half-systems in a tab bar. If you are
+choosing between adding a feature and understanding what your system
+already does, choose the second — it is what the artist statement will
+need.</p>
+<p>Reusing your own earlier work is encouraged: extend a LAB 13 keep,
+deepen a PROJECT 5 phase system, translate something further than LAB 12
+took it. Starting fresh is also fine. What is not fine is starting fresh
+<em>and</em> starting late.</p>
+<hr />
+<h2 id="artist-statement-400600-words">Artist Statement (400–600
+words)</h2>
+<p>Not a description of what you made. An account of what you found.</p>
+<p>Address:</p>
+<ul>
+<li><strong>The system:</strong> state the rule so that someone could
+reimplement it.</li>
+<li><strong>The constraint:</strong> what you refused yourself, and what
+that refusal produced.</li>
+<li><strong>The discovery:</strong> something the system does that you
+did not plan. If there is nothing, say so honestly — that is a finding
+about the system, and about how tightly you specified it.</li>
+<li><strong>The state it dramatizes:</strong> what condition its
+behavior performs. Resist explaining what it <em>means</em>; describe
+what it <em>does</em>, and let the reader draw the rest.</li>
+<li><strong>The lineage:</strong> which precedents, techniques, or
+classmates' work this is in conversation with. Per the course's framing,
+you are always collaborating — name it.</li>
+</ul>
+<hr />
+<h2 id="working-with-ai">Working with AI</h2>
+<p>The terms from PROJECT 5 and PROJECT 6 apply — see <a
+href="../context/ai_policy.html">AI in This Course</a>.</p>
+<p>At this point you have used AI as material (LAB 7), as a collaborator
+on a sound system (PROJECT 5), and as a data assistant with its own
+quiet agenda (PROJECT 6). For the final, the requirement is simply that
+the account be complete:</p>
+<ul>
+<li><strong><code>ai_log.md</code></strong> — tool, prompts, what you
+kept, what you rejected and why</li>
+<li><strong>The Explanation Test</strong> — you can explain every line
+you submit, and you will be asked to, at the exhibition</li>
+<li>Using no AI is a documented methodological choice; state it in the
+README</li>
+</ul>
+<hr />
+<h2 id="technical-requirements">Technical Requirements</h2>
+<ul>
+<li>Any of: p5.js, Tone.js, CSV/JSON data, the DOM</li>
+<li>Everything committed to your repo — no live APIs that may be down at
+the exhibition, no local file paths, no assets outside the repo</li>
+<li>Runs on first load; if it needs a click to start audio, say so on
+the canvas</li>
+<li>Tested from the <strong>public URL</strong>, on a machine that is
+not yours, before the exhibition. Case-sensitivity in file paths is the
+classic failure here.</li>
+</ul>
+<hr />
+<h2 id="process-documentation-requirements">Process Documentation
+Requirements</h2>
+<p>Your project folder must include:</p>
+<ul>
+<li><code>index.html</code>, your sketch files, and any data</li>
+<li><code>README.md</code>: the rule, the constraint, what to look for,
+how long to watch, and any sources or data citations</li>
+<li><code>statement.md</code>: your artist statement</li>
+<li><code>ai_log.md</code>, if applicable</li>
+</ul>
+<hr />
+<h2 id="reflection">Reflection</h2>
+<p>The reflection for this project is the artist statement. The broader
+looking-back happens in the <strong>Final Portfolio</strong>.</p>
+<hr />
+<h2 id="how-this-project-fits-the-course-arc">How This Project Fits the
+Course Arc</h2>
+<p>It is the argument of the course, made by you rather than to you:
+that form is not a container for content but performs it, that systems
+dramatize states rather than carry messages, and that constraint
+generates possibility instead of removing it.</p>
+<p>What follows is the <a href="final_portfolio.html">Final
+Portfolio</a>, where you assemble the semester and assess it
+yourself.</p>
+<hr />
+<p><em>End of FINAL PROJECT</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>
