@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAB 10 — Mapping Without Message — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #4aa8c4; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Labs</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="lab-10--mapping-without-message">LAB 10 — Mapping Without
+Message</h1>
+<p><strong>Course:</strong> DCDA 30833 — Creative Coding for the
+Humanities <strong>Due:</strong> Week 12 (Wednesday)
+<strong>Tools:</strong> p5.js + a CSV or JSON file
+<strong>Submission:</strong> GitHub link to your sketch (include the
+data file)</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This lab isolates the single operation at the center of all data
+work: <strong>mapping</strong> — taking a number that meant one thing
+and letting it control something else.</p>
+<p>You will load a real dataset and map at least one of its columns onto
+a parameter of a running system. You will then do something that will
+feel wrong: <strong>you will not explain it.</strong> No title, no
+legend, no axis, no caption, no key.</p>
+<p>Every previous lab gave you a constraint on your materials. This one
+constrains your <em>rhetoric</em>. The question is what a mapping does
+before anyone tells you what it means.</p>
+<hr />
+<h2 id="core-idea">Core Idea</h2>
+<p>You are not making a chart.</p>
+<p>A chart is an argument with a legend attached. What you are building
+is one step earlier: the raw act of letting external numbers drive a
+system's behavior.</p>
+<p><code>map(value, low, high, newLow, newHigh)</code> looks like a
+utility function. It is actually the most consequential line in the
+file. It decides which differences in the world become visible
+differences in the work — and, silently, which ones don't.</p>
+<p>One dataset. One mapping. No commentary.</p>
+<hr />
+<h2 id="restrictions">Restrictions</h2>
+<p>You <strong>must use</strong>:</p>
+<ul>
+<li><strong>Real external data</strong> — a CSV or JSON file you did not
+invent, loaded with <code>loadTable()</code> or <code>loadJSON()</code>
+in <code>preload()</code></li>
+<li>At least <strong>one column mapped</strong> to at least one
+parameter of your system (position, size, opacity, interval, density,
+rotation — your choice)</li>
+<li>A system that keeps running: the data drives <em>behavior</em>, not
+a static picture</li>
+</ul>
+<p>You <strong>may not use</strong>:</p>
+<ul>
+<li>Titles, labels, legends, axes, tooltips, or captions</li>
+<li>Any text on the canvas that explains what is being shown</li>
+<li>Data you made up, or data with fewer than 50 rows</li>
+<li>More than <strong>one</strong> mapped column (save that for LAB
+11)</li>
+</ul>
+<p>If a viewer could read your sketch and correctly state what the data
+is about, you have probably added something this lab asks you to
+withhold.</p>
+<hr />
+<h2 id="finding-data">Finding Data</h2>
+<p>Use anything real. Some free sources with no signup:</p>
+<ul>
+<li><strong>USGS earthquake feeds</strong> — <a
+href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">live
+GeoJSON, updated continuously</a>; magnitude, depth, and time are all
+directly mappable</li>
+<li><strong>Our World in Data</strong> — <a
+href="https://ourworldindata.org/">downloadable CSVs on almost any
+global indicator</a></li>
+<li><strong>data.gov</strong> — <a href="https://data.gov/">US federal
+open data</a></li>
+<li><strong>Your own logs</strong> — steps, screen time, sleep,
+listening history. Small personal datasets often map more interestingly
+than large public ones, because you know what the numbers cost.</li>
+</ul>
+<hr />
+<h2
+id="suggested-system-prompts-choose-one-or-invent-your-own">Suggested
+System Prompts (Choose One or Invent Your Own)</h2>
+<ul>
+<li><strong>One Column, One Parameter:</strong> Map a single column to
+circle radius and let the rows play out over time, one per frame. Watch
+the shape of the distribution appear without ever plotting it.</li>
+<li><strong>Data as Weather:</strong> Map a value to the
+<em>density</em> of marks rather than to their position. The dataset
+becomes a climate rather than a curve.</li>
+<li><strong>Sonified Row Reader:</strong> Map one column to an interval
+in Tone.js and let the dataset set the pace. (Reuses LAB 9.)</li>
+<li><strong>Deliberate Loss:</strong> Map a 10,000-row column onto 200
+pixels of brightness. Most of the data cannot survive that. Build it
+anyway and look at what did.</li>
+<li><strong>Wrong on Purpose:</strong> Map a column to a parameter it
+has no business controlling — file size to hue, timestamps to rotation.
+Note whether the result is meaningless or merely unfamiliar.</li>
+</ul>
+<hr />
+<h2 id="starter-template">Starter Template</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> table<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> rows <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> index <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">preload</span>() {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Any CSV with a header row. Swap in your own.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  table <span class="op">=</span> <span class="fu">loadTable</span>(<span class="st">&quot;data.csv&quot;</span><span class="op">,</span> <span class="st">&quot;csv&quot;</span><span class="op">,</span> <span class="st">&quot;header&quot;</span>)<span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">setup</span>() {</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">createCanvas</span>(<span class="dv">400</span><span class="op">,</span> <span class="dv">400</span>)<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colorMode</span>(HSB<span class="op">,</span> <span class="dv">360</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">100</span>)<span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">noStroke</span>()<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">background</span>(<span class="dv">200</span><span class="op">,</span> <span class="dv">20</span><span class="op">,</span> <span class="dv">12</span>)<span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Pull one column out as numbers, discarding anything unparseable</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> r <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> r <span class="op">&lt;</span> table<span class="op">.</span><span class="fu">getRowCount</span>()<span class="op">;</span> r<span class="op">++</span>) {</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> v <span class="op">=</span> <span class="pp">parseFloat</span>(table<span class="op">.</span><span class="fu">getString</span>(r<span class="op">,</span> <span class="st">&quot;value&quot;</span>))<span class="op">;</span>   <span class="co">// &lt;- your column name</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span><span class="pp">isNaN</span>(v)) rows<span class="op">.</span><span class="fu">push</span>(v)<span class="op">;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">draw</span>() {</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (rows<span class="op">.</span><span class="at">length</span> <span class="op">===</span> <span class="dv">0</span>) <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="co">// The whole lab lives in these three lines.</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> v <span class="op">=</span> rows[index <span class="op">%</span> rows<span class="op">.</span><span class="at">length</span>]<span class="op">;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> lo <span class="op">=</span> <span class="fu">min</span>(rows)<span class="op">;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> hi <span class="op">=</span> <span class="fu">max</span>(rows)<span class="op">;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> size <span class="op">=</span> <span class="fu">map</span>(v<span class="op">,</span> lo<span class="op">,</span> hi<span class="op">,</span> <span class="dv">4</span><span class="op">,</span> <span class="dv">90</span>)<span class="op">;</span>      <span class="co">// &lt;- the consequential decision</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fill</span>(<span class="dv">200</span><span class="op">,</span> <span class="dv">70</span><span class="op">,</span> <span class="dv">95</span><span class="op">,</span> <span class="dv">40</span>)<span class="op">;</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ellipse</span>(<span class="fu">random</span>(width)<span class="op">,</span> <span class="fu">random</span>(height)<span class="op">,</span> size)<span class="op">;</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  index<span class="op">++;</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<hr />
+<h2 id="reflection-35-sentences">Reflection (3–5 Sentences)</h2>
+<p>Answer briefly:</p>
+<ol type="1">
+<li>What did your mapping make visible, and what did it flatten? Name
+one distinction in the data that your system cannot show at all.</li>
+<li>Did withholding the legend make the piece feel dishonest, or did it
+feel more honest than a chart would have? Sit with whichever answer you
+got.</li>
+<li><code>map()</code> needs a low and a high. Where did yours come from
+— the actual minimum and maximum, a round number, or something you chose
+because it looked better? What did that choice do?</li>
+</ol>
+<hr />
+<h2 id="what-this-lab-prepares-you-for">What This Lab Prepares You
+For</h2>
+<p>You have made <strong>one</strong> mapping. In <strong>LAB 11 — Three
+Mappings, Same Data</strong>, you will make three from the same file,
+and discover that the dataset was never the work. The mapping was.</p>
+<p>Together these two labs prepare you for <strong>PROJECT 6 —
+Data-Driven Expressive System</strong>.</p>
+<hr />
+<h2 id="technical-notes">Technical Notes</h2>
+<p><strong><code>preload()</code> matters.</strong> Data loading is
+asynchronous. If you call <code>loadTable()</code> in
+<code>setup()</code> your sketch will run before the file arrives and
+fail confusingly. Load in <code>preload()</code>; p5 waits.</p>
+<p><strong>Local files need a server.</strong> Opening
+<code>index.html</code> directly from your hard drive will block the
+data load for security reasons. Use the p5.js Web Editor, VS Code's Live
+Server, or push to GitHub Pages — where your sketch is already
+published.</p>
+<p><strong>Clean your numbers.</strong> Real data has blanks, footnote
+markers, and text in numeric columns. The <code>isNaN()</code> guard in
+the template is not decoration; expect to need it.</p>
+<hr />
+<p><em>End of LAB 10</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

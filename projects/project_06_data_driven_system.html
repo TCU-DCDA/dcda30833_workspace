@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJECT 6 — Data-Driven Expressive System — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #4aa8c4; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Projects</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="project-6--data-driven-expressive-system">PROJECT 6 —
+Data-Driven Expressive System</h1>
+<p><strong>Course:</strong> DCDA 30833 — Creative Coding for the
+Humanities <strong>Due:</strong> Week 13 (Wednesday)
+<strong>Tools:</strong> p5.js (Tone.js optional) + a real dataset
+<strong>Submission:</strong> GitHub link to your project folder + short
+written reflection</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This project builds a system whose behavior is <strong>driven by data
+that came from somewhere in the world</strong> — and asks you to take
+responsibility for the correspondence you chose.</p>
+<p>Everything before this used materials you invented: shapes, palettes,
+words, sounds. Data is the first material in this course with a
+<strong>prior life</strong>. Someone collected it, for a reason, using
+categories they decided on, leaving out whatever didn't fit. By the time
+it reaches your sketch it has already been shaped several times. Your
+mapping is one more shaping, not the first.</p>
+<p>This project synthesizes:</p>
+<ul>
+<li><strong>LAB 10 — Mapping Without Message:</strong> the mapping
+operation, isolated</li>
+<li><strong>LAB 11 — Three Mappings, Same Data:</strong> the mapping as
+the site of authorship</li>
+<li><strong>PROJECT 5 — Generative Sound / Sonified System:</strong>
+systems that run and behave</li>
+</ul>
+<hr />
+<h2 id="precedents--system-autopsy-in-class">Precedents — System Autopsy
+(In-Class)</h2>
+<blockquote>
+<p><strong>How examples work in this course:</strong> you will always be
+shown examples — but here, an example is a <strong>system to take apart,
+not an image to reproduce.</strong> You'll see how a work was made, and
+the range of outcomes its rules can produce, more often than a single
+finished "right answer." There is no result to match: a strong system
+can generate many different outcomes, including ones no one has made
+yet.</p>
+</blockquote>
+<p><em>Why take other makers' work apart? Because you are always
+collaborating with what came before — the autopsy just makes it
+deliberate. See <a href="../context/collaboration.html">Collaboration in
+Computer Art</a>.</em></p>
+<p>Before you build, take apart three works that treat data as a
+material with stakes rather than as a neutral input.</p>
+<p><strong>Look at:</strong></p>
+<ul>
+<li><strong>W. E. B. Du Bois — <em>Data Portraits</em> (1900):</strong>
+hand-drawn charts of Black American life, made for the Paris Exposition.
+They are rigorous and they are arguing. Du Bois chose spirals,
+unconventional color, and deliberate breaks in scale because the
+argument required them — a century before anyone called this "data
+visualization," and a definitive answer to the idea that visual form is
+neutral.</li>
+<li><strong>Giorgia Lupi &amp; Stefanie Posavec — <em>Dear Data</em>
+(2014–15):</strong> a year of weekly hand-drawn postcards, each mapping
+a week of personal data with a legend invented for that week alone. The
+mapping changes every time; the data is mundane; the results are
+not.</li>
+<li><strong>Mark Lombardi — <em>Narrative Structures</em>
+(1990s):</strong> hand-drawn network diagrams of financial and political
+relationships, built from public records. A structure, drawn carefully,
+that says what no sentence in the sources says.</li>
+</ul>
+<p><strong>Where to find them (free):</strong></p>
+<ul>
+<li>Du Bois — <a
+href="https://www.loc.gov/pictures/item/2005679642/">the charts
+themselves, at the Library of Congress</a>, free and high-resolution;
+part of the <a
+href="https://www.loc.gov/collections/african-american-photographs-1900-paris-exposition/about-this-collection/">1900
+Paris Exposition collection</a></li>
+<li>Lupi &amp; Posavec — <a
+href="https://www.dear-data.com/theproject">dear-data.com</a>, with the
+postcards and their hand-written legends</li>
+<li>Lombardi — <a
+href="https://www.pierogi2000.com/artists/mark-lombardi/">the drawings
+at Pierogi Gallery</a>, which represents his estate</li>
+</ul>
+<p><strong>Autopsy questions (ask of each):</strong></p>
+<ol type="1">
+<li>What is the mapping? Could you restate the correspondence in a
+sentence?</li>
+<li>What is fixed, and where does the maker's judgment enter?</li>
+<li>Which single constraint is doing the most work?</li>
+<li>What state or condition does the structure dramatize, setting aside
+"what it means"?</li>
+<li>What does this mapping make impossible to notice?</li>
+</ol>
+<p><em>In class: examine 2–3 of these together at the project's launch
+(~20–30 minutes), then carry the same questions into your own
+build.</em></p>
+<hr />
+<h2 id="core-requirements">Core Requirements</h2>
+<p>Your system must:</p>
+<ul>
+<li>Be driven by a <strong>real dataset</strong> you did not fabricate —
+at least 100 rows, from a source you can cite</li>
+<li><strong>Run and behave</strong> — data drives motion, sound, growth,
+decay, or interaction, not a static image</li>
+<li>Hold a consistent <strong>system identity</strong>: someone should
+see it twice and recognize it</li>
+<li>Include <strong>one mapping you can defend</strong>, stated plainly
+in the README</li>
+<li>Include <strong>one thing the system deliberately refuses to
+show</strong>, also stated in the README (see below)</li>
+</ul>
+<hr />
+<h2 id="system-requirements">System Requirements</h2>
+<p>Choose <strong>one</strong> relationship between data and
+behavior:</p>
+<ol type="1">
+<li><strong>Data as parameter</strong> — values set properties of a
+running system: speed, density, size, interval, lifespan.</li>
+<li><strong>Data as sequence</strong> — the dataset is read through over
+time; its order and pacing structure the piece.</li>
+<li><strong>Data as force</strong> — values govern how elements affect
+<em>each other</em>: attraction, repulsion, contagion, thresholds.</li>
+</ol>
+<p>Whichever you choose:</p>
+<ul>
+<li>Your visual or sonic language should come from earlier work in this
+course. This project is not the place to also learn a new medium.</li>
+<li>The system must produce variation, not a single fixed output.</li>
+<li>No legends, axes, or captions <strong>on the canvas</strong>.
+Everything explanatory lives in the README. If the piece needs a label
+to work, it is a chart with extra steps.</li>
+</ul>
+<hr />
+<h2 id="the-refusal">The Refusal</h2>
+<p>Every mapping loses something, and this course's position is that the
+loss is worth naming rather than hiding.</p>
+<p><strong>Name one thing your system will not represent</strong> — a
+distinction that exists in the data and does not survive your mapping —
+and say in the README why you chose to lose that particular thing rather
+than something else.</p>
+<p>This is not an apology for a limitation. Sampling anything at all
+guarantees that some differences will not come through; the honest move
+is to know which ones and to have decided. A system that claims to show
+everything is the only kind that is certainly lying.</p>
+<hr />
+<h2 id="working-with-ai-on-this-project">Working with AI on This
+Project</h2>
+<p>The terms from PROJECT 5 carry forward — see <a
+href="../context/ai_policy.html">AI in This Course</a>.</p>
+<p>Data work is where an assistant is most useful and most quietly
+risky: it will happily clean your dataset in ways you didn't ask for and
+won't notice. Drop rows, coerce types, fill blanks with means. Those are
+all <strong>mapping decisions made by something other than
+you</strong>.</p>
+<ul>
+<li><strong>Prompt for constraints and behaviors, not
+outcomes.</strong></li>
+<li><strong>The Explanation Test</strong> applies to data handling too:
+if you can't say what happened to the rows that didn't parse, you don't
+yet know your dataset.</li>
+<li><strong>Keep <code>ai_log.md</code></strong> — tool, prompts, what
+you kept, what you rejected and why. Include any place the assistant
+changed your data without being asked.</li>
+</ul>
+<p>Using no AI is a documented choice; say so in the README.</p>
+<hr />
+<h2 id="technical-requirements">Technical Requirements</h2>
+<ul>
+<li><strong>p5.js</strong>; Tone.js if your system is sonic</li>
+<li>Data loaded in <code>preload()</code> from a CSV or JSON file
+<strong>committed to your repo</strong> (do not rely on a live API that
+may be down at critique)</li>
+<li>Cite the source and the retrieval date in the README</li>
+<li>Runs in a browser from your GitHub Pages URL with no setup</li>
+</ul>
+<hr />
+<h2 id="process-documentation-requirements">Process Documentation
+Requirements</h2>
+<p>Your project folder must include:</p>
+<ul>
+<li><code>index.html</code>, <code>sketch.js</code>, and your data
+file</li>
+<li><code>README.md</code> explaining:
+<ul>
+<li>the dataset, its source, its retrieval date, and who made it and
+why</li>
+<li>the mapping, stated as a defensible correspondence</li>
+<li><strong>the refusal</strong> — what the system will not show, and
+why that one</li>
+<li>what you did with rows that didn't parse cleanly</li>
+</ul></li>
+<li><code>ai_log.md</code>, if you used an assistant</li>
+</ul>
+<hr />
+<h2 id="reflection-57-sentences">Reflection (5–7 Sentences)</h2>
+<p>Whose decisions were already inside your dataset before you touched
+it — what did someone else decide to count, and to leave uncounted?
+Having built three mappings in LAB 11 and committed to one here, how did
+you choose? What would a viewer conclude from your piece that the data
+does not actually support? Did your system end up dramatizing the data
+or the <em>act of measuring</em> — and were you able to tell the
+difference? What would change if you ran it on a different dataset with
+the same shape?</p>
+<hr />
+<h2 id="how-this-project-fits-the-course-arc">How This Project Fits the
+Course Arc</h2>
+<p>You have now built systems in four materials: image, text, sound, and
+data. In each, the same argument held — the rules perform the content,
+and the constraint generates rather than limits.</p>
+<p>Data is where that argument stops being only aesthetic. A mapping
+decides which differences in the world become visible, and that is true
+of every system that represents anything, including the ones you will
+use rather than build.</p>
+<p>Next, <strong>Week 14 — Translation &amp; Failure</strong> asks what
+survives when a system is rewritten in another medium, and what glitch
+produces that intention can't.</p>
+<hr />
+<p><em>End of PROJECT 6</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -82,10 +82,16 @@ Path to 100% (priority order):
 
 ## Remaining — Second Half (Weeks 9–15 + finals)
 
+Sound arc and data arc are authored. Remaining: the Translation & Failure labs
+(Week 14) and the two finals deliverables. Week swatches: sound `#a8408b`,
+data `#4aa8c4`; Week 14 has none assigned yet.
+
 - [x] **LAB 9 — Rhythm Without Notes** (Week 10) — authored; closes the sound labs with LAB 8.
-- [ ] **Labs:** 10 (Mapping Without Message), 11 (Three Mappings), 12 (System Identity Translation), 13 (Failure Harvest)
+- [x] **LAB 10 — Mapping Without Message** (Week 12) and **LAB 11 — Three Mappings, Same Data** (Week 13) — authored; the data labs.
+- [ ] **Labs:** 12 (System Identity Translation), 13 (Failure Harvest)
 - [x] **PROJECT 5 — Generative Sound / Sonified System** (Week 11) — authored; completes the **sound arc** (LAB 8 → LAB 9 → PROJECT 5). Autopsy precedents: Reich, Riley, Eno/generative.fm.
-- [ ] **Projects:** 6 (Data-Driven), Final Project, Final Portfolio
+- [x] **PROJECT 6 — Data-Driven Expressive System** (Week 13) — authored; completes the **data arc** (LAB 10 → LAB 11 → PROJECT 6). Autopsy precedents: Du Bois, Lupi & Posavec, Lombardi.
+- [ ] **Projects:** Final Project, Final Portfolio
 - [ ] **Decks or live-coding plans** for second-half weeks (sound, data,
   translation) — the first half settled on live-coding plans for technique weeks;
   the same call likely applies here.
@@ -118,6 +124,9 @@ Material; PROJECT 4 allows AI-generated text). Make it a coherent thread:
   `ai_log.md` recording what was kept and what was rejected. Opting out is an
   allowed, documented choice. *Carry the same section into PROJECT 6 and the
   Final Project.*
+- [x] **Carried into PROJECT 6** — with a data-specific warning: an assistant
+  will clean a dataset in ways you did not ask for, and those are mapping
+  decisions made by something other than you.
 
 ---
 

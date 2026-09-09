@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAB 11 — Three Mappings, Same Data — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #4aa8c4; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Labs</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="lab-11--three-mappings-same-data">LAB 11 — Three Mappings, Same
+Data</h1>
+<p><strong>Course:</strong> DCDA 30833 — Creative Coding for the
+Humanities <strong>Due:</strong> Week 13 (Monday)
+<strong>Tools:</strong> p5.js (Tone.js optional)
+<strong>Submission:</strong> GitHub link to your lab folder — three
+sketches plus a short note</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This lab runs a controlled experiment with exactly one variable.</p>
+<p>You will take <strong>the dataset you used in LAB 10</strong> —
+unchanged, not a row edited — and build <strong>three separate
+sketches</strong> from it. Same numbers, three different mappings. Then
+you will look at what you made and answer an uncomfortable question: if
+the data is identical and the results are unrecognizable as relatives,
+what exactly was the data contributing?</p>
+<hr />
+<h2 id="core-idea">Core Idea</h2>
+<p>The dataset is not the work.</p>
+<p>It is easy to believe that data has a shape and that visualizing it
+reveals that shape. This lab is designed to make that belief hard to
+hold. Three honest mappings of one file will produce three works with
+different moods, different apparent claims, and different things they
+make impossible to notice — with no dishonesty at any step.</p>
+<p>That gap is where your authorship actually lives. Not in the data,
+and not in the code, but in the <strong>choice of
+correspondence</strong> between them.</p>
+<hr />
+<h2 id="restrictions">Restrictions</h2>
+<p>You <strong>must use</strong>:</p>
+<ul>
+<li><strong>One dataset, used three times, entirely unmodified</strong>
+— same file, same rows</li>
+<li><strong>Three distinct sketches</strong>, in three files
+(<code>mapping_a.js</code>, <code>mapping_b.js</code>,
+<code>mapping_c.js</code> or three folders)</li>
+<li>Three genuinely different <strong>kinds</strong> of mapping — not
+three color schemes. At least one of your three must differ from the
+others in <em>what parameter is driven</em>, not just how much</li>
+</ul>
+<p>You <strong>may not use</strong>:</p>
+<ul>
+<li>Different data for different versions</li>
+<li>Filtering, sorting, or aggregating differently between versions
+(that changes the data, which is a different experiment — a good one,
+but not this one)</li>
+<li>Explanatory text on any of the three canvases</li>
+</ul>
+<p><strong>At least one of your three must be a mapping you consider
+bad</strong> — one that loses something important, exaggerates a
+difference, or produces a false impression. Build it properly anyway.
+You cannot argue that mappings are consequential if all of yours are
+flattering.</p>
+<hr />
+<h2 id="three-directions-to-push-pick-three-or-invent">Three Directions
+to Push (Pick Three, or Invent)</h2>
+<ul>
+<li><strong>Spatial:</strong> value → position. The most familiar, and
+the one that most strongly implies a claim.</li>
+<li><strong>Temporal:</strong> value → duration or interval. The data
+stops being available at a glance; you have to wait for it.</li>
+<li><strong>Density:</strong> value → how many marks, not how big.
+Quantity becomes texture.</li>
+<li><strong>Sonic:</strong> value → pitch, rhythm, or amplitude. (Reuses
+LAB 8 and LAB 9.)</li>
+<li><strong>Relational:</strong> value → how strongly elements attract
+or repel each other. The data governs behavior between things rather
+than a property of one thing.</li>
+<li><strong>Inverted:</strong> take any mapping above and reverse its
+direction. Note how much changes for how little code.</li>
+</ul>
+<hr />
+<h2 id="the-note-this-is-the-real-assignment">The Note (This Is the Real
+Assignment)</h2>
+<p>Alongside the three sketches, write <strong>250–400 words</strong>
+covering:</p>
+<ol type="1">
+<li>What each mapping made visible.</li>
+<li>What each one made <strong>impossible to see</strong>. Be specific —
+name a real distinction in your data that a given mapping destroys.</li>
+<li>Which of the three would you show someone if you wanted them to find
+the data alarming? Which if you wanted them to find it unremarkable? You
+built both.</li>
+<li>Your <code>map()</code> calls each needed a low and a high. Say
+where those came from in each version, and what would change if you'd
+used the true min and max instead of a round number — or the
+reverse.</li>
+</ol>
+<hr />
+<h2 id="a-note-on-normalization">A Note on Normalization</h2>
+<p>Something quiet happens in every one of your three sketches.</p>
+<p>On its own, a value is just itself — a temperature, a count, a
+duration. The moment you <code>map()</code> it against the rest of the
+column, it stops being itself and becomes a <strong>position in a
+distribution</strong>: high <em>for this dataset</em>, unusual
+<em>compared to these others</em>. That conversion is not neutral, and
+it is not optional — it is what makes the value drawable at all.</p>
+<p>It is also where most of the persuasive work of data happens, long
+before anyone writes a caption. Watch for it in your three versions; it
+is the same operation each time, doing different damage.</p>
+<hr />
+<h2 id="reflection-35-sentences">Reflection (3–5 Sentences)</h2>
+<p>Answer briefly, after writing the note:</p>
+<ol type="1">
+<li>Did any of your three surprise you by being better than you expected
+— and was it the one you called "bad"?</li>
+<li>Having made three, do you still think one of them is the
+<em>right</em> mapping for this data? What would "right" mean here?</li>
+<li>What would you have to add to a sketch for a viewer to be able to
+tell that other mappings were possible?</li>
+</ol>
+<hr />
+<h2 id="what-this-lab-prepares-you-for">What This Lab Prepares You
+For</h2>
+<p><strong>PROJECT 6 — Data-Driven Expressive System</strong>, where you
+will commit to one mapping and defend it — knowing exactly how many
+others you could have chosen.</p>
+<hr />
+<p><em>End of LAB 11</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>
