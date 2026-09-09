@@ -226,7 +226,7 @@ function draw() {
 <body>
   <header>
     <h1>[Your Name]</h1>
-    <p>Creative Coding for the Humanities — Spring 2026</p>
+    <p>Creative Coding for the Humanities — Spring 2027</p>
   </header>
 
   <main>
