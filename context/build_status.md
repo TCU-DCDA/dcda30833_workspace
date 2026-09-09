@@ -25,8 +25,8 @@ Target: all of Weeks 1–8 prepared before the term begins. Estimate by bucket:
 - **Assignments** (Labs 0–7, Projects 1–4): ~100% — authored and live
 - **Infrastructure & policies** (site, build pipeline, Pages, theory sheets,
   AI/collaboration/examples policies, deployment docs, link checker): ~95%
-- **Teaching/session plans** (decks + live-coding): ~100% — all five live-coding
-  plans drafted (Weeks 3, 5, 6, 7, 8)
+- **Teaching/session plans** (decks + live-coding): ~100% — plans drafted for
+  every teaching week of the semester, not just the first half
 - **Syllabus & admin**: ~90% — delivery syllabus authored and live; placeholders
   remain for section number, room, meeting time, and the Final Portfolio date
 
@@ -58,7 +58,7 @@ Path to 100% (priority order):
 - **Delivery syllabus** — [syllabus.md](syllabus.md), on the TCU template, with
   the DCDA program outcomes, ungrading model, policy cross-links, and the real
   Spring 2027 MW schedule
-- **Live-coding plans** — Weeks 3, 5, 6, 7, 8
+- **Live-coding / session plans** — every teaching week: 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 (Weeks 1, 2, 4 are covered by the decks)
 - **Labs 0–8** (Lab 8 is Week 9, already drafted)
 - **Projects 1–4** (Project 4 completes the first-half assignments)
 - **Site & infrastructure:** Richter-style home page, HTML build pipeline
@@ -82,9 +82,9 @@ Path to 100% (priority order):
 
 ## Remaining — Second Half (Weeks 9–15 + finals)
 
-**All assignments for the whole course are now authored.** Week swatches:
-sound `#a8408b`, data `#4aa8c4`, translation/failure `#8a5a3c`, finals `#7a3b5c`.
-What remains for the back half is session planning, not assignment writing.
+**The second half is complete** — assignments and session plans both. Week
+swatches: sound `#a8408b`, data `#4aa8c4`, translation/failure `#8a5a3c`,
+finals `#7a3b5c`.
 
 - [x] **LAB 9 — Rhythm Without Notes** (Week 10) — authored; closes the sound labs with LAB 8.
 - [x] **LAB 10 — Mapping Without Message** (Week 12) and **LAB 11 — Three Mappings, Same Data** (Week 13) — authored; the data labs.
@@ -92,10 +92,11 @@ What remains for the back half is session planning, not assignment writing.
 - [x] **PROJECT 5 — Generative Sound / Sonified System** (Week 11) — authored; completes the **sound arc** (LAB 8 → LAB 9 → PROJECT 5). Autopsy precedents: Reich, Riley, Eno/generative.fm.
 - [x] **PROJECT 6 — Data-Driven Expressive System** (Week 13) — authored; completes the **data arc** (LAB 10 → LAB 11 → PROJECT 6). Autopsy precedents: Du Bois, Lupi & Posavec, Lombardi.
 - [x] **FINAL PROJECT — Expressive Generative System** and **FINAL PORTFOLIO — Published Work & Self-Evaluation** — authored; both due in the finals block (May 10–14).
-- [ ] **Decks or live-coding plans** for second-half weeks (sound, data,
-  translation) — **the only remaining build item.** The first half settled on
-  live-coding plans for technique weeks; the same call likely applies to
-  Weeks 9, 10, 12 and 14.
+- [x] **Session plans for the second half** — Weeks 9, 10, 11, 12, 13, 14 and 15
+  drafted in `live_coding/`, matching the first half's pattern: technique weeks
+  build twice and hand into studio; project weeks shorten the builds and carry
+  the in-class System Autopsy beat. Week 15 is studio plus a rehearsal critique.
+  No second-half deck appears warranted.
 
 > Note: the Exhibition & Publication session formerly numbered Week 16 now runs
 > in the assigned final exam block (May 10–14). See the readiness note above.
