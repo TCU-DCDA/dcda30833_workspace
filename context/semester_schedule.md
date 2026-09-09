@@ -93,7 +93,7 @@ Mode: Sound / Time
 Mode: Sound / Pattern  
 - Sequencing  
 - Pattern over melody  
-- LAB 9 due  
+- LAB 9 due (Wed)  
 
 ---
 

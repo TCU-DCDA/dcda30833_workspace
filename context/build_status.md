@@ -82,8 +82,10 @@ Path to 100% (priority order):
 
 ## Remaining — Second Half (Weeks 9–15 + finals)
 
-- [ ] **Labs:** 9 (Rhythm Without Notes), 10 (Mapping Without Message), 11 (Three Mappings), 12 (System Identity Translation), 13 (Failure Harvest)
-- [ ] **Projects:** 5 (Generative Sound), 6 (Data-Driven), Final Project, Final Portfolio
+- [x] **LAB 9 — Rhythm Without Notes** (Week 10) — authored; closes the sound labs with LAB 8.
+- [ ] **Labs:** 10 (Mapping Without Message), 11 (Three Mappings), 12 (System Identity Translation), 13 (Failure Harvest)
+- [x] **PROJECT 5 — Generative Sound / Sonified System** (Week 11) — authored; completes the **sound arc** (LAB 8 → LAB 9 → PROJECT 5). Autopsy precedents: Reich, Riley, Eno/generative.fm.
+- [ ] **Projects:** 6 (Data-Driven), Final Project, Final Portfolio
 - [ ] **Decks or live-coding plans** for second-half weeks (sound, data,
   translation) — the first half settled on live-coding plans for technique weeks;
   the same call likely applies here.
@@ -111,9 +113,11 @@ Material; PROJECT 4 allows AI-generated text). Make it a coherent thread:
   discovery over expression). Rendered to `context/ai_policy.html` and linked
   from LAB 7, and listed under "Course foundations" on the home page. Referenced
   in the delivery syllabus under Course Policies.
-- [ ] **Roll AI into later projects** — deliberate, scaffolded AI use in the
-  back half (e.g., Projects 5/6/Final), analogous to WRIT's AI-assisted capstone
-  "Project Zed," with an AI-collaboration log + citation.
+- [x] **Rolled into PROJECT 5** — a "Working with AI on This Project" section:
+  prompt for constraints not outcomes, the Explanation Test, and a required
+  `ai_log.md` recording what was kept and what was rejected. Opting out is an
+  allowed, documented choice. *Carry the same section into PROJECT 6 and the
+  Final Project.*
 
 ---
 

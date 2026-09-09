@@ -86,9 +86,9 @@ LAB 8 DUE — Envelope Only
 ---
 
 ## Week 10 — Rhythm & Sonification
-- MON Mar 29:
+- MON Mar 29: Sequencing; pattern over melody
+- WED Mar 31:
 LAB 9 DUE — Rhythm Without Notes
-- WED Mar 31: Studio work
 
 ---
 

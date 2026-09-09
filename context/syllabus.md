@@ -332,7 +332,7 @@ Bring your laptop to every class. All required software is free.
 | **8** | Language & Text | Interactive Poetry Systems | Mar 8 — **LAB 7**; autopsy + studio | Mar 10 — **PROJECT 4** |
 | — | *Spring Break* | *no class* | *Mar 15* | *Mar 17* |
 | **9** | Sound & Time | Sound as Expressive System | Mar 22 — Sound fundamentals | Mar 24 — **LAB 8** |
-| **10** | Sound & Time | Rhythm & Sonification | Mar 29 — **LAB 9** | Mar 31 — Studio |
+| **10** | Sound & Time | Rhythm & Sonification | Mar 29 — Sequencing; pattern over melody | Mar 31 — **LAB 9** |
 | **11** | Sound & Time | Interactive Audio Systems | Apr 5 — Studio; critique prep | Apr 7 — **PROJECT 5** |
 | **12** | Data & Society | Data as Poetic Constraint | Apr 12 — Data → behavior | Apr 14 — **LAB 10** |
 | **13** | Data & Society | Data-Driven Systems | Apr 19 — **LAB 11**; studio | Apr 21 — **PROJECT 6** |

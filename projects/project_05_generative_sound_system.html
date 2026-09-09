@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJECT 5 — Generative Sound / Sonified System — DCDA 30833</title>
+  <link rel="stylesheet" href="../assets/assignment.css">
+  <style>:root { --accent: #a8408b; }</style>
+</head>
+<body>
+  <div class="accent-band"></div>
+  <div class="sheet">
+    <div class="crumb"><a href="../index.html">DCDA 30833</a> &nbsp;/&nbsp; Projects</div>
+    <nav class="subnav">
+      <a href="../index.html#schedule">Schedule</a>
+      <a href="../index.html#theory">Theory Sheets</a>
+      <a href="../index.html#decks">Slide Decks</a>
+      <a href="../index.html#resources">Tools &amp; Resources</a>
+    </nav>
+    <div class="content">
+<h1 id="project-5--generative-sound--sonified-system">PROJECT 5 —
+Generative Sound / Sonified System</h1>
+<p><strong>Course:</strong> DCDA 30833 — Creative Coding for the
+Humanities <strong>Due:</strong> Week 11 (Wednesday)
+<strong>Tools:</strong> p5.js + Tone.js <strong>Submission:</strong>
+GitHub link to your project folder + short written reflection</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This project makes <strong>sound the primary material</strong>, not
+the accompaniment to a picture.</p>
+<p>You will build a system that runs on its own and <em>behaves</em> —
+one whose rules produce sound that changes over time without repeating
+itself exactly, and which a listener could sit with for several minutes
+and keep noticing new things.</p>
+<p>This project synthesizes:</p>
+<ul>
+<li><strong>LAB 8 — Envelope Only:</strong> the shape of a single sound
+in time</li>
+<li><strong>LAB 9 — Rhythm Without Notes:</strong> the placement of
+sounds in time</li>
+<li><strong>PROJECT 2 — Generative Visual Study:</strong> rule-based
+systems that vary</li>
+</ul>
+<p>The shift from the visual half of the course is real: an image is
+available all at once, and a sound system is only ever available
+<em>now</em>. Duration stops being a container for the work and becomes
+the work's medium.</p>
+<hr />
+<h2 id="precedents--system-autopsy-in-class">Precedents — System Autopsy
+(In-Class)</h2>
+<blockquote>
+<p><strong>How examples work in this course:</strong> you will always be
+shown examples — but here, an example is a <strong>system to take apart,
+not an image to reproduce.</strong> You'll see how a work was made, and
+the range of outcomes its rules can produce, more often than a single
+finished "right answer." There is no result to match: a strong system
+can generate many different outcomes, including ones no one has made
+yet.</p>
+</blockquote>
+<p><em>Why take other makers' work apart? Because you are always
+collaborating with what came before — the autopsy just makes it
+deliberate. See <a href="../context/collaboration.html">Collaboration in
+Computer Art</a>.</em></p>
+<p>Before you build, take apart how others have made sound systems that
+run rather than pieces that are played. The question is always the same:
+<strong>what is the rule, and what does the rule leave
+undetermined?</strong></p>
+<p><strong>Look at:</strong></p>
+<ul>
+<li><strong>Steve Reich — <em>Piano Phase</em> (1967):</strong> two
+performers play the same short figure at almost the same tempo. One
+drifts. Everything you hear for the next twenty minutes comes from that
+single difference. The score is a rule; the piece is what the rule
+does.</li>
+<li><strong>Terry Riley — <em>In C</em> (1964):</strong> 53 short
+phrases, any number of performers, each advancing through them
+independently. No one decides the texture. The piece is different every
+time and recognizably itself every time — which is a working definition
+of system identity.</li>
+<li><strong>Brian Eno — generative and ambient work:</strong> loops of
+differing lengths left to fall in and out of alignment, producing
+combinations no one placed. Eno's own framing is the useful one: he
+built a system and then listened to it, rather than composing what he
+already had in mind.</li>
+</ul>
+<p><strong>Where to find them (free):</strong></p>
+<ul>
+<li>Steve Reich — Alexander Chen's <a
+href="https://www.chenalexander.com/Piano-Phase"><em>Piano Phase</em>
+visualization</a>, which draws each pianist as a line so you can
+<em>see</em> the two parts drift apart and realign</li>
+<li>Terry Riley — <a href="https://teropa.info/in-c/">a playable browser
+<em>In C</em> by Tero Parviainen</a>; the code is open and worth reading
+alongside the sound</li>
+<li>Generative music systems — <a
+href="https://generative.fm/">generative.fm</a>, a collection of free,
+open-source, endlessly running pieces in the Eno lineage</li>
+<li>Background — Tero Parviainen, <a
+href="https://teropa.info/loop/"><em>How Generative Music
+Works</em></a>, a long, free, playable essay on exactly the systems
+above</li>
+</ul>
+<p><strong>Autopsy questions (ask of each):</strong></p>
+<ol type="1">
+<li>What is the rule? Could you restate it in a few lines of
+pseudocode?</li>
+<li>What is fixed, and where does chance, drift, or performer choice
+enter?</li>
+<li>Which single constraint is doing the most work?</li>
+<li>What state or behavior does the system dramatize, setting aside
+"what it means"?</li>
+<li>If you changed one rule, what would happen — and would it still be
+the same piece?</li>
+</ol>
+<p><em>In class: examine 2–3 of these together at the project's launch
+(~20–30 minutes), then carry the same questions into your own
+build.</em></p>
+<hr />
+<h2 id="core-requirements">Core Requirements</h2>
+<p>Your system must:</p>
+<ul>
+<li>Be <strong>fully generative</strong> — it runs without you, and you
+do not trigger each sound by hand</li>
+<li>Produce a result that <strong>varies over time</strong> and does not
+loop back to an exact repeat within the listening period</li>
+<li>Maintain a recognizable <strong>sonic identity</strong> — someone
+should be able to hear two separate runs and identify them as the same
+system</li>
+<li>Continue to be worth listening to for <strong>at least two
+minutes</strong></li>
+<li>Include a <strong>visual layer that reports on the system's
+state</strong> — not decoration, and not a waveform display, but a view
+that lets someone see what they are hearing</li>
+</ul>
+<hr />
+<h2 id="system-requirements">System Requirements</h2>
+<p>Choose <strong>one</strong> organizing principle and commit to
+it:</p>
+<ol type="1">
+<li><strong>Phase System</strong> — two or more cycles of slightly
+different length, left to drift against each other.</li>
+<li><strong>Probability System</strong> — a fixed set of possible
+events, each with a chance of firing; the texture is a consequence of
+the odds.</li>
+<li><strong>Mapping System</strong> — a continuous underlying variable
+(<code>noise()</code>, time of day, distance, a slowly changing value)
+driving one or more sound parameters.</li>
+</ol>
+<p>Whichever you choose, your system must include:</p>
+<ul>
+<li><strong>Envelope as expression</strong> (from LAB 8) — the shape of
+your sounds is a deliberate choice, not a default</li>
+<li><strong>Time as structure</strong> (from LAB 9) — interval, density,
+silence, or phase doing real work</li>
+<li>At least one <strong>constraint you impose on yourself</strong> and
+state plainly in the README. A restricted pitch set, a single timbre, a
+fixed total density, no sound above a certain frequency — the constraint
+is part of the composition.</li>
+</ul>
+<hr />
+<h2 id="interaction-requirements">Interaction Requirements</h2>
+<p>Interaction is <strong>optional</strong> in this project, but if you
+include it, it must change the <em>system</em>, not the volume.</p>
+<p>A slider that raises the mix is a control. A slider that changes the
+probability of an event, or the drift rate between two loops, is a way
+of entering the system. If you cannot say what your interaction changes
+about the rules, remove it — a system that runs on its own is a
+legitimate and often stronger answer here.</p>
+<hr />
+<h2 id="technical-requirements">Technical Requirements</h2>
+<ul>
+<li><strong>p5.js</strong> for the visual layer,
+<strong>Tone.js</strong> for all sound</li>
+<li>Audio must start from a user gesture
+(<code>Tone.start()</code>)</li>
+<li>No pre-recorded audio, samples, or loops — all sound
+synthesized</li>
+<li>Default canvas <code>400 × 400</code> unless your system needs
+otherwise</li>
+<li>The piece must run in a browser from your GitHub Pages URL, with no
+setup</li>
+</ul>
+<hr />
+<h2 id="working-with-ai-on-this-project">Working with AI on This
+Project</h2>
+<p>AI use is <strong>permitted and scaffolded</strong> here, on the
+terms set out in <a href="../context/ai_policy.html">AI in This
+Course</a>.</p>
+<p>Sound is a good place to work with an assistant, because Tone.js has
+more API surface than you can hold in your head and the failure modes
+are unfamiliar. Use it — and keep the discipline from LAB 7:</p>
+<ul>
+<li><strong>Prompt for constraints and behaviors, not outcomes.</strong>
+"Two loops at 0.5s and 0.51s, one timbre" is a prompt. "Make it sound
+ambient and relaxing" is a request for a product.</li>
+<li><strong>The Explanation Test:</strong> every line you submit is one
+you can explain. Delete what you can't.</li>
+<li><strong>Keep an AI collaboration log</strong> in your project folder
+(<code>ai_log.md</code>): which tool, what you asked, what came back,
+what you kept, what you rejected and why. The rejections are the
+interesting part — they are where your judgment is visible.</li>
+</ul>
+<p>If you use no AI at all, say so in the README. That is also a
+documented methodological choice, not an omission.</p>
+<hr />
+<h2 id="process-documentation-requirements">Process Documentation
+Requirements</h2>
+<p>Your project folder must include:</p>
+<ul>
+<li><code>index.html</code> and <code>sketch.js</code></li>
+<li><code>README.md</code> explaining:
+<ul>
+<li>the organizing principle you chose, and why</li>
+<li>the rule, stated plainly enough that someone could reimplement
+it</li>
+<li>the constraint you imposed on yourself</li>
+<li>what the visual layer reports on</li>
+</ul></li>
+<li><code>ai_log.md</code>, if you used an assistant</li>
+</ul>
+<hr />
+<h2 id="reflection-57-sentences">Reflection (5–7 Sentences)</h2>
+<p>What did your system do that you did not plan? Where did you have to
+stop yourself from composing — from placing an event because it sounded
+good rather than because a rule put it there? Which was harder to
+design: the sounds, or the silence between them? Did the visual layer
+help you hear the system, or did it start telling a different story than
+the sound? If you listened to your piece for five minutes rather than
+thirty seconds, what changed?</p>
+<hr />
+<h2 id="how-this-project-fits-the-course-arc">How This Project Fits the
+Course Arc</h2>
+<p>You have now built systems in three materials — image, text, and
+sound — using the same underlying moves: constrain the parameters, let
+rules place the events, and listen to what the system produces rather
+than executing a plan.</p>
+<p>Next, in the <strong>data</strong> unit, the input stops being
+invented. You will take numbers that came from somewhere in the world
+and ask what happens when a system's behavior is driven by them — and
+what gets lost on the way in.</p>
+<hr />
+<p><em>End of PROJECT 5</em></p>
+    </div>
+    <div class="sheet-footer">
+      DCDA 30833 — Creative Coding for the Humanities · <a href="../index.html">Back to schedule</a>
+    </div>
+  </div>
+</body>
+</html>

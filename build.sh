@@ -42,6 +42,7 @@ convert labs/lab_06_text_as_object.md        "#2f8f86" "LAB 6 — Text as Object
 convert labs/lab_07_prompt_as_material.md    "#2f8f86" "LAB 7 — Prompt as Material"             "Labs" \
         "The Sublime & Discovery" "slide_decks/the_sublime/index.html"
 convert labs/lab_08_envelope_only.md         "#a8408b" "LAB 8 — Envelope Only"                  "Labs"
+convert labs/lab_09_rhythm_without_notes.md   "#a8408b" "LAB 9 — Rhythm Without Notes"           "Labs"
 
 # ---- Projects ----
 convert projects/project_01_system_based_shape_self_portrait.md "#2f4b9b" "PROJECT 1 — System-Based Shape Self-Portrait" "Projects" \
@@ -49,6 +50,7 @@ convert projects/project_01_system_based_shape_self_portrait.md "#2f4b9b" "PROJE
 convert projects/project_02_generative_visual_study.md          "#3f8a4f" "PROJECT 2 — Generative Visual Study"          "Projects"
 convert projects/project_03_algorithmic_color_composition.md    "#e0792e" "PROJECT 3 — Algorithmic Color Composition"    "Projects"
 convert projects/project_04_animated_interactive_concrete_poem.md "#d56a8f" "PROJECT 4 — Animated & Interactive Concrete Poem" "Projects"
+convert projects/project_05_generative_sound_system.md "#a8408b" "PROJECT 5 — Generative Sound / Sonified System" "Projects"
 
 # ---- Theory sheets (accent = nearest related mode color) ----
 convert theory_sheets/generative_art_cheatsheet.md    "#3f8a4f" "Generative Art — Cheat Sheet"      "Theory Sheets"
