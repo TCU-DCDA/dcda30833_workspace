@@ -27,6 +27,43 @@ Humanities<br />
 <strong>Tools:</strong> HTML + CSS<br />
 <strong>Submission:</strong> GitHub link to your lab folder</p>
 <hr />
+<h2 id="before-you-start">Before You Start</h2>
+<p>You don't need prior HTML or CSS for this lab. Everything here was
+built live in Wednesday's session, and the <a
+href="../theory_sheets/html_css_cheatsheet.html">HTML &amp; CSS cheat
+sheet</a> covers it all. If your intro course was in Python, start
+there.</p>
+<p><strong>Your files</strong> are already in your repo, in
+<code>labs/lab-00-structure-surface/</code>: an <code>index.html</code>
+with the page skeleton and an empty <code>style.css</code>, already
+linked. Do your work in those two files.</p>
+<p><strong>To see your page,</strong> open <code>index.html</code> in a
+browser (double-click it, or drag it into a window) and refresh after
+every save. Right-click anything and choose <em>Inspect</em> to see the
+nesting the browser actually built.</p>
+<p><strong>The five ideas you need:</strong></p>
+<ol type="1">
+<li><strong>Elements nest.</strong> Anything between
+<code>&lt;div&gt;</code> and <code>&lt;/div&gt;</code> is
+<em>inside</em> that div. Indent your code so you can see what holds
+what. Every tag you open, close.</li>
+<li><strong>Block vs. inline.</strong> <code>&lt;section&gt;</code>,
+<code>&lt;div&gt;</code>, and <code>&lt;p&gt;</code> stack vertically;
+<code>&lt;span&gt;</code> marks a piece <em>within</em> a line.</li>
+<li><strong>Classes name roles.</strong> Write
+<code>&lt;div class="obligation"&gt;</code> in HTML, and
+<code>.obligation { ... }</code> in CSS (note the dot) to write a rule
+for every element with that role.</li>
+<li><strong>A rule is selector + declarations.</strong>
+<code>.obligation { padding: 1rem; color: #333; }</code> One rule
+applies to every match.</li>
+<li><strong><code>:hover</code> is a state.</strong>
+<code>.obligation:hover { ... }</code> applies only while the pointer is
+over it.</li>
+</ol>
+<p>Expect one surprise in Part 1: the browser will not show your
+nesting. That's not a bug. It's the point of Part 2.</p>
+<hr />
 <h2 id="purpose">Purpose</h2>
 <p>This lab introduces the core idea that <strong>structure and rules
 already create meaning</strong>, even before motion, sound, or

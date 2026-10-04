@@ -13,6 +13,7 @@ instructive mistakes, and re-run to show the *range* one system produces.
 
 | Week | Focus | Status |
 |------|-------|--------|
+| 1 | Structure & Surface | [week_01_structure_surface.md](week_01_structure_surface.md) — single session (MLK Monday); hands off to the deployment deck |
 | 3 | Randomness as Material | [week_03_randomness.md](week_03_randomness.md) |
 | 5 | Color as Structure | [week_05_color.md](week_05_color.md) |
 | 6 | Algorithmic Drawing & Mark-Making | [week_06_markmaking.md](week_06_markmaking.md) |
@@ -35,5 +36,6 @@ weeks** (6, 8, 11, 13) shorten the builds to protect studio time and carry that
 project's required in-class **System Autopsy** beat. Week 15 is neither — studio
 and a rehearsal critique for the exhibition.
 
-Weeks 1, 2 and 4 are covered by the decks in `slide_decks/`. See
+Week 1 is a single Wednesday session: a live build of LAB 0's HTML/CSS, then the
+deployment deck for Pages. Weeks 2 and 4 are covered by the decks in `slide_decks/`. See
 `context/build_status.md` for why the rest are live-coded rather than decked.

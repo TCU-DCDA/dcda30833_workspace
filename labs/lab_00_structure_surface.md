@@ -7,6 +7,41 @@
 
 ------------------------------------------------------------------------
 
+## Before You Start
+
+You don't need prior HTML or CSS for this lab. Everything here was built
+live in Wednesday's session, and the
+[HTML & CSS cheat sheet](../theory_sheets/html_css_cheatsheet.html) covers
+it all. If your intro course was in Python, start there.
+
+**Your files** are already in your repo, in
+`labs/lab-00-structure-surface/`: an `index.html` with the page skeleton
+and an empty `style.css`, already linked. Do your work in those two files.
+
+**To see your page,** open `index.html` in a browser (double-click it, or
+drag it into a window) and refresh after every save. Right-click anything
+and choose *Inspect* to see the nesting the browser actually built.
+
+**The five ideas you need:**
+
+1.  **Elements nest.** Anything between `<div>` and `</div>` is *inside*
+    that div. Indent your code so you can see what holds what. Every tag
+    you open, close.
+2.  **Block vs. inline.** `<section>`, `<div>`, and `<p>` stack
+    vertically; `<span>` marks a piece *within* a line.
+3.  **Classes name roles.** Write `<div class="obligation">` in HTML, and
+    `.obligation { ... }` in CSS (note the dot) to write a rule for every
+    element with that role.
+4.  **A rule is selector + declarations.** `.obligation { padding: 1rem;
+    color: #333; }` One rule applies to every match.
+5.  **`:hover` is a state.** `.obligation:hover { ... }` applies only while
+    the pointer is over it.
+
+Expect one surprise in Part 1: the browser will not show your nesting.
+That's not a bug. It's the point of Part 2.
+
+------------------------------------------------------------------------
+
 ## Purpose
 
 This lab introduces the core idea that **structure and rules already

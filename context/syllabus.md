@@ -105,8 +105,9 @@ Additional readings are provided through the course repository. See the
   [generative art](../theory_sheets/generative_art_cheatsheet.html),
   [color](../theory_sheets/color_theory_cheatsheet.html),
   [drawing](../theory_sheets/drawing_theory_cheatsheet.html),
-  [interactive poetry](../theory_sheets/interactive_poetry_cheatsheet.html), and
-  [sound design](../theory_sheets/sound_design_cheatsheet.html)
+  [interactive poetry](../theory_sheets/interactive_poetry_cheatsheet.html),
+  [sound design](../theory_sheets/sound_design_cheatsheet.html), and
+  [HTML & CSS](../theory_sheets/html_css_cheatsheet.html)
 
 ---
 

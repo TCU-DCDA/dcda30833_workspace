@@ -65,6 +65,7 @@ convert theory_sheets/color_theory_cheatsheet.md      "#6b4a9e" "Color Theory �
 convert theory_sheets/drawing_theory_cheatsheet.md    "#e0792e" "Drawing Theory — Cheat Sheet"      "Theory Sheets"
 convert theory_sheets/interactive_poetry_cheatsheet.md "#2f8f86" "Interactive Poetry — Cheat Sheet" "Theory Sheets"
 convert theory_sheets/sound_design_cheatsheet.md      "#a8408b" "Sound Design — Cheat Sheet"        "Theory Sheets"
+convert theory_sheets/html_css_cheatsheet.md         "#c1352b" "HTML & CSS — Cheat Sheet"          "Theory Sheets"
 
 # ---- Course policy ----
 convert context/syllabus.md "#c1352b" "DCDA 30833 — Syllabus" "Syllabus"

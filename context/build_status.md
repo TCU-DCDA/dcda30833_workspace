@@ -58,7 +58,7 @@ Path to 100% (priority order):
 - **Delivery syllabus** — [syllabus.md](syllabus.md), on the TCU template, with
   the DCDA program outcomes, ungrading model, policy cross-links, and the real
   Spring 2027 MW schedule
-- **Live-coding / session plans** — every teaching week: 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 (Weeks 1, 2, 4 are covered by the decks)
+- **Live-coding / session plans** — every teaching week: 1, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 (Weeks 2 and 4 are covered by the decks; Week 1 hands off to the deployment deck). Week 1 is supported by the HTML & CSS theory sheet and a "Before You Start" primer in LAB 0, for students whose intro course had no HTML/CSS
 - **Labs 0–8** (Lab 8 is Week 9, already drafted)
 - **Projects 1–4** (Project 4 completes the first-half assignments)
 - **Site & infrastructure:** Richter-style home page, HTML build pipeline

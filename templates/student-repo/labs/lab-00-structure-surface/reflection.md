@@ -1,7 +1,9 @@
 # Reflection — Lab 00: Structure & Surface
 
-1. How did separating structure (HTML) from surface (CSS) change how you thought about the page?
+Answer in 3–5 sentences total.
 
-2. What rule or property had the most surprising visual effect?
+1. What structural decision shaped the page the most?
 
-3. Did the constraint of "no images, just rules" feel limiting or generative?
+2. What single CSS rule changed the mood the most?
+
+3. How is this already a "system," even without motion?

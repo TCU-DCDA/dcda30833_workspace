@@ -16,7 +16,7 @@ Mode: Structure & Interface
 - CSS as rule system  
 - Canvas as embedded environment  
 - Git basics + **enable GitHub Pages (serve from repo root)**  
-- LAB 0 due — and published live via GitHub Pages  
+- Start LAB 0 — published live via GitHub Pages (due Week 2, Monday)  
 
 > Deployment note: Pages is enabled once in Week 1 and serves all work for the rest of the semester. From here on, every lab/project is pushed *and* live at its own URL — deployment is routine, not a finals-week task. See context/github_classroom_structure.md.
 
@@ -24,6 +24,7 @@ Mode: Structure & Interface
 
 ## Week 2 — Time Enters the System
 Mode: Image / Motion  
+- LAB 0 due (Mon)  
 - p5.js animation  
 - frameCount  
 - Deterministic motion  
