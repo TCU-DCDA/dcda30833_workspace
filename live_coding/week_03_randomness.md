@@ -22,6 +22,7 @@ Build from blank, narrating each line; run constantly.
 ```js
 function setup() { createCanvas(400, 400); }
 function draw() {
+  background(255);                  // delete this line live: chaos accumulates
   let x = random(width);
   let y = random(height);
   fill(random(255), random(255), random(255), 120);
@@ -61,8 +62,12 @@ a result you **find** and a result you **accept without looking**?
 Reintroduce constraint incrementally — the heart of "probability as design":
 
 ```js
-let palette = [color(20,90,90), color(210,80,90), color(50,85,95)];
-function setup() { createCanvas(400,400); colorMode(HSB,360,100,100,100); noStroke(); }
+let palette;
+function setup() {
+  createCanvas(400,400); colorMode(HSB,360,100,100,100); noStroke();
+  // color() only exists once p5 starts, and must follow colorMode(HSB)
+  palette = [color(20,90,90), color(210,80,90), color(50,85,95)];
+}
 function draw() {
   let c = random(palette);          // chance, but only from a chosen set
   fill(c);
