@@ -72,4 +72,15 @@ convert context/syllabus.md "#c1352b" "DCDA 30833 — Syllabus" "Syllabus"
 convert context/collaboration.md "#2f8f86" "Collaboration in Computer Art" "Course Reading"
 convert context/ai_policy.md "#2f8f86" "AI in This Course — Policy & Practice" "Course Policy"
 
+# ---- Course information & readings (linked from the home page and syllabus) ----
+# Instructor-only context files (semester_schedule, labs_and_projects,
+# examples_policy, repo_setup_instructor, build_status) are deliberately not built.
+convert context/student_calendar.md        "#c1352b" "Student Calendar"                     "Course Info"
+convert context/github_classroom_structure.md "#c1352b" "Student Repos & Deployment"        "Course Info"
+convert context/working_from_examples.md   "#2f8f86" "Working from Examples"                "Course Policy"
+convert context/theory_foundations.md      "#2f8f86" "Theory Foundations"                   "Course Reading"
+convert context/the_sublime_and_discovery.md "#2f8f86" "The Sublime and Discovery"          "Course Reading"
+convert readings/bibliography.md           "#2f8f86" "Bibliography & Reading List"          "Course Reading"
+convert readings/viewings_readings.md      "#2f8f86" "Viewings & Readings Packet"           "Course Reading"
+
 echo "Done."

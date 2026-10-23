@@ -7,7 +7,7 @@ The course is **ungraded**; reflection and process matter more than polish.
 
 > **Status:** [x] = authored · [ ] = not yet authored. Build progress and the
 > remaining-work checklist live in [build_status.md](build_status.md).
-> The first half (Weeks 1–8) assignments are **complete**; only polish remains.
+> All assignments are **complete** (Labs 0–13, Projects 1–6, Final Project, Final Portfolio).
 
 ---
 
@@ -22,11 +22,11 @@ The course is **ungraded**; reflection and process matter more than polish.
 [x] LAB 6 — Text as Object  
 [x] LAB 7 — Prompt as Material  
 [x] LAB 8 — Envelope Only  
-[ ] LAB 9 — Rhythm Without Notes  
-[ ] LAB 10 — Mapping Without Message  
-[ ] LAB 11 — Three Mappings, Same Data  
-[ ] LAB 12 — System Identity Translation  
-[ ] LAB 13 — Failure Harvest  
+[x] LAB 9 — Rhythm Without Notes  
+[x] LAB 10 — Mapping Without Message  
+[x] LAB 11 — Three Mappings, Same Data  
+[x] LAB 12 — System Identity Translation  
+[x] LAB 13 — Failure Harvest  
 [ ] LAB 14 — (To Be Determined)  
 
 ---
@@ -37,8 +37,8 @@ The course is **ungraded**; reflection and process matter more than polish.
 [x] PROJECT 2 — Generative Visual Study  
 [x] PROJECT 3 — Algorithmic Color Composition  
 [x] PROJECT 4 — Animated & Interactive Concrete Poem *(completes the first half)*  
-[ ] PROJECT 5 — Generative Sound / Sonified System  
-[ ] PROJECT 6 — Data-Driven Expressive System  
+[x] PROJECT 5 — Generative Sound / Sonified System  
+[x] PROJECT 6 — Data-Driven Expressive System  
 
-[ ] FINAL PROJECT — Expressive Generative System  
-[ ] FINAL PORTFOLIO — GitHub Pages + Reflection
+[x] FINAL PROJECT — Expressive Generative System  
+[x] FINAL PORTFOLIO — GitHub Pages + Reflection

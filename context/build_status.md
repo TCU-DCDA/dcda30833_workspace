@@ -5,133 +5,143 @@ source of truth for build progress; [labs_and_projects.md](labs_and_projects.md)
 mirrors the assignment status, and the home page ([../index.html](../index.html))
 shows it visually (color tiles = authored, grey = not yet).
 
+*Last verified: October 22, 2026.*
+
 ---
 
-## Milestone: First Half (Weeks 1–8)
+## Summary
 
-The first half is the image-and-text arc (structure → motion → randomness →
-color → gesture → text). **Assignments authored, site polished,
-accessibility-checked, all links verified.**
-
-### Readiness for day 1 — ~95%
+**The course is fully authored.** Every assignment (Labs 0–13, Projects 1–6,
+Final Project, Final Portfolio) and every session plan is written, built, and
+live. No home-page tile is grey. What remains is setup and registrar
+information, not content.
 
 The course runs **Spring 2027 on a MW 80-minute schedule**. The registrar's
 calendar affords **15 instructional weeks**, not 16: Weeks 1–15 map 1:1, and
-Week 16 (Exhibition & Publication) moves to the assigned final exam block,
+the Exhibition & Publication session runs in the assigned final exam block,
 May 10–14. MLK (Mon, Jan 18) leaves Week 1 with a single meeting on Wed, Jan 20.
 
-Target: all of Weeks 1–8 prepared before the term begins. Estimate by bucket:
+### Readiness for day 1 — ~95%
 
-- **Assignments** (Labs 0–7, Projects 1–4): ~100% — authored and live
-- **Infrastructure & policies** (site, build pipeline, Pages, theory sheets,
-  AI/collaboration/examples policies, deployment docs, link checker): ~95%
-- **Teaching/session plans** (decks + live-coding): ~100% — plans drafted for
-  every teaching week of the semester, not just the first half
-- **Syllabus & admin**: ~90% — delivery syllabus authored and live; placeholders
-  remain for section number, room, meeting time, and the Final Portfolio date
+- **Assignments:** 100% — Labs 0–13, Projects 1–6, Final Project, Final Portfolio
+- **Session plans:** 100% — every teaching week (see below)
+- **Infrastructure & policies:** ~95% — site, build, Pages, theory sheets,
+  policies, and link checker done; the student template repository does not
+  exist on GitHub yet
+- **Syllabus & admin:** ~90% — authored and live; registrar placeholders remain
 
-Path to 100% (priority order):
+---
 
-1. ~~Fill the Week 5/6/7/8 live-coding plans~~ — **done.**
-2. ~~Finalize the syllabus~~ — **done:** [syllabus.md](syllabus.md), built and
-   linked from the home page, with the AI-policy and collaboration references in.
-3. **Make the student-repo a real GitHub *template repository*** (manual toggle on GitHub; day-1 critical, files are ready).
-4. **Confirm the Weeks 1/2/4 session approach** (likely covered by existing decks).
-5. **Fill the four syllabus placeholders** once the registrar assigns a room,
-   time, section number, and final exam block.
+## Open items (priority order)
 
-### Remaining for the first half (polish)
-
-- [x] **Project 4 — Animated & Interactive Concrete Poem (Week 8)** — authored; closes the text arc fed by Labs 6 & 7.
-- [x] **Deck coverage decision** — Weeks 3, 5, 6, 7, 8 have no dedicated slide deck; all five are now taught from drafted **live-coding plans** instead.
-  - **Direction:** these are hands-on technique weeks (randomness, color, mark-making, text), likely taught better through **live coding** than slides — build a sketch with the class in the p5.js editor, and teach from the assignment page + live precedent sketches projected on the site. Reserve committed decks for big conceptual framing (already built: Discovery, the Sublime, Deployment).
-  - **Plans live in `live_coding/`** — all five drafted. Weeks 5 and 7 introduce technique and scaffold two labs each; Weeks 6 and 8 protect studio time and carry the in-class System Autopsy beat for PROJECT 3 and PROJECT 4. No saved deck appears warranted for these weeks.
-- [x] **`slide_decks/the_sublime/`** — was text-only (nothing broken); enriched with Richter and Klee images on their quote slides.
-- [x] **Accessibility (WAVE)** — fixed across the course site and all three decks: contrast (faint grey, dark-theme dim greys, accent text, precedent-card labels) and very-small text raised to a readable floor; deck content no longer runs below the fold; deck images have descriptive alt text.
-- [x] **Live verify** — first-half pages and decks confirmed rendering correctly on GitHub Pages.
-- [x] **Optional:** live interactive concrete-poem recreation — `sketches/concrete_poem.html` (kinetic *Silencio*, after Gomringer); replaces the Project 4 placeholder on the home page.
+1. **Create the student template repository on GitHub.** Not just a toggle: as
+   of this check, the only course repo in the `TCU-DCDA` org is
+   `dcda30833_workspace`, and it is not a template. Create a new public repo
+   seeded from [templates/student-repo/](../templates/student-repo/), then check
+   **Settings → Template repository**. Steps are in
+   [repo_setup_instructor.md](repo_setup_instructor.md#one-time-setup).
+   Day-1 critical — students copy it in Week 1.
+2. **Confirm the Week 2 deck.** Week 4 is wired to *The Sublime & Discovery*
+   on the home page. Week 2's card has no deck link: *Discovery over Expression*
+   is linked from the Week 1 card (alongside the deployment deck), and
+   `slide_decks/DCDA30833_Week1_Week2_Deck.pptx` exists locally but is not
+   linked anywhere. Decide which deck teaches Week 2 and link it there.
+3. **Fill the syllabus placeholders** in [syllabus.md](syllabus.md) once the
+   registrar assigns them: `[SECTION]`, `[ROOM]`, `[TIME]`,
+   `[IF APPLICABLE]` (Zoom), and the Final Portfolio `[DATE]` in the
+   due-dates table.
+4. **Spot-check the six 403 links in a browser.** `check-links.sh` reports 0
+   missing internal links and 0 external failures; six external links return
+   403 (likely bot-blocking, e.g. loc.gov), not confirmed breaks.
 
 ---
 
 ## Authored (done)
 
+### Assignments
+
+- **Labs 0–13** — one technique each, from LAB 0 (Structure & Surface) through
+  LAB 13 (Failure Harvest)
+- **Projects 1–6** — each with the System Autopsy opener and vetted exemplar
+  links, per [meta_labs_projects.md](meta_labs_projects.md)
+- **Final Project** (Expressive Generative System) and **Final Portfolio**
+  (Published Work & Self-Evaluation), both due in the finals block
+
+The arcs:
+
+- **Image & text** (Weeks 1–8): structure → motion → randomness → color →
+  gesture → text, closing with PROJECT 4
+- **Sound** (Weeks 9–11): LAB 8 → LAB 9 → PROJECT 5 (precedents: Reich, Riley,
+  Eno/generative.fm)
+- **Data** (Weeks 12–13): LAB 10 → LAB 11 → PROJECT 6 (precedents: Du Bois,
+  Lupi & Posavec, Lombardi)
+- **Translation & failure** (Weeks 14–15): LAB 12 → LAB 13 → Final Project
+
+### Session plans
+
+- **Live-coding plans** in `live_coding/` for Weeks 1, 3, 5–15. Technique weeks
+  (3, 5, 7, 9, 10, 12, 14) build twice and hand into studio; project weeks
+  (6, 8, 11, 13) shorten the builds and carry the System Autopsy beat; Week 15
+  is studio plus a rehearsal critique.
+- **Week 1** is a single session: a live build of LAB 0's HTML/CSS, then the
+  deployment deck. Supported by the HTML & CSS theory sheet and a "Before You
+  Start" primer in LAB 0.
+- **Weeks 2 and 4** are taught from decks (see open item 2 for Week 2).
+- **Decks** (HTML, in `slide_decks/`): Discovery over Expression, The Sublime &
+  Discovery, Publishing as Part of the System (deployment).
+
+### Syllabus & policies
+
 - **Delivery syllabus** — [syllabus.md](syllabus.md), on the TCU template, with
-  the DCDA program outcomes, ungrading model, policy cross-links, and the real
+  the DCDA program outcomes, ungrading model, policy cross-links, and the
   Spring 2027 MW schedule
-- **Live-coding / session plans** — every teaching week: 1, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 (Weeks 2 and 4 are covered by the decks; Week 1 hands off to the deployment deck). Week 1 is supported by the HTML & CSS theory sheet and a "Before You Start" primer in LAB 0, for students whose intro course had no HTML/CSS
-- **Labs 0–8** (Lab 8 is Week 9, already drafted)
-- **Projects 1–4** (Project 4 completes the first-half assignments)
-- **Site & infrastructure:** Richter-style home page, HTML build pipeline
-  (`build.sh` + pandoc), GitHub Pages enabled (serving `master` root),
-  student-repo template, link checker (`check-links.sh`)
-- **Visual design & accessibility:** home tiles as color plates with a
-  per-section accent; Color Theory sheet illustration column (dimensions,
-  harmonies, temperature, contrast, palette, accessibility); the collaboration
-  piece's "three registers" diagram + live precedent thumbnail strips (also on
-  Project 1); emoji-free, WCAG-AA contrast; all deck images local (no hotlinks);
-  all links verified
-- **Precedents on the schedule:** four live, responsive p5.js recreations —
-  Interruptions (Molnár), Schotter (Nees), Homage (Albers), and kinetic
-  Silencio (Gomringer) — embedded as inline cards that close each first-half
-  unit and link to that project's autopsy
-- **Pedagogy scaffolding:** Lab → Autopsy → Project workflow (surfaced on the
-  home page), per-project System Autopsy beat with vetted free exemplar links,
-  examples policy (instructor + student-facing)
+- **AI policy** — [ai_policy.md](ai_policy.md), rendered and linked from LAB 7,
+  the home page, and the syllabus
+- **Collaboration framing** — [collaboration.md](collaboration.md), rendered and
+  linked both ways with the AI policy
+- **Working from Examples** — [working_from_examples.md](working_from_examples.md),
+  the student-facing page, linked from the home page, syllabus, and AI policy.
+  The instructor rationale stays in [examples_policy.md](examples_policy.md).
 
----
+### Site & infrastructure
 
-## Remaining — Second Half (Weeks 9–15 + finals)
-
-**The second half is complete** — assignments and session plans both. Week
-swatches: sound `#a8408b`, data `#4aa8c4`, translation/failure `#8a5a3c`,
-finals `#7a3b5c`.
-
-- [x] **LAB 9 — Rhythm Without Notes** (Week 10) — authored; closes the sound labs with LAB 8.
-- [x] **LAB 10 — Mapping Without Message** (Week 12) and **LAB 11 — Three Mappings, Same Data** (Week 13) — authored; the data labs.
-- [x] **LAB 12 — System Identity Translation** (Week 14) and **LAB 13 — Failure Harvest** (Week 15) — authored; the Translation & Failure pair.
-- [x] **PROJECT 5 — Generative Sound / Sonified System** (Week 11) — authored; completes the **sound arc** (LAB 8 → LAB 9 → PROJECT 5). Autopsy precedents: Reich, Riley, Eno/generative.fm.
-- [x] **PROJECT 6 — Data-Driven Expressive System** (Week 13) — authored; completes the **data arc** (LAB 10 → LAB 11 → PROJECT 6). Autopsy precedents: Du Bois, Lupi & Posavec, Lombardi.
-- [x] **FINAL PROJECT — Expressive Generative System** and **FINAL PORTFOLIO — Published Work & Self-Evaluation** — authored; both due in the finals block (May 10–14).
-- [x] **Session plans for the second half** — Weeks 9, 10, 11, 12, 13, 14 and 15
-  drafted in `live_coding/`, matching the first half's pattern: technique weeks
-  build twice and hand into studio; project weeks shorten the builds and carry
-  the in-class System Autopsy beat. Week 15 is studio plus a rehearsal critique.
-  No second-half deck appears warranted.
-
-> Note: the Exhibition & Publication session formerly numbered Week 16 now runs
-> in the assigned final exam block (May 10–14). See the readiness note above.
+- Richter-style home page, hand-maintained
+- `build.sh` (pandoc) for all labs, projects, theory sheets, and the
+  student-facing context and readings pages (Student Calendar, Theory
+  Foundations, The Sublime and Discovery, Student Repos & Deployment, Working
+  from Examples, Bibliography, Viewings & Readings)
+- **Instructor-only files are deliberately not built or linked:**
+  `semester_schedule.md`, `labs_and_projects.md`, `examples_policy.md`,
+  `repo_setup_instructor.md`, this file, and `live_coding/`. The repo is public,
+  so they are still readable on GitHub and as raw files on Pages.
+- GitHub Pages serving `master` root from `TCU-DCDA/dcda30833_workspace`
+- `check-links.sh` link checker
+- **Theory sheets:** Drawing, Generative Art, Color, HTML & CSS, Interactive
+  Poetry, Sound Design
+- **Live precedent sketches:** Interruptions (Molnár), Schotter (Nees), Homage
+  (Albers), kinetic Silencio (Gomringer), embedded as inline cards closing
+  the first-half units
+- **Accessibility:** WCAG-AA contrast, readable text floor, emoji-free, deck
+  images local with descriptive alt text
 
 ---
 
 ## Cross-cutting thread — AI in the course
 
-The course already frames AI as creative **material** (LAB 7 — Prompt as
-Material; PROJECT 4 allows AI-generated text). Make it a coherent thread:
+Complete end to end:
 
-- [x] **Seed early** — the Week 3 live-coding plan connects "the machine
-  decides" (chance) to AI as another deciding system.
-- [x] **Collaboration framing** — [collaboration.md](collaboration.md): "you
-  are always collaborating" (with the medium, the community, AI, language, art
-  history); AI as the newest *register*, not a rupture; collaboration vs.
-  abdication. Rendered, linked both ways with the AI policy, and on the home
-  page. *Draft — open to further refinement.*
-- [x] **DCDA AI policy written** — [ai_policy.md](ai_policy.md): WRIT's
-  discipline (Explanation Test, document/cite, no AI on learning labs, stay
-  critical) reframed for creative coding (AI as collaborator/material,
-  discovery over expression). Rendered to `context/ai_policy.html` and linked
-  from LAB 7, and listed under "Course foundations" on the home page. Referenced
-  in the delivery syllabus under Course Policies.
-- [x] **Rolled into PROJECT 5** — a "Working with AI on This Project" section:
-  prompt for constraints not outcomes, the Explanation Test, and a required
-  `ai_log.md` recording what was kept and what was rejected. Opting out is an
-  allowed, documented choice. *Carry the same section into PROJECT 6 and the
-  Final Project.*
-- [x] **Carried into PROJECT 6** — with a data-specific warning: an assistant
+- **Seeded** in the Week 3 live-coding plan ("the machine decides" → AI as
+  another deciding system)
+- **LAB 7 — Prompt as Material** introduces AI as material; PROJECT 4 allows
+  AI-generated text
+- **PROJECT 5** adds "Working with AI on This Project": prompt for constraints,
+  not outcomes; the Explanation Test; a required `ai_log.md`. Opting out is a
+  documented choice.
+- **PROJECT 6** carries it forward with a data-specific warning: an assistant
   will clean a dataset in ways you did not ask for, and those are mapping
-  decisions made by something other than you.
-- [x] **Carried into the FINAL PROJECT** — `ai_log.md` plus the Explanation Test,
-  which the exhibition makes live: students are asked to explain lines on the
-  spot. The thread is now complete end to end (LAB 7 → P5 → P6 → Final).
+  decisions made by something other than you
+- **Final Project** keeps `ai_log.md` and the Explanation Test, made live at the
+  exhibition, where students explain lines on the spot
 
 ---
 
@@ -149,4 +159,5 @@ The repeatable steps (same for every lab/project):
 4. For projects, add a free, reverse-engineerable exemplar to the "Where to
    find them" list; optionally author a live recreation in `sketches/` and
    embed it as the unit's inline precedent card on the schedule.
-5. Commit and push — GitHub Pages publishes automatically.
+5. Update this file and [labs_and_projects.md](labs_and_projects.md).
+6. Commit and push — GitHub Pages publishes automatically.

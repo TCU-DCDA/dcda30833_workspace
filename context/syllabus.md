@@ -94,8 +94,8 @@ research.
   - *Getting Started with p5.js*, McCarthy, Reas, and Fry
 
 Additional readings are provided through the course repository. See the
-[bibliography](../readings/bibliography.md) and
-[viewings & readings](../readings/viewings_readings.md).
+[bibliography](../readings/bibliography.html) and
+[viewings & readings](../readings/viewings_readings.html).
 
 ### Supplementary Resources
 
@@ -131,9 +131,9 @@ Albers, Gomringer — to see how its system operates. The project then synthesiz
 both into something of your own.
 
 Further reading:
-[Theory Foundations](theory_foundations.md) ·
+[Theory Foundations](theory_foundations.html) ·
 [Collaboration in Computer Art](collaboration.html) ·
-[The Sublime and Discovery](the_sublime_and_discovery.md)
+[The Sublime and Discovery](the_sublime_and_discovery.html)
 
 ---
 
@@ -303,9 +303,9 @@ medium, the community, language, and art history.
 ### Working from Examples
 
 Looking at other people's systems is how this discipline is learned; the
-precedent autopsies build it into the course. The
-[examples policy](examples_policy.md) sets out how to work from an example
-without submitting it.
+precedent autopsies build it into the course.
+[Working from Examples](working_from_examples.html) sets out how to work from an
+example without submitting it.
 
 ### Technology
 
@@ -342,5 +342,5 @@ Bring your laptop to every class. All required software is free.
 | **Finals** | Synthesis | Exhibition & Publication | May 10–14 — **FINAL PROJECT**, public exhibition at our assigned final exam block | **FINAL PORTFOLIO** — Pages + reflection |
 
 A week-by-week student view with the same dates is kept at
-[student_calendar.md](student_calendar.md); the live course site is the
+[Student Calendar](student_calendar.html); the live course site is the
 authoritative index of assignments.

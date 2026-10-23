@@ -8,7 +8,8 @@ resentment. The goal is not to withhold examples but to be deliberate about
 This policy supports the course principles: **Form = Content · Systems
 Dramatize States · Discovery over Expression.** See also
 [meta_labs_projects.md](meta_labs_projects.md) (the Precedents / System Autopsy
-beat) and [theory_foundations.md](theory_foundations.md).
+beat) and [theory_foundations.md](theory_foundations.md). The student-facing version,
+published on the course site, is [working_from_examples.md](working_from_examples.md).
 
 ---
 

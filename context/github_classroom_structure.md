@@ -1,13 +1,6 @@
 # Student Repositories & Workflow for DCDA 30833
 
-This document outlines the recommended repository structure and workflow for student work in Creative Coding for the Humanities.
-
-> **Do you need GitHub Classroom? No.** The course runs on plain GitHub. The
-> default path below uses a **template repository** ("Use this template") —
-> nothing about the structure, the workflow, GitHub Pages, or feedback requires
-> Classroom. Classroom only automates *distribution and roster*, which pays off
-> at larger scale; for a small ungraded elective the template path is simpler.
-> An optional "If you use GitHub Classroom" note appears in the setup section.
+How your course repository is organized, how you get it, and how your work goes live on GitHub Pages.
 
 ---
 
@@ -25,7 +18,7 @@ This minimizes overhead, shows the full semester arc in commit history, and natu
 
 ### Course Repository (1 per student)
 
-**Created from template:** `dcda30833` (a GitHub *template repository* — see [Distributing the Template](#distributing-the-template) below)
+**Created from template:** `dcda30833` (a GitHub *template repository* — see [Getting Your Repository](#getting-your-repository) below)
 
 ```
 dcda30833-[username]/
@@ -282,41 +275,19 @@ function draw() {
 
 ---
 
-## Distributing the Template
+## Getting Your Repository
 
-The course uses one **template repository** that students copy. This is the
-default path and needs no GitHub Classroom.
+The course has one **template repository**. You make your own copy of it once,
+in Week 1, and use that copy all semester.
 
-### One-time setup (instructor)
-
-1. Create a repository to hold the starter structure (the folder layout and
-   starter files above; [templates/student-repo/](../templates/student-repo/)
-   in this workspace is the seed for it).
-2. In that repo's **Settings**, check **"Template repository."**
-3. Make it **Public** (so students can copy it and peers can view work).
-
-### Each student (Week 1)
+### Week 1
 
 1. Open the template repo and click **"Use this template" → "Create a new repository."**
 2. Name it (e.g., `dcda30833-yourname`) and make it **Public.**
 3. Clone it, and enable GitHub Pages once (see [Workflow for Students](#workflow-for-students)).
-4. **Share the repository URL with the instructor** (a shared sheet or form is enough — this is your "roster").
+4. **Share the repository URL with the instructor** (through the sheet or form shared in class).
 
-That's the whole distribution mechanism: copy the template, share the URL.
-
-### Optional: if you use GitHub Classroom
-
-Classroom automates the copy-and-roster step and is worth it for larger
-classes. If you choose it, create **one** assignment for the whole semester:
-
-- Type: Individual
-- Visibility: Public (peer viewing and critique)
-- Starter code: the `dcda30833` template repo above
-- Deadline: None (ongoing all semester)
-- Autograding: Disabled
-
-Students accept the link once and use that repo for all work; everything else
-in this document is identical either way.
+That's all: copy the template, share the URL.
 
 ---
 
@@ -361,31 +332,9 @@ Your live site root will be:
 
 ---
 
-## Feedback Workflow for Instructor
+## Git Basics
 
-### Option A: GitHub Issues (Recommended)
-- Open an Issue on student's repo with feedback
-- Use labels: `lab-feedback`, `project-feedback`, `question`
-- Students can respond, creating threaded conversation
-- Easy to track what's been reviewed
-
-### Option B: Inline Comments
-- Use GitHub's "Files changed" view to comment on specific lines
-- Good for code-specific suggestions
-- More granular than Issues
-
-### Option C: Direct Commits (for minor fixes)
-- For typos or small suggestions, commit directly to student's repo
-- Use clear commit messages: "Instructor feedback: [description]"
-- Reserve for quick fixes, not substantive feedback
-
-**Recommendation:** Use Issues for substantive feedback (one Issue per lab/project), inline comments for specific code suggestions.
-
----
-
-## Teaching Git Basics
-
-Students need minimal Git literacy. Teach in Week 1 alongside Lab 0.
+You need only a little Git. We cover it in Week 1 alongside Lab 0.
 
 **Essential commands:**
 ```bash
@@ -396,9 +345,9 @@ git commit -m "message"  # Save snapshot
 git push                 # Upload to GitHub
 ```
 
-**GUI Alternative:** Students can use GitHub Desktop or VS Code's built-in Source Control panel to avoid command line entirely. Both work well for this workflow.
+**GUI Alternative:** You can use GitHub Desktop or VS Code's built-in Source Control panel to avoid command line entirely. Both work well for this workflow.
 
-**Commit message tips for students:**
+**Commit message tips:**
 - Describe what changed: "Add color variation to grid"
 - Note experiments: "Try noise instead of random"
 - Mark milestones: "Complete Lab 3 reflection"
@@ -407,7 +356,7 @@ git push                 # Upload to GitHub
 
 ## GitHub Pages Setup
 
-Students enable GitHub Pages **once, in Week 1**, and it serves their work for the rest of the semester.
+You enable GitHub Pages **once, in Week 1**, and it serves your work for the rest of the semester.
 
 1. Go to repo Settings → Pages
 2. Source: Deploy from a branch
@@ -436,14 +385,3 @@ A URL resolves to a folder only if that folder contains an `index.html`. (Option
 - **Works locally, blank when live:** almost always a **case-sensitivity** mismatch. GitHub Pages is case-sensitive; `Sketch.js` referenced as `sketch.js` fails on the server though it worked on macOS/Windows. Match capitalization exactly.
 - **Sketch loads but is empty:** open the browser console (F12). A failed `<script src>` path or a missing library tag is the usual cause.
 - **Old version showing:** the browser cached it — hard-refresh (Cmd/Ctrl+Shift+R), and confirm the latest commit was actually pushed.
-
----
-
-## Notes
-
-- **Process visibility:** Commit history becomes part of the ungrading evidence. Encourage frequent, meaningful commits.
-- **Public repos:** Enable peer learning and critique. Students can browse each other's code.
-- **GitHub Pages:** Free hosting for final portfolio. Each lab/project can be viewed live.
-- **No autograding:** Aligns with ungrading philosophy. Feedback is qualitative, not automated.
-- **One repo, set up once:** Students create their repo at the start of the semester (from the template, or via a single Classroom link) and use it for all work — no new repos or links per assignment.
-- **Classroom is optional:** It only automates distribution and roster. The template path needs nothing beyond plain GitHub.

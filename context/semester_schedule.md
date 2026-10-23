@@ -137,14 +137,12 @@ Mode: Integration
 
 ---
 
-## Week 16 — Exhibition & Publication
+## Finals Block (May 10–14) — Exhibition & Publication
 Mode: Public Systems  
+*Formerly Week 16; the registrar's calendar has 15 instructional weeks, so this
+session runs in the assigned final exam block.*  
 - Polish the live portfolio (Pages already running since Week 1)  
 - Confirm all sketch URLs resolve; fix broken paths / case-sensitivity issues  
 - Public demo  
 - FINAL PROJECT due  
-
----
-
-## Finals Week
-- FINAL PORTFOLIO due (GitHub Pages + reflection)
+- FINAL PORTFOLIO due (GitHub Pages + reflection); exact date set with the exam block
