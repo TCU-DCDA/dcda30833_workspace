@@ -58,7 +58,7 @@ project synthesizes both.
 
 - [**Syllabus**](context/syllabus.md) — the delivery syllabus, on the TCU template
 - [**Semester Schedule**](context/semester_schedule.md) — instructor reference
-- [**Student Calendar**](context/student_calendar.md) — week by week, with dates
+- [**Course Schedule**](context/student_calendar.md) — weekly arc plus meeting-by-meeting tables, with dates
 - [**AI in This Course**](context/ai_policy.md) — AI as material, not vending machine
 - [**Collaboration in Computer Art**](context/collaboration.md) — course reading
 - [**Theory Foundations**](context/theory_foundations.md) — the pedagogical basis

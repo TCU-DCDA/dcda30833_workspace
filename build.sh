@@ -75,7 +75,7 @@ convert context/ai_policy.md "#2f8f86" "AI in This Course — Policy & Practice"
 # ---- Course information & readings (linked from the home page and syllabus) ----
 # Instructor-only context files (semester_schedule, labs_and_projects,
 # examples_policy, repo_setup_instructor, build_status) are deliberately not built.
-convert context/student_calendar.md        "#c1352b" "Student Calendar"                     "Course Info"
+convert context/student_calendar.md        "#c1352b" "Course Schedule"                      "Course Info"
 convert context/github_classroom_structure.md "#c1352b" "Student Repos & Deployment"        "Course Info"
 convert context/working_from_examples.md   "#2f8f86" "Working from Examples"                "Course Policy"
 convert context/theory_foundations.md      "#2f8f86" "Theory Foundations"                   "Course Reading"

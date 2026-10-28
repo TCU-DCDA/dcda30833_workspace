@@ -149,6 +149,24 @@ body {
 .content table { border-collapse: collapse; margin: 1.2rem 0; font-size: 0.9rem; width: 100%; }
 .content th, .content td { border: 1px solid var(--line); padding: 0.5rem 0.8rem; text-align: left; }
 .content th { background: var(--code-bg); }
+.content td { vertical-align: top; }
+.content td:first-child { white-space: nowrap; }
+
+/* Course schedule: due-item chips */
+.content .chip {
+  display: inline-block; margin: 0 0.25rem 0.25rem 0; padding: 0.1rem 0.5rem;
+  border: 1px solid var(--line); border-radius: 999px;
+  font-size: 0.74rem; font-weight: 600; letter-spacing: 0.03em; white-space: nowrap;
+  color: var(--ink-soft); background: var(--paper);
+}
+.content .chip a { border: none; color: inherit; }
+.content .chip-key { border-color: var(--accent); color: var(--ink); }
+.content .chip-project { background: var(--accent); border-color: var(--accent); color: #fff; }
+.content .chip-project a, .content .chip-project a:hover { color: #fff; }
+
+@media (max-width: 760px) {
+  .content table { display: block; overflow-x: auto; }
+}
 
 .sheet-footer {
   margin-top: 3.5rem;

@@ -341,6 +341,6 @@ Bring your laptop to every class. All required software is free.
 | **15** | Synthesis | Final System Studio | May 3 — **LAB 13**; final build | May 5 — In-progress critique; last day of classes |
 | **Finals** | Synthesis | Exhibition & Publication | May 10–14 — **FINAL PROJECT**, public exhibition at our assigned final exam block | **FINAL PORTFOLIO** — Pages + reflection |
 
-A week-by-week student view with the same dates is kept at
-[Student Calendar](student_calendar.html); the live course site is the
+A meeting-by-meeting view with the same dates is kept at
+[Course Schedule](student_calendar.html); the live course site is the
 authoritative index of assignments.
